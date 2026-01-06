@@ -1,0 +1,35 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE Files
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+*~
+
+# Log Files
+*.log
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Node modules (if using any build tools in future)
+node_modules/
+
+# Environment Files
+.env
+.env.local
+
+# Build Files (if applicable)
+dist/
+build/
+
+# Personal Notes (not for submission)
+notes.txt
+TODO.txt
+scratch.md
