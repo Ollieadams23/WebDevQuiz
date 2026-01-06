@@ -4,7 +4,7 @@
 - **Developer:** Ollie Adams
 - **Start Date:** January 6, 2026
 - **Project Type:** Interactive Web Application
-- **Technologies:** HTML5, CSS3, JavaScript, jQuery
+- **Technologies:** HTML5, CSS3, JavaScript, jQuery, Bootstrap 5.3.7
 
 ---
 
@@ -33,11 +33,12 @@
 #### Key Decisions:
 - Design wireframes on Figma (4 pages: home, how-to, quiz, results)
 - Deploy using GitHub Pages
-- Use jQuery for DOM manipulation and enhanced interactivity
+- Use jQuery 3.7.1 for DOM manipulation and enhanced interactivity
+- Use Bootstrap 5.3.8 for responsive framework and UI components
 - Implement 4 quiz categories with random question selection
 - Options for 10 or 20 questions total (mixed from all categories)
 - Category-based color coding for visual organization (within 3-color limit)
-- light and dark themes
+- Light and dark themes with toggle functionality
 
 #### Wireframes:
 - Tool: Figma
@@ -110,47 +111,44 @@
 #### Structure Decisions:
 - Number of pages: 4 (index, how-to, quiz, results)
 - Navigation approach:
-- Question display method:
+- Question display method: multiple choice, true/false, fill-in-blank
 
 #### Accessibility Considerations:
-- Semantic elements used:
-- ARIA labels added:
-- Heading hierarchy:
+- Semantic elements used: header, main, section, article, footer
+- ARIA labels added: aria-label, aria-labelledby
+- Heading hierarchy: h1, h2, h3
 
 #### Challenges & Solutions:
-**Challenge:**  
-**Solution:**  
+**Challenge:** How to use multiple choice question display
+**Solution:** Use radio buttons for multiple choice questions
 **Date Resolved:**
 
 ---
 
 ### Phase 3: CSS Development
-**Date Started:**  
+**Date Started:** January 13, 2026
 **Date Completed:**
 
 #### Design Decisions:
-**Color Scheme:**
-- Primary Color: [#HEX] - Used for:
-- Secondary Color: [#HEX] - Used for:
-- Accent Color: [#HEX] - Used for:
+**Color Scheme:** GitHub Inspired with Dark Theme Toggle
 
 **Typography:**
-- Font Family:
-- Base Font Size:
-- Heading Sizes:
+- Font Family: Inter
+- Base Font Size: 16px
+- Heading Sizes: h1: 36px, h2: 24px, h3: 18px
 
 **Layout Approach:**
-- Mobile-first: Yes/No
+- Mobile-first: Yes
 - Grid/Flexbox:
 
 #### Responsive Design Breakpoints:
-- Mobile: 320px - 767px
+- Mobile: 320px - 767px (Bootstrap 5.3.7)
 - Tablet: 768px - 1023px
 - Desktop: 1024px+
 
 #### Challenges & Solutions:
-**Challenge:**  
-**Solution:**  
+**Challenge:** How to use multiple choice question display
+**Solution:** Use radio buttons for multiple choice questions
 **Date Resolved:**
 
 ---
@@ -266,10 +264,10 @@
    - **URL:**
 
 ### Tutorials Referenced
-1. **Tutorial:**
-   - **URL:**
-   - **What was learned:**
-   - **Date referenced:**
+1. **Tutorial:** 
+   - **URL:** https://www.w3schools.com/html/html5_semantic_elements.asp
+   - **What was learned:** semantic tags and headings
+   
 
 ### Images/Assets
 1. **Asset:**

@@ -5,14 +5,17 @@
 
 ---
 
-## Phase 1: Project Setup & Planning ⏳
+## Phase 1: Project Setup & Planning ✅ COMPLETED
 
 ### 1.1 Initial Setup
-- [ ] Choose quiz theme/subject (e.g., general knowledge, science, pop culture)
+- [x] Choose quiz theme/subject (4 categories: JavaScript, UI/UX, HTML/CSS, Git/GitHub)
 - [x] Create project directory structure
 - [x] Initialize Git repository
 - [x] Create `.gitignore` file
 - [x] Create initial README.md template
+- [x] Create Figma wireframes (homepage, how-to, quiz, results)
+- [x] Export wireframes to assets/images/wireframes/
+- [x] Choose color scheme (GitHub Inspired with dark theme)
 - [ ] Book session with Mentor for project planning
 
 ### 1.2 Directory Structure
@@ -36,39 +39,45 @@ project1/
 ```
 
 **Documentation Required:**
-- Document theme choice and reasoning
-- Initial commit to GitHub
+- [x] Document theme choice and reasoning
+- [x] Document wireframes in DEVELOPMENT.md
+- [x] Document color scheme with WCAG compliance
+- [x] Initial commit to GitHub
+- [x] Second commit: Color scheme
 
 ---
 
-## Phase 2: Documentation Framework ⏳
+## Phase 2: Documentation Framework ✅ COMPLETED
 
 ### 2.1 README.md Structure
-- [ ] Project title and description
-- [ ] Purpose and value to users
-- [ ] Features list (to be completed as built)
-- [ ] Technologies used
-- [ ] Deployment procedure
-- [ ] Credits and attributions section
-- [ ] Screenshots section (placeholder)
+- [x] Project title and description
+- [x] Purpose and value to users
+- [x] Features list (to be completed as built)
+- [x] Technologies used (HTML, CSS, JavaScript, jQuery)
+- [x] Deployment procedure
+- [x] Credits and attributions section
+- [x] Screenshots section (placeholder)
 
 ### 2.2 TESTING.md
-- [ ] Create testing document template
-- [ ] Validation testing section (HTML/CSS/JS)
-- [ ] Browser compatibility testing section
-- [ ] Responsiveness testing section
-- [ ] Accessibility testing section
-- [ ] Bug tracking section
+- [x] Create testing document template
+- [x] Validation testing section (HTML/CSS/JS)
+- [x] Browser compatibility testing section
+- [x] Responsiveness testing section
+- [x] Accessibility testing section
+- [x] Bug tracking section
 
 ### 2.3 DEVELOPMENT.md
-- [ ] Development log setup
-- [ ] Track decisions made
-- [ ] Track challenges and solutions
-- [ ] Code attribution tracking
+- [x] Development log setup
+- [x] Track decisions made
+- [x] Track challenges and solutions
+- [x] Code attribution tracking
+- [x] Document quiz theme and categories
+- [x] Document wireframes with images
+- [x] Document color scheme decision
 
 **Documentation Required:**
-- All three documents created with templates
-- Git commit documenting setup
+- [x] All three documents created with templates
+- [x] Git commits documenting setup
 
 ---
 

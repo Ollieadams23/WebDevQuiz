@@ -121,7 +121,8 @@ This online quiz application was developed to test and reinforce fundamental web
 - **HTML5** - Semantic structure and content
 - **CSS3** - Styling and responsive design
 - **JavaScript (ES6+)** - Quiz functionality and interactivity
-- **jQuery** - DOM manipulation and simplified JavaScript
+- **jQuery 3.7.1** - DOM manipulation and simplified JavaScript
+- **Bootstrap 5.3.7** - Responsive framework and UI components
 
 ### Development Tools
 - **Git** - Version control
