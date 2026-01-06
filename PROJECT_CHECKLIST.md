@@ -9,10 +9,10 @@
 
 ### 1.1 Initial Setup
 - [ ] Choose quiz theme/subject (e.g., general knowledge, science, pop culture)
-- [ ] Create project directory structure
-- [ ] Initialize Git repository
-- [ ] Create `.gitignore` file
-- [ ] Create initial README.md template
+- [x] Create project directory structure
+- [x] Initialize Git repository
+- [x] Create `.gitignore` file
+- [x] Create initial README.md template
 - [ ] Book session with Mentor for project planning
 
 ### 1.2 Directory Structure

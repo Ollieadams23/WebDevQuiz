@@ -37,6 +37,7 @@
 - Implement 4 quiz categories with random question selection
 - Options for 10 or 20 questions total (mixed from all categories)
 - Category-based color coding for visual organization (within 3-color limit)
+- light and dark themes
 
 #### Wireframes:
 - Tool: Figma
@@ -77,7 +78,29 @@
 - Content drafted: January 6, 2026
 - Location: `HOW_TO_CONTENT.md`
 - Will be implemented in `how-to.html` during Phase 3
-- decide on color scheme 
+
+#### Color Scheme Decision:
+- **Selected:** GitHub Inspired with Dark Theme Toggle
+- **Date:** January 6, 2026
+- **Details:** `COLOR_SCHEME.md`
+
+**Light Theme:**
+- Primary: #0D1117 (Dark Slate)
+- Secondary: #238636 (GitHub Green)
+- Accent: #DA3633 (GitHub Red)
+- All colors WCAG AAA compliant ✅
+
+**Dark Theme:**
+- Primary: #58A6FF (GitHub Blue)
+- Secondary: #3FB950 (Bright Green)
+- Accent: #F85149 (Bright Red)
+- All colors WCAG AAA compliant ✅
+
+**Features:**
+- Theme toggle button for user preference
+- LocalStorage to remember user choice
+- Smooth transitions between themes
+- 3 colors per theme (within requirement) 
 ---
 
 ### Phase 2: HTML Development
