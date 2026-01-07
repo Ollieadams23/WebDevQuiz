@@ -28,7 +28,7 @@
 #### Initial Setup
 - Git repository initialized: [6/1/2026]
 - Directory structure created: [6/1/2026]
-- Initial commit: [Date]
+- Initial commit: [7/1/2026]
 
 #### Key Decisions:
 - Design wireframes on Figma (4 pages: home, how-to, quiz, results)
@@ -67,7 +67,7 @@
 
 #### User Flow Defined:
 1. User lands on home page
-2. User clicks to start quiz or reads How-To instructions
+2. User clicks reads How-To instructions (optional)
 3. User selects number of questions (10 or 20)
 4. User selects category (JavaScript, UI/UX, HTML/CSS, or Git/GitHub)
 5. User answers questions one by one with Next/Previous navigation

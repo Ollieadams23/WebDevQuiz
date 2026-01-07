@@ -1,3 +1,4 @@
+
 /* ===================================
    CSS VARIABLES - GitHub Inspired Theme
    All colors are WCAG AAA compliant
@@ -68,6 +69,14 @@ header{
     font-size: 36px;
     font-weight: 700;
     padding: 1.5rem;
+    gap: 1rem;
+    position: relative;
+}
+
+
+
+.header-title {
+    display: flex;
     gap: 1rem;
 }
 
@@ -150,6 +159,10 @@ section h2 {
 }
 
 .darktoggle{
+    position: absolute;
+    left: 1rem;
+    display: flex;
+    align-items: center;
     background-color: var(--color-primary);
     color: var(--color-background);
     border: 2px solid var(--color-accent);
@@ -237,6 +250,7 @@ a:focus {
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
+ 
 
 @media (max-width: 768px) {
   header {
@@ -255,6 +269,10 @@ a:focus {
   .btn {
     width: 100%;
   }
+
+  #light-dark-text{
+    display: none;
+  }
 }
 
 #amount10.active{
@@ -268,3 +286,35 @@ a:focus {
     color: var(--color-background);
     border: 2px solid var(--color-secondary);
 }
+
+.topic-links{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.topic-links a{
+    text-align: center;
+    color: var(--color-text);
+    text-decoration: none;
+    width: 200px;
+    padding: 1rem;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.topic-links a:hover{
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s ease;
+    font-size: 1.5rem;
+
+}
+    

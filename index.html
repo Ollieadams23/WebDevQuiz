@@ -10,16 +10,18 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="/assets/js/script.js" defer></script>
 </head>
-<body>
+<body >
     <header>
-        <button class="darktoggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <button class="darktoggle"  aria-label="Toggle dark mode">
             <span class="light-icon">🌙</span>
-            <h5>Dark/Light Mode</h5>
+            <h5 id="light-dark-text">Dark/Light Mode</h5>
             <span class="dark-icon">☀️</span>
         </button>
-        <h1>Web</h1>
-        <h1>Dev</h1>
-        <h1>Quiz</h1>
+        <div class="header-title">
+            <h1>Web</h1>
+            <h1>Dev</h1>
+            <h1>Quiz</h1>
+        </div>
     </header>
     <main>
         <section id="home">
@@ -46,12 +48,12 @@
                 </div>
                 <section>
                     <br>
-                    <h2>Step 2: Select Topic</h2>
-                    <ul>
-                        <ul>JavaScript Fundamentals</ul>
-                        <ul>UI/UX Design</ul>
-                        <ul>HTML & CSS Basics</ul>
-                        <ul>Git & GitHub</ul>
+                    <h2>Step 2: Select Topic to Start</h2>
+                    <ul class="topic-links">
+                        <a href="/jsfund.html">JavaScript Fundamentals</a>
+                        <a href="/uiux.html">UI/UX Design</a>
+                        <a href="/htmlcss.html">HTML & CSS Basics</a>
+                        <a href="/gitgithub.html">Git & GitHub</a>
                     </ul>
                 </section>
             </div>
