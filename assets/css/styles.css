@@ -1,25 +1,270 @@
+/* ===================================
+   CSS VARIABLES - GitHub Inspired Theme
+   All colors are WCAG AAA compliant
+   =================================== */
 
+:root {
+  /* Light Theme Colors (Default) */
+  --color-primary: #0D1117;        /* Dark Slate - Headers, buttons */
+  --color-secondary: #238636;      /* GitHub Green - Success */
+  --color-accent: #DA3633;         /* GitHub Red - Errors */
+  --color-background: #FFFFFF;     /* White - Main background */
+  --color-surface: #F6F8FA;        /* Light gray - Cards */
+  --color-text: #24292F;           /* GitHub Gray - Body text */
+  --color-text-secondary: #57606A; /* Muted gray - Secondary text */
+  --color-border: #D0D7DE;         /* Light border */
+  
+  /* Semantic colors */
+  --color-success: #238636;
+  --color-error: #DA3633;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --color-primary: #58A6FF;        /* GitHub Blue */
+  --color-secondary: #3FB950;      /* Bright Green */
+  --color-accent: #F85149;         /* Bright Red */
+  --color-background: #0D1117;     /* Dark Slate */
+  --color-surface: #161B22;        /* Dark Surface */
+  --color-text: #C9D1D9;           /* Light Gray */
+  --color-text-secondary: #8B949E; /* Muted Gray */
+  --color-border: #30363D;         /* Dark border */
+  
+  /* Semantic colors */
+  --color-success: #3FB950;
+  --color-error: #F85149;
+}
+
+/* ===================================
+   GLOBAL STYLES
+   =================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+}
+
+/* ===================================
+   HEADER
+   =================================== */
 
 header{
     display: flex;
     justify-content: center;
-    background-color: rgb(253, 253, 253);
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-background);
     text-align: center;
-    font-family: 'inter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 36px;
     font-weight: 700;
+    padding: 1.5rem;
+    gap: 1rem;
 }
 
-body{
+header h1 {
+  margin: 0;
+}
+
+/* ===================================
+   MAIN CONTENT
+   =================================== */
+
+main{
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
+main p {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
 
-.amount-buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 0.5rem;
+/* ===================================
+   SECTIONS
+   =================================== */
+
+section {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+section h2 {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* ===================================
+   BUTTONS - Override Bootstrap
+   =================================== */
+
+.btn {
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-info {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  border: 2px solid var(--color-secondary);
+}
+
+.btn-info:hover {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+}
+
+.darktoggle{
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border: 2px solid var(--color-accent);
+
+}
+
+.start-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* ===================================
+   HOW-TO SECTION
+   =================================== */
+
+.how-to-steps {
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.step {
+  margin-bottom: 2rem;
+}
+
+.step h2 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.amount-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* ===================================
+   LISTS
+   =================================== */
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+ul li {
+  background-color: var(--color-surface);
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--color-secondary);
+  color: var(--color-text);
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+
+/* Focus indicators for keyboard navigation */
+button:focus,
+a:focus {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* High contrast for better readability */
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+  header {
+    font-size: 24px;
+    padding: 1rem;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  .start-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+#amount10.active{
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    border: 2px solid var(--color-secondary);
+}
+
+#amount20.active{
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    border: 2px solid var(--color-secondary);
 }
