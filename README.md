@@ -93,7 +93,8 @@ This online quiz application was developed to test and reinforce fundamental web
 ---
 
 ### ♿ Accessibility Features
-- High contrast color scheme (WCAG AA compliant)
+- High contrast color scheme (WCAG AAA compliant)
+- **Dark Mode Toggle:** User-controlled theme switching between light and dark modes with preference saved via localStorage
 - Semantic HTML structure
 - Keyboard navigation support
 - Screen reader friendly

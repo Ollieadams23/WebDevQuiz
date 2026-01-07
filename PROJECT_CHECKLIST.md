@@ -180,10 +180,10 @@ project1/
 ## Phase 5: JavaScript Core Functionality ⏳
 
 ### 5.1 jQuery Setup
-- [ ] Include jQuery CDN link in HTML files
-- [ ] Verify jQuery is loading correctly
-- [ ] Use jQuery for DOM manipulation and event handling
-- [ ] Document jQuery version and source in README
+- [x] Include jQuery CDN link in HTML files
+- [x] Verify jQuery is loading correctly
+- [x] Use jQuery for DOM manipulation and event handling
+- [x] Document jQuery version and source in README
 
 ### 5.2 Data Structure
 - [ ] Create question bank array
