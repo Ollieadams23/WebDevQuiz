@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your web development knowledge with our interactive quiz covering JavaScript, UI/UX, HTML/CSS, and Git/GitHub">
+    <title>Web Dev Quiz - Home</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="/assets/js/script.js" defer></script>
+</head>
+<body>
+    <header style="align-items: center;">
+        <button class="darktoggle" aria-label="Toggle dark mode">
+            <span class="light-icon">🌙</span>
+            <h5 id="light-dark-text">Dark/Light Mode</h5>
+            <span class="dark-icon">☀️</span>
+        </button>
+        <div class="header-title">
+            <h1>Web</h1>
+            <h1>Dev</h1>
+            <h1>Quiz</h1>
+        </div>
+    </header>
+    <main>
+        <section id="results-container">
+            <!-- Score Summary -->
+            <article class="score-summary">
+                <h2>Quiz Results</h2>
+                <div class="score-circle">
+                    <div class="score-display">
+                        <span class="score-percentage" id="score-percentage">0%</span>
+                        <span class="score-label">Score</span>
+                    </div>
+                </div>
+                <div class="score-details">
+                    <p class="score-info">
+                        <span class="correct-count" id="correct-count">0</span> correct out of 
+                        <span class="total-count" id="total-count">0</span> questions
+                    </p>
+                    <p class="category-name" id="category-name">Category Name</p>
+                </div>
+                
+                <!-- Performance Message -->
+                <div class="performance-message" id="performance-message">
+                    <p>Great job!</p>
+                </div>
+            </article>
+
+            <!-- Answer Review Section -->
+            <article class="answer-review">
+                <h3>Answer Review</h3>
+                <div id="review-list">
+                    <!-- Review items will be dynamically inserted here -->
+                    <!-- Example structure:
+                    <div class="review-item correct">
+                        <div class="review-header">
+                            <span class="question-number">Question 1</span>
+                            <span class="result-icon">✓</span>
+                        </div>
+                        <p class="review-question">What is the question text?</p>
+                        <div class="review-answers">
+                            <p class="user-answer">Your answer: Option A</p>
+                            <p class="correct-answer">Correct answer: Option A</p>
+                        </div>
+                        <p class="explanation">Explanation text here</p>
+                    </div>
+                    -->
+                </div>
+            </article>
+
+            <!-- Action Buttons -->
+            <div class="results-actions">
+                <a href="/index.html" class="btn btn-secondary">← Back to Home</a>
+                <button id="retake-btn" class="btn btn-primary">Retake Quiz</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

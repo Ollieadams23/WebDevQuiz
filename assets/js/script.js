@@ -46,3 +46,21 @@ $('.darktoggle').click(function() {
         localStorage.setItem('darkMode', 'dark');
     }
 });
+
+
+//topic links
+$('#jsfund').click(function() {
+    window.location.href = '/jsfund.html';
+});
+
+$('#uiux').click(function() {
+    window.location.href = '/uiux.html';
+});
+
+$('#htmlcss').click(function() {
+    window.location.href = '/htmlcss.html';
+});
+
+$('#gitgithub').click(function() {
+    window.location.href = '/gitgithub.html';
+});

@@ -309,6 +309,7 @@ a:focus {
 }
 
 .topic-links a:hover{
+    cursor: pointer;
     background-color: var(--color-primary);
     color: var(--color-background);
     transform: translateY(-2px);

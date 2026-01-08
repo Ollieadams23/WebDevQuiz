@@ -39,6 +39,9 @@
 - Options for 10 or 20 questions total (mixed from all categories)
 - Category-based color coding for visual organization (within 3-color limit)
 - Light and dark themes with toggle functionality
+- URL parameters for category and question count (visible, bookmarkable)
+- sessionStorage for quiz answers/progress (temporary, clears after session)
+- localStorage only for user preferences like dark mode
 
 #### Wireframes:
 - Tool: Figma
@@ -128,6 +131,9 @@
 **Challenge:** How to use multiple choice question display
 **Solution:** Use radio buttons for multiple choice questions
 **Date Resolved:**
+
+**Challenge:** how to maintain data across views
+**Solution:** use localStorage to store data
 
 ---
 
@@ -292,7 +298,7 @@
 ## Git Commit History Notes
 
 ### Important Commits:
-- Initial commit: [hash] - [date]
+- Initial commit: [hash] - [7/1/2026]
 - HTML structure complete: [hash] - [date]
 - CSS styling complete: [hash] - [date]
 - JavaScript functionality complete: [hash] - [date]
