@@ -1,0 +1,395 @@
+{
+  "category": "UI/UX Design",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "What does UX stand for?",
+      "options": [
+        "User Experience",
+        "User Exchange",
+        "Universal Experience",
+        "Unified Exchange"
+      ],
+      "correctAnswer": 0,
+      "explanation": "UX stands for User Experience, which encompasses all aspects of the end-user's interaction with a company, its services, and its products."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "What is the primary goal of UI design?",
+      "options": [
+        "Creating visually appealing and intuitive interfaces",
+        "Writing clean code",
+        "Database optimization",
+        "Server configuration"
+      ],
+      "correctAnswer": 0,
+      "explanation": "UI (User Interface) design focuses on creating visually appealing and intuitive interfaces that users can easily interact with."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "What is a wireframe in UX design?",
+      "options": [
+        "A basic visual guide showing the structure of a page",
+        "A type of programming framework",
+        "A security feature",
+        "A database schema"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A wireframe is a low-fidelity visual guide that represents the skeletal framework of a website or application, showing the layout and placement of elements."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "What does WCAG stand for?",
+      "options": [
+        "Web Content Accessibility Guidelines",
+        "Web Code Access Guide",
+        "World Computing Access Group",
+        "Website Creation and Graphics"
+      ],
+      "correctAnswer": 0,
+      "explanation": "WCAG stands for Web Content Accessibility Guidelines. These are standards developed to make web content more accessible to people with disabilities."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "What is the minimum contrast ratio required for WCAG AA compliance?",
+      "options": [
+        "4.5:1 for normal text",
+        "2:1 for normal text",
+        "3:1 for normal text",
+        "7:1 for normal text"
+      ],
+      "correctAnswer": 0,
+      "explanation": "WCAG AA requires a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text. AAA level requires 7:1 for normal text."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "What is a persona in UX design?",
+      "options": [
+        "A fictional character representing a user type",
+        "A design template",
+        "A color palette",
+        "A type of animation"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A persona is a fictional character created to represent a user type that might use a site, brand, or product. Personas help designers understand user needs, experiences, and goals."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "What is the purpose of A/B testing?",
+      "options": [
+        "To compare two versions to see which performs better",
+        "To test alphabetical ordering",
+        "To check browser compatibility",
+        "To validate HTML code"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A/B testing compares two versions of a webpage or app feature to determine which one performs better based on user behavior and metrics."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "What is the F-pattern in web design?",
+      "options": [
+        "A common eye-tracking pattern users follow when reading web content",
+        "A type of CSS framework",
+        "A font family",
+        "A color scheme"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The F-pattern describes how users typically scan web content in an F-shaped pattern: horizontally across the top, then down the left side, with shorter horizontal scans."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "What does responsive design mean?",
+      "options": [
+        "Design that adapts to different screen sizes",
+        "Design that responds quickly to user input",
+        "Design with animated elements",
+        "Design with interactive features"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Responsive design is an approach where design adapts to different screen sizes and devices, providing an optimal viewing experience across desktops, tablets, and mobile phones."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "What is white space (negative space) in design?",
+      "options": [
+        "Empty space around and between elements",
+        "The background color of a page",
+        "Unused code in a stylesheet",
+        "Error messages"
+      ],
+      "correctAnswer": 0,
+      "explanation": "White space, or negative space, is the empty space around and between design elements. It improves readability, draws attention to important elements, and creates balance."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "What is a call-to-action (CTA)?",
+      "options": [
+        "An element that prompts users to take a specific action",
+        "A phone number on a website",
+        "A navigation menu",
+        "A footer section"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A call-to-action (CTA) is a prompt that encourages users to take a specific action, such as 'Sign Up', 'Buy Now', or 'Learn More'. CTAs are crucial for conversions."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "What is the purpose of a style guide in design?",
+      "options": [
+        "To maintain consistency across design elements",
+        "To store CSS code",
+        "To list all HTML tags",
+        "To track project timelines"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A style guide documents design standards, including colors, typography, spacing, and component usage, ensuring consistency across a product or brand."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "What is the 60-30-10 rule in color theory?",
+      "options": [
+        "Use 60% dominant color, 30% secondary, 10% accent",
+        "60 colors maximum per page",
+        "30% opacity for backgrounds",
+        "10 color palettes minimum"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 60-30-10 rule is a color distribution principle: 60% dominant color, 30% secondary color, and 10% accent color for balanced, visually appealing designs."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "What is affordance in UX design?",
+      "options": [
+        "Visual clues that suggest how an element should be used",
+        "The cost of design software",
+        "The loading speed of a page",
+        "The number of features in an app"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Affordance refers to visual clues that suggest how an object should be used. For example, a button that looks clickable suggests it can be clicked."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "What is the purpose of user testing?",
+      "options": [
+        "To observe real users interacting with a product",
+        "To test server performance",
+        "To validate code syntax",
+        "To check browser versions"
+      ],
+      "correctAnswer": 0,
+      "explanation": "User testing involves observing real users as they interact with a product to identify usability issues, gather feedback, and improve the user experience."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "What is a prototype in UX design?",
+      "options": [
+        "An interactive mockup of a product",
+        "The final version of a website",
+        "A programming language",
+        "A design tool"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A prototype is an interactive mockup that simulates user interactions and workflows before actual development, allowing for testing and refinement."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "What does 'mobile-first' design mean?",
+      "options": [
+        "Designing for mobile devices before desktop",
+        "Only designing for mobile devices",
+        "Mobile devices are the most important",
+        "Testing on mobile first"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Mobile-first design is an approach where designers create the mobile version first, then scale up to larger screens. This ensures the core experience works on smaller devices."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "What is the purpose of a breadcrumb navigation?",
+      "options": [
+        "To show users their location within a site's hierarchy",
+        "To display cookie consent",
+        "To show page loading progress",
+        "To list recent updates"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Breadcrumb navigation shows users their current location within a website's hierarchy and allows easy navigation back to parent pages (e.g., Home > Products > Category)."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "What is Fitts's Law in UX design?",
+      "options": [
+        "The time to reach a target depends on size and distance",
+        "Fonts should fit the design",
+        "Files should fit screen size",
+        "Features should fit user needs"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Fitts's Law states that the time required to move to a target depends on its size and distance. Larger, closer targets are easier and faster to interact with."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "What is a heuristic evaluation in UX?",
+      "options": [
+        "Experts reviewing a design against usability principles",
+        "Automated testing of code",
+        "User surveys",
+        "Performance monitoring"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A heuristic evaluation is a usability inspection method where experts review a design against established usability principles (heuristics) to identify issues."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "What is the purpose of a mood board?",
+      "options": [
+        "To communicate the visual direction and feel of a design",
+        "To track user emotions",
+        "To organize code files",
+        "To plan project deadlines"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A mood board is a visual collage of images, colors, textures, and typography used to communicate the intended visual direction and emotional feel of a design project."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "What is the difference between UI and UX?",
+      "options": [
+        "UI is visual design, UX is overall experience",
+        "UI is coding, UX is design",
+        "UI is for mobile, UX is for desktop",
+        "They are the same thing"
+      ],
+      "correctAnswer": 0,
+      "explanation": "UI (User Interface) focuses on visual design and interactive elements, while UX (User Experience) encompasses the entire user journey and overall experience with a product."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "What is progressive disclosure in UX?",
+      "options": [
+        "Showing only essential information first, revealing more as needed",
+        "Gradually loading images",
+        "Progressive web apps",
+        "Incremental software updates"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Progressive disclosure is a technique that shows only essential information first and reveals additional details as users need them, reducing cognitive load and complexity."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "What is the gestalt principle of proximity?",
+      "options": [
+        "Elements close together are perceived as related",
+        "Similar elements look alike",
+        "Elements form complete shapes",
+        "Elements continue in a pattern"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The proximity principle states that objects placed close together are perceived as a group or related to each other, while those farther apart are seen as separate."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "What is card sorting in UX research?",
+      "options": [
+        "A method to organize content based on user input",
+        "Organizing playing cards",
+        "Sorting design files",
+        "Categorizing CSS styles"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Card sorting is a UX research method where users organize topics or content into categories that make sense to them, helping designers create intuitive information architecture."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "What is the golden ratio in design?",
+      "options": [
+        "1:1.618, a mathematically harmonious proportion",
+        "60:40 color split",
+        "The perfect font size",
+        "3:2 aspect ratio"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The golden ratio (approximately 1:1.618) is a mathematical proportion found in nature and used in design to create aesthetically pleasing, balanced compositions."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "What is an empathy map in UX?",
+      "options": [
+        "A tool to understand user feelings and perspectives",
+        "A site navigation diagram",
+        "A color emotion guide",
+        "A user flow chart"
+      ],
+      "correctAnswer": 0,
+      "explanation": "An empathy map is a collaborative tool that helps teams understand users' feelings, thoughts, actions, and pain points, fostering user-centered design thinking."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "What is the purpose of a loading indicator?",
+      "options": [
+        "To inform users that content is being processed",
+        "To measure internet speed",
+        "To show file size",
+        "To display errors"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Loading indicators provide feedback that the system is processing a request, reducing user anxiety and preventing confusion during wait times."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "What is microinteraction in UI design?",
+      "options": [
+        "Small, single-purpose animations or feedback",
+        "Tiny text elements",
+        "Mobile-only features",
+        "Minor bug fixes"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Microinteractions are small, single-purpose animations or design elements that provide feedback, guide users, or make interactions feel more engaging (e.g., a like button animation)."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "What is accessibility in web design?",
+      "options": [
+        "Designing for users of all abilities, including disabilities",
+        "Making sites load faster",
+        "Creating mobile-friendly layouts",
+        "Using simple language"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Accessibility means designing websites and applications so they can be used by people of all abilities, including those with visual, auditory, motor, or cognitive disabilities."
+    }
+  ]
+}

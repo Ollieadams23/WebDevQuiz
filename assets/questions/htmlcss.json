@@ -1,0 +1,395 @@
+{
+  "category": "HTML & CSS Basics",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyper Text Markup Language",
+        "High Tech Modern Language",
+        "Home Tool Markup Language",
+        "Hyperlinks and Text Markup Language"
+      ],
+      "correctAnswer": 0,
+      "explanation": "HTML stands for Hyper Text Markup Language. It is the standard markup language for creating web pages and web applications."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Which HTML tag is used for the largest heading?",
+      "options": [
+        "<h1>",
+        "<h6>",
+        "<heading>",
+        "<head>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <h1> tag is used for the largest and most important heading. HTML has six heading levels from <h1> (largest) to <h6> (smallest)."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "What does CSS stand for?",
+      "options": [
+        "Cascading Style Sheets",
+        "Computer Style Sheets",
+        "Creative Style Sheets",
+        "Colorful Style Sheets"
+      ],
+      "correctAnswer": 0,
+      "explanation": "CSS stands for Cascading Style Sheets. It is used to style and layout web pages, controlling colors, fonts, spacing, and positioning."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Which HTML tag is used to create a hyperlink?",
+      "options": [
+        "<a>",
+        "<link>",
+        "<href>",
+        "<url>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <a> (anchor) tag is used to create hyperlinks. The href attribute specifies the URL destination: <a href='url'>Link text</a>."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "How do you insert a comment in CSS?",
+      "options": [
+        "/* This is a comment */",
+        "// This is a comment",
+        "<!-- This is a comment -->",
+        "# This is a comment"
+      ],
+      "correctAnswer": 0,
+      "explanation": "CSS comments use /* comment */. HTML comments use <!-- comment -->, and JavaScript uses // or /* */."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Which property is used to change the text color in CSS?",
+      "options": [
+        "color",
+        "text-color",
+        "font-color",
+        "text-style"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'color' property in CSS is used to change the text color. For example: color: red; or color: #FF0000;"
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "What is the correct HTML for creating a checkbox?",
+      "options": [
+        "<input type='checkbox'>",
+        "<checkbox>",
+        "<check>",
+        "<input type='check'>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The correct syntax is <input type='checkbox'>. The type attribute determines what kind of input element to display."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Which CSS property controls the text size?",
+      "options": [
+        "font-size",
+        "text-size",
+        "font-style",
+        "text-style"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'font-size' property controls text size. Values can be in pixels (px), ems (em), rems (rem), or percentages (%)."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "What is the correct HTML for inserting an image?",
+      "options": [
+        "<img src='image.jpg' alt='description'>",
+        "<image src='image.jpg'>",
+        "<img href='image.jpg'>",
+        "<picture>image.jpg</picture>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <img> tag with src (source) attribute displays images. The alt attribute provides alternative text for accessibility and when images fail to load."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Which HTML tag defines an unordered list?",
+      "options": [
+        "<ul>",
+        "<ol>",
+        "<list>",
+        "<li>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <ul> tag creates an unordered (bulleted) list. <ol> creates ordered (numbered) lists. <li> defines individual list items."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "How do you make text bold in HTML?",
+      "options": [
+        "<strong> or <b>",
+        "<bold>",
+        "<weight>",
+        "<heavy>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "<strong> (semantic importance) and <b> (visual styling) both make text bold. <strong> is preferred for accessibility."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Which CSS property is used to change the background color?",
+      "options": [
+        "background-color",
+        "bgcolor",
+        "color",
+        "background"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'background-color' property sets the background color. The shorthand 'background' property can also include images and other properties."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "What is the correct HTML for making a text input field?",
+      "options": [
+        "<input type='text'>",
+        "<textfield>",
+        "<input type='textfield'>",
+        "<text>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "<input type='text'> creates a single-line text input field. Other types include 'email', 'password', 'number', etc."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Which property is used to add space between the border and content?",
+      "options": [
+        "padding",
+        "margin",
+        "spacing",
+        "border-spacing"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Padding adds space inside the element between the border and content. Margin adds space outside the element's border."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "What is the purpose of the <div> tag?",
+      "options": [
+        "To group and style block-level content",
+        "To divide numbers",
+        "To create divisions in tables",
+        "To make dividers on pages"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <div> tag is a container for grouping and styling block-level content. It's commonly used with CSS classes and IDs."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "Which CSS selector targets elements by their ID?",
+      "options": [
+        "#idname",
+        ".idname",
+        "idname",
+        "*idname"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The # symbol selects elements by ID: #myId. The . symbol selects by class: .myClass. Element names are used directly: div."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "What does the <!DOCTYPE html> declaration do?",
+      "options": [
+        "Tells the browser this is an HTML5 document",
+        "Creates a new document type",
+        "Links to a stylesheet",
+        "Defines the document title"
+      ],
+      "correctAnswer": 0,
+      "explanation": "<!DOCTYPE html> tells the browser to render the page in HTML5 mode. It should be the first line in an HTML document."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Which HTML attribute specifies an alternate text for an image?",
+      "options": [
+        "alt",
+        "title",
+        "text",
+        "description"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'alt' attribute provides alternative text for images, important for accessibility and displayed when images fail to load."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "How do you select elements with class 'menu' in CSS?",
+      "options": [
+        ".menu",
+        "#menu",
+        "menu",
+        "*menu"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Class selectors use a period (.): .menu selects all elements with class='menu'. The # symbol is for IDs."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Which CSS property is used to make text italic?",
+      "options": [
+        "font-style: italic",
+        "text-style: italic",
+        "font: italic",
+        "text-decoration: italic"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'font-style' property with value 'italic' makes text italic. The <em> or <i> HTML tags can also create italic text."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "What is the correct HTML for creating a dropdown list?",
+      "options": [
+        "<select>",
+        "<dropdown>",
+        "<list>",
+        "<input type='dropdown'>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <select> tag creates a dropdown list. Individual options are defined with <option> tags inside the <select> element."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Which property controls the space between elements?",
+      "options": [
+        "margin",
+        "padding",
+        "spacing",
+        "gap"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Margin controls space outside an element's border, between elements. Padding controls space inside the element, between border and content."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "What is the purpose of the <span> tag?",
+      "options": [
+        "To group and style inline content",
+        "To create line breaks",
+        "To span multiple columns",
+        "To measure distances"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <span> tag is an inline container for styling text and content without breaking the flow. <div> is the block-level equivalent."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Which CSS property makes elements display side by side?",
+      "options": [
+        "display: inline or float",
+        "position: side",
+        "align: horizontal",
+        "layout: row"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Elements can be displayed side by side using 'display: inline' or 'inline-block', 'float: left/right', or modern methods like flexbox and grid."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "What is the correct HTML for creating a table?",
+      "options": [
+        "<table>",
+        "<tab>",
+        "<tables>",
+        "<tbl>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <table> tag creates a table. Use <tr> for rows, <th> for header cells, and <td> for data cells."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Which property changes the font type in CSS?",
+      "options": [
+        "font-family",
+        "font-type",
+        "typeface",
+        "text-font"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'font-family' property specifies the font. Multiple fonts can be listed as fallbacks: font-family: Arial, sans-serif;"
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "What does the z-index property control?",
+      "options": [
+        "The stacking order of positioned elements",
+        "The zoom level",
+        "The element's height",
+        "The element's depth"
+      ],
+      "correctAnswer": 0,
+      "explanation": "z-index controls the stacking order of positioned elements (position: absolute, relative, or fixed). Higher values appear on top."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Which HTML tag defines a paragraph?",
+      "options": [
+        "<p>",
+        "<para>",
+        "<paragraph>",
+        "<pg>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <p> tag defines a paragraph. Browsers automatically add space before and after paragraphs."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "How do you center an element horizontally in CSS?",
+      "options": [
+        "margin: 0 auto; (with a defined width)",
+        "align: center;",
+        "center: true;",
+        "position: center;"
+      ],
+      "correctAnswer": 0,
+      "explanation": "For block elements with a defined width, 'margin: 0 auto;' centers horizontally. For text, use 'text-align: center;'."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "What is the purpose of the <meta> tag?",
+      "options": [
+        "To provide metadata about the HTML document",
+        "To create metadata variables",
+        "To style meta information",
+        "To link meta files"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <meta> tag provides metadata like character encoding, viewport settings, descriptions, and keywords. It's placed in the <head> section."
+    }
+  ]
+}

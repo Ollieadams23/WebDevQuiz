@@ -1,0 +1,395 @@
+{
+  "category": "JavaScript Fundamentals",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "What is the correct way to declare a variable in JavaScript?",
+      "options": [
+        "var myVariable = 5;",
+        "variable myVariable = 5;",
+        "v myVariable = 5;",
+        "declare myVariable = 5;"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'var' keyword is used to declare variables in JavaScript. You can also use 'let' or 'const' in modern JavaScript (ES6+)."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Which method adds an element to the end of an array?",
+      "options": [
+        "push()",
+        "pop()",
+        "shift()",
+        "unshift()"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The push() method adds one or more elements to the end of an array and returns the new length of the array."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "What does '===' check in JavaScript?",
+      "options": [
+        "Value and type equality",
+        "Value equality only",
+        "Type equality only",
+        "Reference equality only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The === operator checks for strict equality, meaning both value and type must be the same. Unlike ==, it does not perform type coercion."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Which of these is NOT a primitive data type in JavaScript?",
+      "options": [
+        "Object",
+        "String",
+        "Number",
+        "Boolean"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Object is not a primitive data type. The primitive types are: String, Number, Boolean, Undefined, Null, Symbol, and BigInt."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "What will 'typeof null' return?",
+      "options": [
+        "object",
+        "null",
+        "undefined",
+        "number"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This is a known JavaScript quirk. 'typeof null' returns 'object', which is actually a bug in JavaScript that has been kept for backward compatibility."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "How do you write a comment in JavaScript?",
+      "options": [
+        "// This is a comment",
+        "<!-- This is a comment -->",
+        "# This is a comment",
+        "/* This is a comment"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Single-line comments in JavaScript use //. Multi-line comments use /* */. HTML comments (<!-- -->) and Python-style (#) comments don't work in JavaScript."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "What is the output of: console.log(2 + '2')?",
+      "options": [
+        "22",
+        "4",
+        "Error",
+        "undefined"
+      ],
+      "correctAnswer": 0,
+      "explanation": "JavaScript performs type coercion. When you add a number and a string, the number is converted to a string, resulting in string concatenation: '22'."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Which keyword is used to define a constant in JavaScript?",
+      "options": [
+        "const",
+        "constant",
+        "var",
+        "let"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'const' keyword is used to declare constants in JavaScript. Unlike 'var' and 'let', the value cannot be reassigned after declaration."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "What does the 'return' statement do in a function?",
+      "options": [
+        "Exits the function and optionally returns a value",
+        "Restarts the function",
+        "Declares a variable",
+        "Prints to console"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'return' statement exits the function immediately and can optionally pass a value back to the caller. Any code after 'return' will not execute."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Which method removes the last element from an array?",
+      "options": [
+        "pop()",
+        "push()",
+        "shift()",
+        "unshift()"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The pop() method removes the last element from an array and returns that element. This method changes the length of the array."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "What is the correct syntax for a for loop in JavaScript?",
+      "options": [
+        "for (let i = 0; i < 5; i++)",
+        "for i = 0 to 5",
+        "for (i = 0; i < 5)",
+        "loop (i = 0; i < 5; i++)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The correct syntax includes initialization (let i = 0), condition (i < 5), and increment (i++) separated by semicolons within parentheses."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "What does 'NaN' stand for in JavaScript?",
+      "options": [
+        "Not a Number",
+        "Null and Negative",
+        "New Array Number",
+        "Never a Null"
+      ],
+      "correctAnswer": 0,
+      "explanation": "NaN stands for 'Not a Number' and represents a value that is not a legal number. Interestingly, typeof NaN returns 'number'."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Which operator is used for strict inequality in JavaScript?",
+      "options": [
+        "!==",
+        "!=",
+        "<>",
+        "=/="
+      ],
+      "correctAnswer": 0,
+      "explanation": "The !== operator checks for strict inequality, comparing both value and type. The != operator only checks value with type coercion."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "What is the scope of a variable declared with 'let'?",
+      "options": [
+        "Block scope",
+        "Global scope",
+        "Function scope",
+        "Module scope"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Variables declared with 'let' have block scope, meaning they are only accessible within the block (curly braces) where they are defined."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "How do you create an empty array in JavaScript?",
+      "options": [
+        "let arr = [];",
+        "let arr = ();",
+        "let arr = {};",
+        "let arr = <>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Square brackets [] create an empty array. Curly braces {} create an empty object. Parentheses () are used for grouping or function calls."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "What will 'Boolean(0)' return?",
+      "options": [
+        "false",
+        "true",
+        "0",
+        "null"
+      ],
+      "correctAnswer": 0,
+      "explanation": "In JavaScript, 0 is a falsy value. When converted to a boolean using Boolean(), it returns false. Other falsy values include '', null, undefined, and NaN."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Which method converts a string to lowercase?",
+      "options": [
+        "toLowerCase()",
+        "toLower()",
+        "lower()",
+        "lowerCase()"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The toLowerCase() method converts all characters in a string to lowercase letters. There's also toUpperCase() for converting to uppercase."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "What is a callback function in JavaScript?",
+      "options": [
+        "A function passed as an argument to another function",
+        "A function that returns another function",
+        "A function that calls itself",
+        "A function that runs automatically"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A callback function is a function passed as an argument to another function, which is then executed inside that function. Callbacks are commonly used for asynchronous operations."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "What does the 'this' keyword refer to in JavaScript?",
+      "options": [
+        "The object that is executing the current function",
+        "The previous object",
+        "The global window object always",
+        "The parent function"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'this' keyword refers to the object that is currently executing the function. Its value depends on how the function is called (context)."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Which symbol is used for template literals in JavaScript?",
+      "options": [
+        "Backticks (`)",
+        "Single quotes (')",
+        "Double quotes (\")",
+        "Angle brackets (<>)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Template literals use backticks (`) and allow embedded expressions using ${expression}. They also support multi-line strings without escape characters."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "What is the purpose of JSON.parse()?",
+      "options": [
+        "Convert JSON string to JavaScript object",
+        "Convert JavaScript object to JSON string",
+        "Parse HTML",
+        "Parse CSS"
+      ],
+      "correctAnswer": 0,
+      "explanation": "JSON.parse() converts a JSON string into a JavaScript object. The opposite operation is JSON.stringify(), which converts an object to a JSON string."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "What does the 'break' statement do in a loop?",
+      "options": [
+        "Exits the loop completely",
+        "Skips the current iteration",
+        "Pauses the loop",
+        "Restarts the loop"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'break' statement exits the loop completely and continues execution after the loop. The 'continue' statement skips the current iteration but stays in the loop."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "Which method joins all elements of an array into a string?",
+      "options": [
+        "join()",
+        "concat()",
+        "merge()",
+        "combine()"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The join() method joins all elements of an array into a string using a specified separator. If no separator is provided, a comma is used by default."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "What is the output of: typeof []?",
+      "options": [
+        "object",
+        "array",
+        "list",
+        "collection"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Arrays in JavaScript are actually objects. The typeof operator returns 'object' for arrays. To check if something is an array, use Array.isArray()."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "Which method is used to find the length of a string?",
+      "options": [
+        ".length",
+        ".size()",
+        ".count()",
+        ".strlen()"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The .length property returns the number of characters in a string. It's a property, not a method, so it doesn't use parentheses."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "What is a closure in JavaScript?",
+      "options": [
+        "A function that has access to variables in its outer scope",
+        "A function that is closed to modifications",
+        "A function with no parameters",
+        "A function that returns nothing"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A closure is created when a function is defined inside another function, giving it access to the outer function's variables even after the outer function has finished executing."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Which method is used to round a number to the nearest integer?",
+      "options": [
+        "Math.round()",
+        "Math.floor()",
+        "Math.ceil()",
+        "Math.nearest()"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Math.round() rounds to the nearest integer. Math.floor() always rounds down, and Math.ceil() always rounds up."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "What does the 'await' keyword do in JavaScript?",
+      "options": [
+        "Pauses execution until a Promise is resolved",
+        "Creates a new Promise",
+        "Cancels a Promise",
+        "Delays execution by a fixed time"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'await' keyword pauses the execution of an async function until a Promise is resolved or rejected. It can only be used inside async functions."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "Which operator is used to check if a property exists in an object?",
+      "options": [
+        "in",
+        "exists",
+        "has",
+        "contains"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'in' operator returns true if the specified property exists in the object or its prototype chain. Example: 'name' in person."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "What is the default return value of a function that doesn't explicitly return anything?",
+      "options": [
+        "undefined",
+        "null",
+        "0",
+        "false"
+      ],
+      "correctAnswer": 0,
+      "explanation": "If a function doesn't have a return statement or has a return statement without a value, it returns 'undefined' by default."
+    }
+  ]
+}

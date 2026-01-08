@@ -1,0 +1,395 @@
+{
+  "category": "Git & GitHub",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "What is Git?",
+      "options": [
+        "A distributed version control system",
+        "A programming language",
+        "A text editor",
+        "A web hosting service"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Git is a distributed version control system that tracks changes in source code during software development. It was created by Linus Torvalds in 2005."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "What is the command to initialize a new Git repository?",
+      "options": [
+        "git init",
+        "git start",
+        "git create",
+        "git new"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The 'git init' command creates a new Git repository in the current directory, creating a .git subdirectory with repository metadata."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "What does GitHub provide?",
+      "options": [
+        "Cloud-based Git repository hosting",
+        "Free web hosting",
+        "Code compilation services",
+        "Database management"
+      ],
+      "correctAnswer": 0,
+      "explanation": "GitHub is a cloud-based hosting service for Git repositories, providing collaboration features, issue tracking, pull requests, and project management tools."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Which command stages all changes for commit?",
+      "options": [
+        "git add .",
+        "git stage all",
+        "git commit all",
+        "git save all"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git add .' stages all changes in the current directory and subdirectories. 'git add -A' stages all changes in the entire repository."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "What command creates a commit with a message?",
+      "options": [
+        "git commit -m 'message'",
+        "git save -m 'message'",
+        "git message 'message'",
+        "git create -m 'message'"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git commit -m \"message\"' creates a commit with the specified message. The -m flag allows you to add the message inline."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "What is a branch in Git?",
+      "options": [
+        "An independent line of development",
+        "A folder in the repository",
+        "A backup of the code",
+        "A type of commit"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A branch is an independent line of development that allows you to work on features or fixes without affecting the main codebase."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Which command creates a new branch?",
+      "options": [
+        "git branch branch-name",
+        "git new branch-name",
+        "git create branch-name",
+        "git make branch-name"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git branch branch-name' creates a new branch. To create and switch to it in one command, use 'git checkout -b branch-name'."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "What command switches to a different branch?",
+      "options": [
+        "git checkout branch-name",
+        "git switch branch-name",
+        "git change branch-name",
+        "git goto branch-name"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git checkout branch-name' switches to the specified branch. In newer Git versions, 'git switch branch-name' is also available."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "What does 'git pull' do?",
+      "options": [
+        "Fetches and merges changes from a remote repository",
+        "Removes files from the repository",
+        "Creates a new branch",
+        "Pushes changes to remote"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git pull' fetches changes from a remote repository and automatically merges them into your current branch. It's equivalent to 'git fetch' + 'git merge'."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "What does 'git push' do?",
+      "options": [
+        "Uploads local commits to a remote repository",
+        "Downloads changes from remote",
+        "Deletes the remote repository",
+        "Creates a backup"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git push' uploads your local commits to a remote repository, making your changes available to others."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "What is a merge conflict?",
+      "options": [
+        "When Git can't automatically merge changes from different branches",
+        "When Git crashes",
+        "When a file is deleted",
+        "When a commit fails"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A merge conflict occurs when Git can't automatically merge changes because the same lines were modified in different branches. Manual resolution is required."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "What command shows the status of your working directory?",
+      "options": [
+        "git status",
+        "git info",
+        "git state",
+        "git check"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git status' shows the state of the working directory and staging area, displaying which changes are staged, unstaged, or untracked."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "What is a pull request on GitHub?",
+      "options": [
+        "A request to merge changes from one branch to another",
+        "A request to download code",
+        "A request to create a repository",
+        "A request to delete a branch"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A pull request is a GitHub feature that allows you to propose changes and request that someone review and merge them into their branch."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "What does 'git clone' do?",
+      "options": [
+        "Creates a local copy of a remote repository",
+        "Duplicates a branch",
+        "Copies a file",
+        "Creates a backup"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git clone <url>' creates a complete local copy of a remote repository, including all files, branches, and commit history."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "What is the purpose of a .gitignore file?",
+      "options": [
+        "To specify files Git should not track",
+        "To list ignored users",
+        "To hide the repository",
+        "To delete files"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A .gitignore file specifies which files and directories Git should ignore and not track, such as build files, dependencies, or sensitive data."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "What command shows the commit history?",
+      "options": [
+        "git log",
+        "git history",
+        "git commits",
+        "git show"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git log' displays the commit history, showing commit hashes, authors, dates, and commit messages. Use 'git log --oneline' for a compact view."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "What is the main branch typically called in Git?",
+      "options": [
+        "main or master",
+        "primary",
+        "root",
+        "default"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The default branch is traditionally called 'master', but many projects now use 'main'. GitHub creates 'main' by default for new repositories."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "What does 'git diff' show?",
+      "options": [
+        "Changes between commits, branches, or working directory",
+        "The difference in file sizes",
+        "Different branches only",
+        "Deleted files"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git diff' shows changes between commits, commit and working tree, or between two branches. It displays line-by-line differences."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "What command removes a file from the staging area?",
+      "options": [
+        "git reset HEAD filename",
+        "git remove filename",
+        "git unstage filename",
+        "git delete filename"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git reset HEAD filename' removes a file from the staging area while keeping the changes in your working directory. In newer Git, 'git restore --staged filename' works too."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "What is a fork on GitHub?",
+      "options": [
+        "A personal copy of someone else's repository",
+        "A branch in your repository",
+        "A type of merge",
+        "A way to delete repositories"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A fork is a personal copy of another user's repository on GitHub, allowing you to freely experiment with changes without affecting the original project."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "What does 'git merge' do?",
+      "options": [
+        "Combines changes from one branch into another",
+        "Deletes a branch",
+        "Creates a new branch",
+        "Uploads changes to remote"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git merge branch-name' combines the changes from the specified branch into your current branch, creating a merge commit."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "What is a remote in Git?",
+      "options": [
+        "A version of your repository hosted elsewhere",
+        "A deleted branch",
+        "A backup file",
+        "A type of commit"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A remote is a version of your repository hosted on another server (like GitHub). 'origin' is the default name for the primary remote repository."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "What command adds a remote repository?",
+      "options": [
+        "git remote add name url",
+        "git add remote url",
+        "git connect url",
+        "git link url"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git remote add <name> <url>' adds a new remote repository. Typically: git remote add origin https://github.com/user/repo.git"
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "What does 'git stash' do?",
+      "options": [
+        "Temporarily saves changes without committing",
+        "Permanently deletes changes",
+        "Creates a backup",
+        "Merges branches"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git stash' temporarily saves your uncommitted changes and reverts to a clean working directory. Use 'git stash pop' to restore them."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "What is GitHub Pages?",
+      "options": [
+        "A service to host static websites from GitHub repositories",
+        "A documentation tool",
+        "A page numbering system",
+        "A file viewer"
+      ],
+      "correctAnswer": 0,
+      "explanation": "GitHub Pages is a free hosting service that publishes static websites directly from a GitHub repository, commonly used for project documentation and portfolios."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "What does 'git rebase' do?",
+      "options": [
+        "Reapplies commits on top of another base commit",
+        "Deletes the repository",
+        "Creates a new branch",
+        "Backs up the database"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git rebase' moves or combines commits to a new base commit, creating a linear history. It's an alternative to merging that rewrites commit history."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "What command deletes a branch?",
+      "options": [
+        "git branch -d branch-name",
+        "git delete branch-name",
+        "git remove branch-name",
+        "git drop branch-name"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git branch -d branch-name' safely deletes a merged branch. Use '-D' (capital) to force delete an unmerged branch."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "What are GitHub Issues used for?",
+      "options": [
+        "Tracking bugs, enhancements, and tasks",
+        "Storing code files",
+        "Creating branches",
+        "Hosting websites"
+      ],
+      "correctAnswer": 0,
+      "explanation": "GitHub Issues provide a way to track bugs, feature requests, tasks, and other project-related discussions in a centralized location."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "What does 'git fetch' do?",
+      "options": [
+        "Downloads changes from remote without merging",
+        "Uploads changes to remote",
+        "Deletes remote branches",
+        "Creates a new repository"
+      ],
+      "correctAnswer": 0,
+      "explanation": "'git fetch' downloads changes from a remote repository but doesn't merge them into your working branch, allowing you to review before merging."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "What is a commit hash?",
+      "options": [
+        "A unique identifier for each commit",
+        "A password for the repository",
+        "A type of merge conflict",
+        "A branch name"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A commit hash (or SHA) is a unique 40-character identifier generated for each commit, allowing you to reference specific commits in Git's history."
+    }
+  ]
+}

@@ -42,6 +42,7 @@
 - URL parameters for category and question count (visible, bookmarkable)
 - sessionStorage for quiz answers/progress (temporary, clears after session)
 - localStorage only for user preferences like dark mode
+- home and how to page will be seperate html but the quiz page will be SPA
 
 #### Wireframes:
 - Tool: Figma
