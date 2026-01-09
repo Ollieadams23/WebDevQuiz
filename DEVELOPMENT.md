@@ -293,10 +293,40 @@
 - JavaScript Validation: [Pass/Fail] - Date:
 
 #### Major Bugs Found:
-1. **Bug Description:**
-   - **Impact:**
-   - **Fix:**
-   - **Date Fixed:**
+1. **Bug Description:** HTML tags in JSON files displaying as actual HTML elements causing answer options to disappear
+   - **Impact:** Quiz questions with HTML code examples (like `<h1>`, `<div>`, `<a>`) were rendering as HTML instead of text, making answer options invisible or incomplete. Affected 70+ instances across htmlcss.json and 2 in gitgithub.json.
+   - **Fix:** Escaped all HTML tags in JSON files by replacing `<` with `&lt;` and `>` with `&gt;`. Used Python script to bulk process htmlcss.json (16 questions affected), and manually fixed 2 command placeholders in gitgithub.json (git clone &lt;url&gt; and git remote add &lt;name&gt; &lt;url&gt;). This ensures HTML tags display as text when inserted into DOM via jQuery.
+   - **Date Fixed:** January 9, 2026
+
+2. **Bug Description:** CSS file loaded with incorrect HTML tag
+   - **Impact:** quizstyle.css was being loaded with `<script>` tag instead of `<link rel="stylesheet">` tag, causing quiz-specific styles not to apply.
+   - **Fix:** Changed `<script src="assets/css/quizstyle.css">` to `<link rel="stylesheet" href="assets/css/quizstyle.css">` in quiz.html.
+   - **Date Fixed:** January 9, 2026
+
+3. **Bug Description:** Dark mode toggle not working on quiz page
+   - **Impact:** Clicking the dark mode toggle button on quiz.html had no effect due to duplicate script.js loading causing event handler conflicts.
+   - **Fix:** Removed duplicate script.js reference from quiz.html, kept only quiz.js which has its own dark mode toggle implementation.
+   - **Date Fixed:** January 9, 2026
+
+4. **Bug Description:** Answer button labels not staying on left side
+   - **Impact:** Answer labels (A, B, C, D) were wrapping or not aligning properly with answer text, making the quiz interface look inconsistent.
+   - **Fix:** Implemented flexbox layout with `.answer-label` set to `flex-shrink: 0` (prevents shrinking) and `.answer-text` set to `flex: 1` (fills remaining space), ensuring labels stay fixed on the left.
+   - **Date Fixed:** January 9, 2026
+
+5. **Bug Description:** CSS selected class not applying to answer buttons
+   - **Impact:** When users clicked answer buttons, the selected state styling wasn't visible, making it unclear which answer was chosen.
+   - **Fix:** Changed CSS selector from `.answer-btn .selected` (child element) to `.answer-btn.selected` (same element with both classes) to properly target selected buttons.
+   - **Date Fixed:** January 9, 2026
+
+6. **Bug Description:** Topic links calling undefined function
+   - **Impact:** Clicking topic links on homepage threw JavaScript error "setURLParameter is not defined", preventing navigation to quiz page.
+   - **Fix:** Replaced non-existent setURLParameter() function calls with direct `window.location.href` assignment using URL parameters (e.g., `quiz.html?category=javascript`).
+   - **Date Fixed:** January 9, 2026
+
+7. **Bug Description:** Responsive media query not overriding answer options width
+   - **Impact:** On mobile devices, answer options remained at 500px width instead of responsive 300px, causing horizontal scrolling.
+   - **Fix:** Moved media query from styles.css to quizstyle.css which loads later, ensuring proper CSS cascade and override of `.answer-options` width.
+   - **Date Fixed:** January 9, 2026
 
 #### Browser Testing Results:
 - Chrome: [Status]
