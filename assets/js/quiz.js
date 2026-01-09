@@ -122,13 +122,11 @@ $(document).ready(function() {
             $('#prev-btn').prop('disabled', false);
         }
 
-        // Next/Submit buttons
+        // Hide next button on last question
         if (currentQuestionIndex === questionCount - 1) {
             $('#next-btn').hide();
-            $('#submit-btn').show();
         } else {
             $('#next-btn').show();
-            $('#submit-btn').hide();
         }
 
         // Enable next button only if current question is answered
@@ -156,6 +154,14 @@ $(document).ready(function() {
             
             // Enable next button
             updateNavigationButtons();
+            
+            // Auto-submit if last question
+            if (currentQuestionIndex === questionCount - 1) {
+                // Small delay for visual feedback
+                setTimeout(function() {
+                    submitQuiz();
+                }, 500);
+            }
         });
 
         // Previous button
@@ -171,39 +177,6 @@ $(document).ready(function() {
                 displayQuestion(currentQuestionIndex + 1);
             }
         });
-
-        // Submit button
-        $('#submit-btn').click(function() {
-            showSubmitModal();
-        });
-
-        // Modal buttons
-        $('#confirm-submit').click(function() {
-            submitQuiz();
-        });
-
-        $('#cancel-submit').click(function() {
-            hideSubmitModal();
-        });
-    }
-
-    // Show submit confirmation modal
-    function showSubmitModal() {
-        const unansweredCount = userAnswers.filter(answer => answer === null).length;
-        
-        if (unansweredCount > 0) {
-            $('#unanswered-count').text(unansweredCount);
-            $('#unanswered-warning').show();
-        } else {
-            $('#unanswered-warning').hide();
-        }
-
-        $('#submit-modal').fadeIn();
-    }
-
-    // Hide submit modal
-    function hideSubmitModal() {
-        $('#submit-modal').fadeOut();
     }
 
     // Submit quiz and calculate results

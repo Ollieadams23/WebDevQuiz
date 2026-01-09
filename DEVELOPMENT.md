@@ -367,18 +367,56 @@
    - **Date added:**
 
 ### Libraries/Frameworks (if any)
-1. **Name:**
-   - **Version:**
-   - **Purpose:**
-   - **URL:**
+1. **Name:** jQuery
+   - **Version:** 3.7.1
+   - **Purpose:** DOM manipulation, event handling, AJAX for JSON loading
+   - **URL:** https://jquery.com/
+
+2. **Name:** Bootstrap
+   - **Version:** 5.3.8
+   - **Purpose:** Responsive design framework and UI components
+   - **URL:** https://getbootstrap.com/
 
 ### Tutorials Referenced
-1. **Tutorial:** 
+1. **Tutorial:** HTML5 Semantic Elements
    - **URL:** https://www.w3schools.com/html/html5_semantic_elements.asp
-   - **What was learned:** semantic tags and headings
+   - **What was learned:** Semantic tags and proper heading hierarchy
+   - **Date referenced:** January 6-7, 2026
 
-   -**url:** https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/set
-   - **what was learned:** URLSearchParams for passing the catagorie to the quiz
+2. **Tutorial:** URLSearchParams API
+   - **URL:** https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+   - **What was learned:** URLSearchParams for passing category parameter to quiz page
+   - **Date referenced:** January 8, 2026
+
+3. **Tutorial:** jQuery $.getJSON()
+   - **URL:** https://api.jquery.com/jquery.getjson/
+   - **What was learned:** Loading and parsing JSON question files with AJAX
+   - **Date referenced:** January 8, 2026
+
+4. **Tutorial:** CSS Variables (Custom Properties)
+   - **URL:** https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+   - **What was learned:** Implementing theme variables for light/dark mode
+   - **Date referenced:** January 7, 2026
+
+5. **Tutorial:** localStorage and sessionStorage
+   - **URL:** https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+   - **What was learned:** Persisting user preferences (dark mode, question count) and passing quiz results
+   - **Date referenced:** January 7-8, 2026
+
+6. **Tutorial:** Array.sort() for Randomization
+   - **URL:** https://www.w3schools.com/js/js_array_sort.asp
+   - **What was learned:** Shuffling array elements for random question selection
+   - **Date referenced:** January 8, 2026
+
+7. **Tutorial:** Flexbox Layout
+   - **URL:** https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+   - **What was learned:** Creating responsive layouts and aligning answer buttons
+   - **Date referenced:** January 9, 2026
+
+8. **Tutorial:** WCAG Color Contrast Guidelines
+   - **URL:** https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html
+   - **What was learned:** Ensuring AAA compliance for accessibility
+   - **Date referenced:** January 6, 2026
    
 
 ### Images/Assets
