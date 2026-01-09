@@ -10,6 +10,7 @@
   --color-secondary: #238636;      /* GitHub Green - Success */
   --color-accent: #DA3633;         /* GitHub Red - Errors */
   --color-background: #FFFFFF;     /* White - Main background */
+  --color-background1: #FFFFFF;     /* White - Main background */
   --color-surface: #F6F8FA;        /* Light gray - Cards */
   --color-text: #24292F;           /* GitHub Gray - Body text */
   --color-text-secondary: #57606A; /* Muted gray - Secondary text */
@@ -22,6 +23,7 @@
 
 /* Dark theme */
 [data-theme="dark"] {
+  --color-background1: #58A6FF;     /* Dark Slate - Main background */
   --color-primary: #58A6FF;        /* GitHub Blue */
   --color-secondary: #3FB950;      /* Bright Green */
   --color-accent: #F85149;         /* Bright Red */
@@ -273,6 +275,8 @@ a:focus {
   #light-dark-text{
     display: none;
   }
+
+  
 }
 
 #amount10.active{
@@ -316,6 +320,183 @@ a:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.8s ease;
     font-size: 1.5rem;
-
 }
+
+/* ===================================
+   RESULTS PAGE STYLES
+   =================================== */
+
+.score-summary {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.score-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 8px solid var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.score-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-percentage {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+.score-label {
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.score-details {
+    margin-top: 1rem;
+}
+
+.score-info {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.correct-count {
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.category-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 1rem;
+}
+
+.performance-message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border-radius: 8px;
+}
+
+.performance-message p {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.answer-review {
+    margin-top: 2rem;
+}
+
+.answer-review h3 {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+#review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.review-item {
+    padding: 1.5rem;
+    background-color: var(--color-background);
+    border-radius: 10px;
+    border-left: 5px solid var(--color-secondary);
+}
+
+.review-item.incorrect {
+    border-left-color: var(--color-accent);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.question-number {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+}
+
+.result-icon {
+    font-size: 1.5rem;
+}
+
+.review-item.correct .result-icon {
+    color: var(--color-secondary);
+}
+
+.review-item.incorrect .result-icon {
+    color: var(--color-accent);
+}
+
+.review-question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.review-answers {
+    margin: 1rem 0;
+}
+
+.user-answer,
+.correct-answer {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.user-answer {
+    background-color: var(--color-background-alt);
+}
+
+.correct-answer {
+    background-color: var(--color-secondary-light);
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.explanation {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--color-background-alt);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.results-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+.results-actions .btn {
+    min-width: 150px;
+}
+    
     

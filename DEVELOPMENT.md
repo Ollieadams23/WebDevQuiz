@@ -173,31 +173,91 @@
 ---
 
 ### Phase 4: JavaScript Development
-**Date Started:**  
-**Date Completed:**
+**Date Started:** January 7, 2026
+**Date Completed:** January 8, 2026
 
 #### jQuery Implementation:
-- jQuery Version:
-- CDN Source:
-- Date Added:
-- Used for: (DOM manipulation, event handling, animations, etc.)
+- jQuery Version: 3.7.1
+- CDN Source: https://code.jquery.com/jquery-3.7.1.min.js
+- Date Added: January 7, 2026
+- Used for: DOM manipulation, event handling, AJAX for JSON loading, dynamic content updates
 
 #### Quiz Structure:
-- Total questions created:
-- Question types included:
-- Randomization approach:
+- Total questions created: 120 (30 per category)
+- Question types included: Multiple choice (4 options)
+- Randomization approach: Array shuffling using sort() with random comparison
+- Data format: JSON files stored in assets/questions/
+- Question selection: Random 10 or 20 from 30 available per category
+
+#### Quiz Logic Implementation: January 8, 2026
+**File:** `assets/js/quiz.js`
+
+**Key Features:**
+
+1. **Initialization & Data Loading:**
+   - Gets category from URL parameter (`?category=javascript`)
+   - Retrieves question count from localStorage (10 or 20)
+   - Loads appropriate JSON file using $.getJSON()
+   - Maps category names to JSON file paths
+   - Error handling with fallback to homepage
+
+2. **Question Management:**
+   - Randomizes all 30 questions using array shuffle
+   - Selects requested number (10 or 20 questions)
+   - Single Page Application (SPA) behavior - no page reloads
+   - Displays one question at a time
+   - Dynamically generates answer buttons (A, B, C, D)
+
+3. **User Interaction:**
+   - Click answer buttons to select (visual feedback with 'selected' class)
+   - Previous/Next navigation buttons
+   - Tracks all answers in array
+   - Disables Next button until answer selected
+   - Shows/hides Submit button on last question
+
+4. **Progress Tracking:**
+   - Progress bar showing completion percentage
+   - Question counter (e.g., "Question 3 of 10")
+   - Visual progress fill animation
+   - Maintains user answers when navigating back/forward
+
+5. **Submit Modal:**
+   - Confirmation dialog before submitting
+   - Counts and displays unanswered questions
+   - Warning message for incomplete quizzes
+   - Cancel option to return to quiz
+
+6. **Results Calculation:**
+   - Compares user answers to correct answers
+   - Calculates score and percentage
+   - Stores complete results in sessionStorage
+   - Includes questions, user answers, correct answers, explanations
+   - Redirects to results page
+
+7. **Dark Mode Integration:**
+   - Applies saved theme on page load
+   - Toggle button works independently
+   - Theme persists across navigation
 
 #### Core Functions Implemented:
-1. **Function Name:** `shuffleQuestions()`
-   - **Purpose:** Randomize question order
-   - **Date Implemented:**
+1. **Function Name:** `initQuiz()`
+   - **Purpose:** Initialize quiz, get parameters, load JSON data
+   - **Date Implemented:** January 8, 2026
 
-2. **Function Name:** `displayQuestion()`
-   - **Purpose:** Show current question and options
-   - **Date Implemented:**
+2. **Function Name:** `startQuiz()`
+   - **Purpose:** Randomize and select questions, initialize answers array
+   - **Date Implemented:** January 8, 2026
 
-3. **Function Name:** `checkAnswer()`
-   - **Purpose:** Validate user answer
+3. **Function Name:** `displayQuestion(index)`
+   - **Purpose:** Show current question with options and progress
+   - **Date Implemented:** January 8, 2026
+
+4. **Function Name:** `updateNavigationButtons()`
+   - **Purpose:** Enable/disable navigation based on state
+   - **Date Implemented:** January 8, 2026
+
+5. **Function Name:** `submitQuiz()`
+   - **Purpose:** Calculate score and pass results to results page
    - **Date Implemented:**
 
 4. **Function Name:** `calculateScore()`
@@ -286,6 +346,9 @@
 1. **Tutorial:** 
    - **URL:** https://www.w3schools.com/html/html5_semantic_elements.asp
    - **What was learned:** semantic tags and headings
+
+   -**url:** https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/set
+   - **what was learned:** URLSearchParams for passing the catagorie to the quiz
    
 
 ### Images/Assets

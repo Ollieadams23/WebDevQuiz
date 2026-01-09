@@ -50,17 +50,17 @@ $('.darktoggle').click(function() {
 
 //topic links
 $('#jsfund').click(function() {
-    window.location.href = '/jsfund.html';
+    window.location.href = 'quiz.html?category=javascript';
 });
 
 $('#uiux').click(function() {
-    window.location.href = '/uiux.html';
+    window.location.href = 'quiz.html?category=uiux';
 });
 
 $('#htmlcss').click(function() {
-    window.location.href = '/htmlcss.html';
+    window.location.href = 'quiz.html?category=htmlcss';
 });
 
 $('#gitgithub').click(function() {
-    window.location.href = '/gitgithub.html';
+    window.location.href = 'quiz.html?category=gitgithub';
 });

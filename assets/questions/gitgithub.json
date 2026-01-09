@@ -181,7 +181,7 @@
         "Creates a backup"
       ],
       "correctAnswer": 0,
-      "explanation": "'git clone <url>' creates a complete local copy of a remote repository, including all files, branches, and commit history."
+      "explanation": "'git clone &lt;url&gt;' creates a complete local copy of a remote repository, including all files, branches, and commit history."
     },
     {
       "id": 15,
@@ -298,7 +298,7 @@
         "git link url"
       ],
       "correctAnswer": 0,
-      "explanation": "'git remote add <name> <url>' adds a new remote repository. Typically: git remote add origin https://github.com/user/repo.git"
+      "explanation": "'git remote add &lt;name&gt; &lt;url&gt;' adds a new remote repository. Typically: git remote add origin https://github.com/user/repo.git"
     },
     {
       "id": 24,
