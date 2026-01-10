@@ -328,6 +328,11 @@
    - **Fix:** Moved media query from styles.css to quizstyle.css which loads later, ensuring proper CSS cascade and override of `.answer-options` width.
    - **Date Fixed:** January 9, 2026
 
+8. **Bug Description:** Topic links hover text color not changing to white
+   - **Impact:** When hovering over topic links, the text color remained dark gray instead of turning white, making it difficult to read against the dark primary background color. CSS variable `var(--color-text)` was not providing sufficient contrast on hover.
+   - **Fix:** Attempted to use CSS variables (`var(--color-background)` and `var(--color-background1)`) but they were not overriding properly due to specificity or browser caching issues. Solution was to use absolute color value `#FFFFFF` with `!important` flag: `color: #FFFFFF !important;` in the `.topic-links a:hover` selector. This ensures white text displays on the dark background regardless of theme.
+   - **Date Fixed:** January 10, 2026
+
 #### Browser Testing Results:
 - Chrome: [Status]
 - Firefox: [Status]

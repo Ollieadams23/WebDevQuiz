@@ -16,6 +16,7 @@
   --color-text-secondary: #57606A; /* Muted gray - Secondary text */
   --color-border: #D0D7DE;         /* Light border */
   
+  
   /* Semantic colors */
   --color-success: #238636;
   --color-error: #DA3633;
@@ -310,16 +311,17 @@ a:focus {
     border: 2px solid var(--color-primary);
     border-radius: 10px;
     font-weight: 600;
+    
 }
 
 .topic-links a:hover{
     cursor: pointer;
     background-color: var(--color-primary);
-    color: var(--color-background);
+    color: white!important;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.8s ease;
     font-size: 1.5rem;
+    transition: all 0.3s ease;
 }
 
 /* ===================================
