@@ -61,6 +61,22 @@ $(document).ready(function() {
         const shuffled = allQuestions.sort(() => 0.5 - Math.random());
         selectedQuestions = shuffled.slice(0, questionCount);
 
+        // Shuffle answer options for each question
+        selectedQuestions.forEach(question => {
+            // Create array of option objects with original index
+            const optionsWithIndex = question.options.map((option, index) => ({
+                text: option,
+                isCorrect: index === question.correctAnswer
+            }));
+
+            // Shuffle the options
+            const shuffledOptions = optionsWithIndex.sort(() => 0.5 - Math.random());
+
+            // Update question with shuffled options and new correct answer index
+            question.options = shuffledOptions.map(opt => opt.text);
+            question.correctAnswer = shuffledOptions.findIndex(opt => opt.isCorrect);
+        });
+
         // Initialize user answers array
         userAnswers = new Array(questionCount).fill(null);
 

@@ -333,6 +333,11 @@
    - **Fix:** Attempted to use CSS variables (`var(--color-background)` and `var(--color-background1)`) but they were not overriding properly due to specificity or browser caching issues. Solution was to use absolute color value `#FFFFFF` with `!important` flag: `color: #FFFFFF !important;` in the `.topic-links a:hover` selector. This ensures white text displays on the dark background regardless of theme.
    - **Date Fixed:** January 10, 2026
 
+9. **Bug Description:** Correct answer always appearing in position A
+   - **Impact:** All questions displayed answer options in their original order from the JSON file, meaning the correct answer was always in position A. This made the quiz predictable and eliminated the challenge, as users could simply select A for every question.
+   - **Fix:** Implemented answer shuffling in the `startQuiz()` function. Created an array of option objects that pair each answer text with a boolean indicating if it's correct, shuffled this array using `sort(() => 0.5 - Math.random())`, then updated the question's options array and recalculated the `correctAnswer` index using `findIndex()` to find where the correct answer moved to after shuffling. This ensures correct answers appear randomly at positions A, B, C, or D.
+   - **Date Fixed:** January 10, 2026
+
 #### Browser Testing Results:
 - Chrome: [Status]
 - Firefox: [Status]
