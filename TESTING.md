@@ -82,13 +82,17 @@ From line 53, column 25; to line 53, column 40
             From line 54, column 25; to line 54, column 38
           <a id="uiux" >UI/UX  -->
 
+          <!-- Error: The heading h4 (with computed level 4) follows the heading h1 (with computed level 1), skipping 2 heading levels.
+From line 28, column 13; to line 28, column 16
+          <h4>This q -->
+
 - **Warnings Found:**
 - **Fixes Applied:**
  --removed h5 tag and replace with span, added fontsize 1.5rem to darktoggle class
 --changed p tag to H4 tag
 --added space after id tag
 --added li tag to topic-links
-
+-- changed H4 to H2 tag
 - **Re-test Result:**
 - **Screenshot:** 
 
