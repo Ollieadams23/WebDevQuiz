@@ -16,22 +16,62 @@
 **Validator URL:** https://validator.w3.org/
 
 #### index.html
-- **Test Date:**
-- **Result:** 
+- **Test Date:**11/1/2026
+- **Result:** Passed
 - **Errors Found:**
+
+<!-- Error: Element h5 not allowed as child of element button in this context. (Suppressing further errors from this subtree.)
+From line 17, column 13; to line 17, column 37
+          <h5 id="light-dark-text">Dark/L -->
+
+
+<!-- Error: No space between attributes.
+At line 43, column 46
+n id="amount20"class="btn btn- -->
+
+<!-- Error: Element a not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)
+From line 53, column 25; to line 53, column 40
+          <a id="jsfund" >JavaSc -->
+
+          <!-- Error: Element a not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)
+            From line 54, column 25; to line 54, column 38
+          <a id="uiux" >UI/UX  -->
+
+          <!-- Error: The heading h4 (with computed level 4) follows the heading h1 (with computed level 1), skipping 2 heading levels.
+From line 28, column 13; to line 28, column 16
+          <h4>This q -->
+
 - **Warnings Found:**
+<!-- Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.
+
+From line 27, column 9; to line 27, column 27
+       <section id="home">↩      -->
+
 - **Fixes Applied:**
+ --removed h5 tag and replace with span, added fontsize 1.5rem to darktoggle class
+--changed p tag to H4 tag
+--added space after id tag
+--added li tag to topic-links
+-- changed H4 to H2 tag
+
 - **Re-test Result:**
 - **Screenshot:** 
 
 #### how-to.html
-- **Test Date:**
-- **Result:** 
+- **Test Date:**11/1/2026
+- **Result:** passed
 - **Errors Found:**
+<!-- Error: Element h5 not allowed as child of element button in this context. (Suppressing further errors from this subtree.)
+From line 16, column 13; to line 16, column 37
+          <h5 id="light-dark-text">Dark/L -->
+
 - **Warnings Found:**
 - **Fixes Applied:**
+--changed h5 to span
+
 - **Re-test Result:**
 - **Screenshot:** 
+![alt text](image.png)
 
 #### quiz.html
 - **Test Date:**
@@ -61,38 +101,9 @@
 - **Result:** 
 - **Errors Found:**
 
-<!-- Error: Element h5 not allowed as child of element button in this context. (Suppressing further errors from this subtree.)
-From line 17, column 13; to line 17, column 37
-          <h5 id="light-dark-text">Dark/L -->
-
-<!-- Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.
-
-From line 27, column 9; to line 27, column 27
-       <section id="home">↩      -->
-
-<!-- Error: No space between attributes.
-At line 43, column 46
-n id="amount20"class="btn btn- -->
-
-<!-- Error: Element a not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)
-From line 53, column 25; to line 53, column 40
-          <a id="jsfund" >JavaSc -->
-
-          <!-- Error: Element a not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)
-            From line 54, column 25; to line 54, column 38
-          <a id="uiux" >UI/UX  -->
-
-          <!-- Error: The heading h4 (with computed level 4) follows the heading h1 (with computed level 1), skipping 2 heading levels.
-From line 28, column 13; to line 28, column 16
-          <h4>This q -->
 
 - **Warnings Found:**
 - **Fixes Applied:**
- --removed h5 tag and replace with span, added fontsize 1.5rem to darktoggle class
---changed p tag to H4 tag
---added space after id tag
---added li tag to topic-links
--- changed H4 to H2 tag
 - **Re-test Result:**
 - **Screenshot:** 
 
