@@ -1,3 +1,5 @@
+
+/* jshint esversion: 6 */
 // Results Page Logic - results.js
 $(document).ready(function() {
     // Apply dark mode if active

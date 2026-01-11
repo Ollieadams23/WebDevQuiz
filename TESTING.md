@@ -74,8 +74,8 @@ From line 16, column 13; to line 16, column 37
 ![alt text](image.png)
 
 #### quiz.html
-- **Test Date:**
-- **Result:** 
+- **Test Date:**11/1/2026
+- **Result:** passed
 - **Errors Found:**
 - **Warnings Found:**
 - **Fixes Applied:**
@@ -83,8 +83,8 @@ From line 16, column 13; to line 16, column 37
 - **Screenshot:** 
 
 #### results.html
-- **Test Date:**
-- **Result:** 
+- **Test Date:**11/1/2026
+- **Result:** passed
 - **Errors Found:**
 - **Warnings Found:**
 - **Fixes Applied:**
@@ -97,8 +97,8 @@ From line 16, column 13; to line 16, column 37
 **Validator URL:** http://jigsaw.w3.org/css-validator/
 
 #### style.css
-- **Test Date:**
-- **Result:** 
+- **Test Date:**11/1/2026
+- **Result:** passed
 - **Errors Found:**
 
 
@@ -113,13 +113,33 @@ From line 16, column 13; to line 16, column 37
 **Validator URL:** https://jshint.com/
 
 #### script.js
-- **Test Date:**
-- **Result:** 
+- **Test Date:**11/1/2026
+- **Result:** 0 errors
 - **Warnings Found:**
 - **Significant Issues:**
 - **Fixes Applied:**
 - **Re-test Result:**
 - **Screenshot:** 
+
+#### results.js
+- **Test Date:**11/1/2026
+- **Result:** 0 errors
+- **Warnings Found:**
+- **Significant Issues:**
+- **Fixes Applied:**
+- **Re-test Result:**
+- **Screenshot:** 
+
+#### quiz.js
+- **Test Date:**11/1/2026
+- **Result:** 0 errors
+- **Warnings Found:**
+- **Significant Issues:**
+- **Fixes Applied:**
+- **Re-test Result:**
+- **Screenshot:** 
+
+
 
 ---
 

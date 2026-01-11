@@ -1,4 +1,6 @@
 
+/* jshint esversion: 6 */
+
 $(document).ready(function() {
     // Check for dark mode preference
     if (localStorage.getItem('darkMode') === 'dark') {
