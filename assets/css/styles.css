@@ -162,6 +162,7 @@ section h2 {
 }
 
 .darktoggle{
+    font-size: 1.5rem;
     position: absolute;
     left: 1rem;
     display: flex;
@@ -299,9 +300,15 @@ a:focus {
     align-items: center;
     gap: 2rem;
     margin-top: 2rem;
+    list-style: none;
+    padding: 0;
 }
 
-.topic-links a{
+.topic-links li{
+    list-style: none;
+}
+
+.topic-links li a{
     text-align: center;
     color: var(--color-text);
     text-decoration: none;
@@ -314,7 +321,7 @@ a:focus {
     
 }
 
-.topic-links a:hover{
+.topic-links li a:hover{
     cursor: pointer;
     background-color: var(--color-primary);
     color: white!important;

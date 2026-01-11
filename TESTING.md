@@ -60,8 +60,35 @@
 - **Test Date:**
 - **Result:** 
 - **Errors Found:**
+
+<!-- Error: Element h5 not allowed as child of element button in this context. (Suppressing further errors from this subtree.)
+From line 17, column 13; to line 17, column 37
+          <h5 id="light-dark-text">Dark/L -->
+
+<!-- Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections, or else use a div element instead for any cases where no heading is needed.
+
+From line 27, column 9; to line 27, column 27
+       <section id="home">↩      -->
+
+<!-- Error: No space between attributes.
+At line 43, column 46
+n id="amount20"class="btn btn- -->
+
+<!-- Error: Element a not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)
+From line 53, column 25; to line 53, column 40
+          <a id="jsfund" >JavaSc -->
+
+          <!-- Error: Element a not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)
+            From line 54, column 25; to line 54, column 38
+          <a id="uiux" >UI/UX  -->
+
 - **Warnings Found:**
 - **Fixes Applied:**
+ --removed h5 tag and replace with span, added fontsize 1.5rem to darktoggle class
+--changed p tag to H4 tag
+--added space after id tag
+--added li tag to topic-links
+
 - **Re-test Result:**
 - **Screenshot:** 
 
