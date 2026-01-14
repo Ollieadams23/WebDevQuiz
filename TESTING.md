@@ -148,30 +148,30 @@ From line 16, column 13; to line 16, column 37
 ### Navigation Testing
 | Test Case | Expected Result | Actual Result | Pass/Fail |
 |-----------|----------------|---------------|-----------|
-| Home link from all pages | Returns to index.html | | |
-| How To link from all pages | Opens how-to.html | | |
-| Start Quiz button | Opens quiz.html | | |
-| Next button on quiz | Advances to next question | | |
-| Previous button on quiz | Returns to previous question | | |
-| Submit button | Displays results page | | |
-| Retake Quiz button | Resets and returns to quiz | | |
+| Home link from all pages | Returns to index.html | Passed | |
+| How To link on main page | Opens how-to.html | Passed| |
+| Start Quiz button | Opens quiz.html |Passed | |
+| Next button on quiz | Advances to next question | Passed| |
+| Previous button on quiz | Returns to previous question |Passed | |
+| Submit button | Displays results page |Passed | |
+| Retake Quiz button | Resets and returns to quiz | Passed| |
 
 ### Quiz Functionality Testing
 | Test Case | Expected Result | Actual Result | Pass/Fail |
 |-----------|----------------|---------------|-----------|
-| Questions load randomly | Different order each time | | |
-| Answer selection works | Visual feedback on selection | | |
-| Can select only one answer | Previous selection clears | | |
-| Progress indicator updates | Shows current question number | | |
-| Score calculation accurate | Correct score displayed | | |
-| Results show correct/incorrect | Matches user answers | | |
-| Explanations display | Shows for each question | | |
+| Questions load randomly | Different order each time | Passed| |
+| Answer selection works | Visual feedback on selection | Passed| |
+| Can select only one answer | Previous selection clears | Passed| |
+| Progress indicator updates | Shows current question number | Passed| |
+| Score calculation accurate | Correct score displayed |Passed | |
+| Results show correct/incorrect | Matches user answers | Passed| |
+| Explanations display | Shows for each question |Passed | |
 
 ### Form Validation (if applicable)
 | Test Case | Expected Result | Actual Result | Pass/Fail |
 |-----------|----------------|---------------|-----------|
-| Empty answer submission | Validation message shown | | |
-| Fill-in-blank accepts text | User can type answer | | |
+| Empty answer submission | Validation message shown |Fail | |
+| Fill-in-blank accepts text | User can type answer | Passed| |
 
 ---
 

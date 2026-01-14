@@ -99,6 +99,9 @@ $(document).ready(function() {
         currentQuestionIndex = index;
         const question = selectedQuestions[index];
 
+        // Hide validation error
+        $('#validation-error').hide();
+
         // Update progress
         $('#current-question').text(index + 1);
         const progressPercent = ((index + 1) / questionCount) * 100;
@@ -189,15 +192,8 @@ $(document).ready(function() {
             $('#next-btn').show();
         }
 
-        // Enable next button only if current question is answered
-        const answer = userAnswers[currentQuestionIndex];
-        const isAnswered = answer !== null && answer !== undefined && answer !== '';
-        
-        if (isAnswered) {
-            $('#next-btn').prop('disabled', false);
-        } else {
-            $('#next-btn').prop('disabled', true);
-        }
+        // Always enable next button - validation happens on click
+        $('#next-btn').prop('disabled', false);
     }
 
     // Setup event listeners
@@ -205,6 +201,9 @@ $(document).ready(function() {
         // Answer button click
         $(document).on('click', '.answer-btn', function() {
             const selectedAnswer = parseInt($(this).attr('data-answer'));
+            
+            // Hide validation error
+            $('#validation-error').hide();
             
             // Remove previous selection
             $('.answer-btn').removeClass('selected');
@@ -230,6 +229,9 @@ $(document).ready(function() {
         // Fill-in-blank input handling
         $(document).on('input', '#fill-in-input', function() {
             const inputValue = $(this).val().trim();
+            
+            // Hide validation error
+            $('#validation-error').hide();
             
             // Store answer
             userAnswers[currentQuestionIndex] = inputValue;
@@ -262,6 +264,16 @@ $(document).ready(function() {
 
         // Next button
         $('#next-btn').click(function() {
+            // Check if answer is provided
+            const answer = userAnswers[currentQuestionIndex];
+            const isAnswered = answer !== null && answer !== undefined && answer !== '';
+            
+            if (!isAnswered) {
+                // Show validation error
+                $('#validation-error').show();
+                return;
+            }
+            
             if (currentQuestionIndex < questionCount - 1) {
                 displayQuestion(currentQuestionIndex + 1);
             }

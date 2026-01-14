@@ -20,6 +20,24 @@
     margin: 0 auto;
 }
 
+/* Validation Error Message */
+.validation-error {
+    background-color: var(--color-error);
+    color: var(--color-background);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
 .answer-options{
     display: flex;
     width: 500px;
