@@ -254,6 +254,12 @@ a:focus {
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
+
+   @media (max-width: 1024px) {
+  #light-dark-text{
+    display: none;
+  }
+}
  
 
 @media (max-width: 768px) {
@@ -274,9 +280,7 @@ a:focus {
     width: 100%;
   }
 
-  #light-dark-text{
-    display: none;
-  }
+  
 
   
 }
