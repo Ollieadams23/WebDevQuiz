@@ -1,5 +1,6 @@
 #quit2home{
     background-color: var(--color-primary);
+    font-weight: bold;
     border-radius: 5px;
     position: absolute;
     align-content: center;
@@ -117,7 +118,7 @@
 }
 
 .progress-text {
-    font-style: bold;
+    font-weight: bold;
     margin-bottom: 1rem;
     font-weight: 600;
 }
