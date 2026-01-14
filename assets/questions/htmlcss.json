@@ -263,133 +263,93 @@
     },
     {
       "id": 21,
-      "type": "multiple-choice",
-      "question": "What is the correct HTML for creating a dropdown list?",
+      "type": "true-false",
+      "question": "The &lt;div&gt; tag is a block-level element.",
       "options": [
-        "&lt;select&gt;",
-        "&lt;dropdown&gt;",
-        "&lt;list&gt;",
-        "&lt;input type='dropdown'&gt;"
+        "True",
+        "False"
       ],
       "correctAnswer": 0,
-      "explanation": "The &lt;select&gt; tag creates a dropdown list. Individual options are defined with &lt;option&gt; tags inside the &lt;select&gt; element."
+      "explanation": "True. The &lt;div&gt; tag is a block-level element that starts on a new line and takes up the full width available. &lt;span&gt; is inline."
     },
     {
       "id": 22,
-      "type": "multiple-choice",
-      "question": "Which property controls the space between elements?",
+      "type": "true-false",
+      "question": "CSS stands for Cascading Style Sheets.",
       "options": [
-        "margin",
-        "padding",
-        "spacing",
-        "gap"
+        "True",
+        "False"
       ],
       "correctAnswer": 0,
-      "explanation": "Margin controls space outside an element's border, between elements. Padding controls space inside the element, between border and content."
+      "explanation": "True. CSS (Cascading Style Sheets) is the language used to style HTML documents, controlling layout, colors, fonts, and more."
     },
     {
       "id": 23,
-      "type": "multiple-choice",
-      "question": "What is the purpose of the <span> tag?",
+      "type": "true-false",
+      "question": "The id attribute can be used on multiple elements in HTML.",
       "options": [
-        "To group and style inline content",
-        "To create line breaks",
-        "To span multiple columns",
-        "To measure distances"
+        "True",
+        "False"
       ],
-      "correctAnswer": 0,
-      "explanation": "The &lt;span&gt; tag is an inline container for styling text and content without breaking the flow. &lt;div&gt; is the block-level equivalent."
+      "correctAnswer": 1,
+      "explanation": "False. Each id must be unique within a page. Use the class attribute when you need to apply the same identifier to multiple elements."
     },
     {
       "id": 24,
-      "type": "multiple-choice",
-      "question": "Which CSS property makes elements display side by side?",
+      "type": "true-false",
+      "question": "Inline styles have higher specificity than external CSS files.",
       "options": [
-        "display: inline or float",
-        "position: side",
-        "align: horizontal",
-        "layout: row"
+        "True",
+        "False"
       ],
       "correctAnswer": 0,
-      "explanation": "Elements can be displayed side by side using 'display: inline' or 'inline-block', 'float: left/right', or modern methods like flexbox and grid."
+      "explanation": "True. Inline styles (style attribute) have the highest specificity, followed by IDs, classes, and element selectors in the CSS cascade."
     },
     {
       "id": 25,
-      "type": "multiple-choice",
-      "question": "What is the correct HTML for creating a table?",
+      "type": "true-false",
+      "question": "Semantic HTML has no effect on SEO (Search Engine Optimization).",
       "options": [
-        "&lt;table&gt;",
-        "&lt;tab&gt;",
-        "&lt;tables&gt;",
-        "&lt;tbl&gt;"
+        "True",
+        "False"
       ],
-      "correctAnswer": 0,
-      "explanation": "The &lt;table&gt; tag creates a table. Use &lt;tr&gt; for rows, &lt;th&gt; for header cells, and &lt;td&gt; for data cells."
+      "correctAnswer": 1,
+      "explanation": "False. Semantic HTML (like &lt;header&gt;, &lt;article&gt;, &lt;nav&gt;) helps search engines understand page structure and content, improving SEO."
     },
     {
       "id": 26,
-      "type": "multiple-choice",
-      "question": "Which property changes the font type in CSS?",
-      "options": [
-        "font-family",
-        "font-type",
-        "typeface",
-        "text-font"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The 'font-family' property specifies the font. Multiple fonts can be listed as fallbacks: font-family: Arial, sans-serif;"
+      "type": "fill-in-blank",
+      "question": "The CSS property ___ is used to change the background color of an element.",
+      "correctAnswer": "background-color",
+      "explanation": "The background-color property sets the background color. Example: background-color: blue; or background-color: #3498db;"
     },
     {
       "id": 27,
-      "type": "multiple-choice",
-      "question": "What does the z-index property control?",
-      "options": [
-        "The stacking order of positioned elements",
-        "The zoom level",
-        "The element's height",
-        "The element's depth"
-      ],
-      "correctAnswer": 0,
-      "explanation": "z-index controls the stacking order of positioned elements (position: absolute, relative, or fixed). Higher values appear on top."
+      "type": "fill-in-blank",
+      "question": "The HTML tag used to create a hyperlink is ___.",
+      "correctAnswer": "a",
+      "explanation": "The &lt;a&gt; (anchor) tag creates hyperlinks. Use the href attribute to specify the destination: &lt;a href='url'&gt;Link text&lt;/a&gt;"
     },
     {
       "id": 28,
-      "type": "multiple-choice",
-      "question": "Which HTML tag defines a paragraph?",
-      "options": [
-        "&lt;p&gt;",
-        "&lt;para&gt;",
-        "&lt;paragraph&gt;",
-        "&lt;pg&gt;"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The &lt;p&gt; tag defines a paragraph. Browsers automatically add space before and after paragraphs."
+      "type": "fill-in-blank",
+      "question": "To make text bold in CSS, use the property font-weight with the value ___.",
+      "correctAnswer": "bold",
+      "explanation": "font-weight: bold; makes text bold. You can also use numeric values like 700 (equivalent to bold) or 400 (normal)."
     },
     {
       "id": 29,
-      "type": "multiple-choice",
-      "question": "How do you center an element horizontally in CSS?",
-      "options": [
-        "margin: 0 auto; (with a defined width)",
-        "align: center;",
-        "center: true;",
-        "position: center;"
-      ],
-      "correctAnswer": 0,
-      "explanation": "For block elements with a defined width, 'margin: 0 auto;' centers horizontally. For text, use 'text-align: center;'."
+      "type": "fill-in-blank",
+      "question": "The CSS layout system that uses rows and columns for two-dimensional layouts is called CSS ___.",
+      "correctAnswer": "Grid",
+      "explanation": "CSS Grid is a powerful two-dimensional layout system for rows and columns. Flexbox is one-dimensional (row or column)."
     },
     {
       "id": 30,
-      "type": "multiple-choice",
-      "question": "What is the purpose of the <meta> tag?",
-      "options": [
-        "To provide metadata about the HTML document",
-        "To create metadata variables",
-        "To style meta information",
-        "To link meta files"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The &lt;meta&gt; tag provides metadata like character encoding, viewport settings, descriptions, and keywords. It's placed in the &lt;head&gt; section."
+      "type": "fill-in-blank",
+      "question": "The HTML attribute that makes an input field required before form submission is ___.",
+      "correctAnswer": "required",
+      "explanation": "The required attribute is a boolean attribute that prevents form submission until the field is filled: &lt;input type='text' required&gt;"
     }
   ]
 }

@@ -263,133 +263,93 @@
     },
     {
       "id": 21,
-      "type": "multiple-choice",
-      "question": "What is the purpose of a mood board?",
+      "type": "true-false",
+      "question": "User testing should only be done after the product is fully developed.",
       "options": [
-        "To communicate the visual direction and feel of a design",
-        "To track user emotions",
-        "To organize code files",
-        "To plan project deadlines"
+        "True",
+        "False"
       ],
-      "correctAnswer": 0,
-      "explanation": "A mood board is a visual collage of images, colors, textures, and typography used to communicate the intended visual direction and emotional feel of a design project."
+      "correctAnswer": 1,
+      "explanation": "False. User testing should be conducted throughout the design process, including early prototypes and wireframes, to identify issues before investing in full development."
     },
     {
       "id": 22,
-      "type": "multiple-choice",
-      "question": "What is the difference between UI and UX?",
+      "type": "true-false",
+      "question": "A wireframe is a high-fidelity visual representation of the final design.",
       "options": [
-        "UI is visual design, UX is overall experience",
-        "UI is coding, UX is design",
-        "UI is for mobile, UX is for desktop",
-        "They are the same thing"
+        "True",
+        "False"
       ],
-      "correctAnswer": 0,
-      "explanation": "UI (User Interface) focuses on visual design and interactive elements, while UX (User Experience) encompasses the entire user journey and overall experience with a product."
+      "correctAnswer": 1,
+      "explanation": "False. A wireframe is a low-fidelity sketch that focuses on layout and functionality, not visual details like colors and images. Mockups are high-fidelity."
     },
     {
       "id": 23,
-      "type": "multiple-choice",
-      "question": "What is progressive disclosure in UX?",
+      "type": "true-false",
+      "question": "White space (negative space) in design is wasted space that should be minimized.",
       "options": [
-        "Showing only essential information first, revealing more as needed",
-        "Gradually loading images",
-        "Progressive web apps",
-        "Incremental software updates"
+        "True",
+        "False"
       ],
-      "correctAnswer": 0,
-      "explanation": "Progressive disclosure is a technique that shows only essential information first and reveals additional details as users need them, reducing cognitive load and complexity."
+      "correctAnswer": 1,
+      "explanation": "False. White space is essential for creating visual hierarchy, improving readability, and making designs feel less cluttered and more elegant."
     },
     {
       "id": 24,
-      "type": "multiple-choice",
-      "question": "What is the gestalt principle of proximity?",
+      "type": "true-false",
+      "question": "Personas are fictional representations of target users based on research.",
       "options": [
-        "Elements close together are perceived as related",
-        "Similar elements look alike",
-        "Elements form complete shapes",
-        "Elements continue in a pattern"
+        "True",
+        "False"
       ],
       "correctAnswer": 0,
-      "explanation": "The proximity principle states that objects placed close together are perceived as a group or related to each other, while those farther apart are seen as separate."
+      "explanation": "True. Personas are research-based fictional characters that represent different user types, helping teams empathize with users and make design decisions."
     },
     {
       "id": 25,
-      "type": "multiple-choice",
-      "question": "What is card sorting in UX research?",
+      "type": "true-false",
+      "question": "The fold in web design refers to the bottom of the page.",
       "options": [
-        "A method to organize content based on user input",
-        "Organizing playing cards",
-        "Sorting design files",
-        "Categorizing CSS styles"
+        "True",
+        "False"
       ],
-      "correctAnswer": 0,
-      "explanation": "Card sorting is a UX research method where users organize topics or content into categories that make sense to them, helping designers create intuitive information architecture."
+      "correctAnswer": 1,
+      "explanation": "False. 'The fold' refers to the portion of the page visible without scrolling (like a newspaper fold). Content 'above the fold' is immediately visible."
     },
     {
       "id": 26,
-      "type": "multiple-choice",
-      "question": "What is the golden ratio in design?",
-      "options": [
-        "1:1.618, a mathematically harmonious proportion",
-        "60:40 color split",
-        "The perfect font size",
-        "3:2 aspect ratio"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The golden ratio (approximately 1:1.618) is a mathematical proportion found in nature and used in design to create aesthetically pleasing, balanced compositions."
+      "type": "fill-in-blank",
+      "question": "The design principle that similar elements should be grouped together is called ___.",
+      "correctAnswer": "proximity",
+      "explanation": "Proximity is a Gestalt principle stating that elements placed close together are perceived as related, while those farther apart seem separate."
     },
     {
       "id": 27,
-      "type": "multiple-choice",
-      "question": "What is an empathy map in UX?",
-      "options": [
-        "A tool to understand user feelings and perspectives",
-        "A site navigation diagram",
-        "A color emotion guide",
-        "A user flow chart"
-      ],
-      "correctAnswer": 0,
-      "explanation": "An empathy map is a collaborative tool that helps teams understand users' feelings, thoughts, actions, and pain points, fostering user-centered design thinking."
+      "type": "fill-in-blank",
+      "question": "A ___ is a clickable, interactive model that simulates the final product's functionality.",
+      "correctAnswer": "prototype",
+      "explanation": "A prototype is an interactive simulation of the product that allows users to click through and test functionality before development begins."
     },
     {
       "id": 28,
-      "type": "multiple-choice",
-      "question": "What is the purpose of a loading indicator?",
-      "options": [
-        "To inform users that content is being processed",
-        "To measure internet speed",
-        "To show file size",
-        "To display errors"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Loading indicators provide feedback that the system is processing a request, reducing user anxiety and preventing confusion during wait times."
+      "type": "fill-in-blank",
+      "question": "The minimum number of clicks or taps to complete a task is called ___.",
+      "correctAnswer": "affordance",
+      "explanation": "Affordance refers to the perceived and actual properties that determine how something can be used. In UX, it's about making actions obvious and intuitive."
     },
     {
       "id": 29,
-      "type": "multiple-choice",
-      "question": "What is microinteraction in UI design?",
-      "options": [
-        "Small, single-purpose animations or feedback",
-        "Tiny text elements",
-        "Mobile-only features",
-        "Minor bug fixes"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Microinteractions are small, single-purpose animations or design elements that provide feedback, guide users, or make interactions feel more engaging (e.g., a like button animation)."
+      "type": "fill-in-blank",
+      "question": "___ refers to how easily users can find content and complete tasks on a website.",
+      "correctAnswer": "usability",
+      "explanation": "Usability measures how easy and efficient it is for users to achieve their goals when interacting with a product or interface."
     },
     {
       "id": 30,
-      "type": "multiple-choice",
-      "question": "What is accessibility in web design?",
-      "options": [
-        "Designing for users of all abilities, including disabilities",
-        "Making sites load faster",
-        "Creating mobile-friendly layouts",
-        "Using simple language"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Accessibility means designing websites and applications so they can be used by people of all abilities, including those with visual, auditory, motor, or cognitive disabilities."
+      "type": "fill-in-blank",
+      "question": "The process of organizing and structuring website content is called information ___.",
+      "correctAnswer": "architecture",
+      "explanation": "Information architecture (IA) is the practice of organizing, structuring, and labeling content to help users find information and complete tasks effectively."
     }
   ]
 }
