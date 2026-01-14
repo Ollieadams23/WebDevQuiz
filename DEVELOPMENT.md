@@ -338,6 +338,11 @@
    - **Fix:** Implemented answer shuffling in the `startQuiz()` function. Created an array of option objects that pair each answer text with a boolean indicating if it's correct, shuffled this array using `sort(() => 0.5 - Math.random())`, then updated the question's options array and recalculated the `correctAnswer` index using `findIndex()` to find where the correct answer moved to after shuffling. This ensures correct answers appear randomly at positions A, B, C, or D.
    - **Date Fixed:** January 10, 2026
 
+10. **Bug Description:** Next button disabled preventing validation error message from displaying
+   - **Impact:** When implementing validation error messages to show users they need to select an answer, the Next button was disabled when no answer was selected. This prevented the click event from firing, so the validation error message never appeared. Users couldn't see why they couldn't proceed.
+   - **Fix:** Modified `updateNavigationButtons()` function to always keep the Next button enabled. Instead of disabling the button when no answer is selected, added validation logic to the Next button click handler that checks if an answer is provided. If not, it displays the validation error message and returns early without advancing to the next question. The error message appears in red above the question with a shake animation and automatically hides when an answer is selected.
+   - **Date Fixed:** January 14, 2026
+
 #### Browser Testing Results:
 - Chrome: [Status]
 - Firefox: [Status]
