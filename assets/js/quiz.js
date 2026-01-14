@@ -62,20 +62,23 @@ $(document).ready(function() {
         const shuffled = allQuestions.sort(() => 0.5 - Math.random());
         selectedQuestions = shuffled.slice(0, questionCount);
 
-        // Shuffle answer options for each question
+        // Shuffle answer options only for multiple-choice questions
         selectedQuestions.forEach(question => {
-            // Create array of option objects with original index
-            const optionsWithIndex = question.options.map((option, index) => ({
-                text: option,
-                isCorrect: index === question.correctAnswer
-            }));
+            if (question.type === 'multiple-choice') {
+                // Create array of option objects with original index
+                const optionsWithIndex = question.options.map((option, index) => ({
+                    text: option,
+                    isCorrect: index === question.correctAnswer
+                }));
 
-            // Shuffle the options
-            const shuffledOptions = optionsWithIndex.sort(() => 0.5 - Math.random());
+                // Shuffle the options
+                const shuffledOptions = optionsWithIndex.sort(() => 0.5 - Math.random());
 
-            // Update question with shuffled options and new correct answer index
-            question.options = shuffledOptions.map(opt => opt.text);
-            question.correctAnswer = shuffledOptions.findIndex(opt => opt.isCorrect);
+                // Update question with shuffled options and new correct answer index
+                question.options = shuffledOptions.map(opt => opt.text);
+                question.correctAnswer = shuffledOptions.findIndex(opt => opt.isCorrect);
+            }
+            // true-false and fill-in-blank questions don't need shuffling
         });
 
         // Initialize user answers array
@@ -108,23 +111,63 @@ $(document).ready(function() {
         const $answerOptions = $('#answer-options');
         $answerOptions.empty();
 
-        const labels = ['A', 'B', 'C', 'D'];
-        question.options.forEach((option, i) => {
-            const $button = $('<button>')
-                .addClass('answer-btn')
-                .attr('data-answer', i)
-                .html(`
-                    <span class="answer-label">${labels[i]}</span>
-                    <span class="answer-text">${option}</span>
-                `);
+        if (question.type === 'multiple-choice') {
+            // Display 4 buttons for multiple-choice
+            const labels = ['A', 'B', 'C', 'D'];
+            question.options.forEach((option, i) => {
+                const $button = $('<button>')
+                    .addClass('answer-btn')
+                    .attr('data-answer', i)
+                    .html(`
+                        <span class="answer-label">${labels[i]}</span>
+                        <span class="answer-text">${option}</span>
+                    `);
 
-            // Highlight if this answer was previously selected
-            if (userAnswers[index] === i) {
-                $button.addClass('selected');
-            }
+                // Highlight if this answer was previously selected
+                if (userAnswers[index] === i) {
+                    $button.addClass('selected');
+                }
 
-            $answerOptions.append($button);
-        });
+                $answerOptions.append($button);
+            });
+        } else if (question.type === 'true-false') {
+            // Display 2 buttons for true-false
+            const labels = ['True', 'False'];
+            question.options.forEach((option, i) => {
+                const $button = $('<button>')
+                    .addClass('answer-btn')
+                    .attr('data-answer', i)
+                    .html(`
+                        <span class="answer-label">${labels[i]}</span>
+                    `);
+
+                // Highlight if this answer was previously selected
+                if (userAnswers[index] === i) {
+                    $button.addClass('selected');
+                }
+
+                $answerOptions.append($button);
+            });
+        } else if (question.type === 'fill-in-blank') {
+            // Display text input for fill-in-blank
+            const $input = $('<input>')
+                .attr('type', 'text')
+                .attr('id', 'fill-in-input')
+                .addClass('fill-in-input')
+                .attr('placeholder', 'Type your answer here...')
+                .val(userAnswers[index] || '');
+
+            const $label = $('<label>')
+                .attr('for', 'fill-in-input')
+                .text('Your Answer:')
+                .addClass('fill-in-label');
+
+            $answerOptions.append($label);
+            $answerOptions.append($input);
+
+            // Focus the input
+            setTimeout(() => $input.focus(), 100);
+        }
 
         // Update navigation buttons
         updateNavigationButtons();
@@ -147,7 +190,10 @@ $(document).ready(function() {
         }
 
         // Enable next button only if current question is answered
-        if (userAnswers[currentQuestionIndex] !== null) {
+        const answer = userAnswers[currentQuestionIndex];
+        const isAnswered = answer !== null && answer !== undefined && answer !== '';
+        
+        if (isAnswered) {
             $('#next-btn').prop('disabled', false);
         } else {
             $('#next-btn').prop('disabled', true);
@@ -181,6 +227,32 @@ $(document).ready(function() {
             }
         });
 
+        // Fill-in-blank input handling
+        $(document).on('input', '#fill-in-input', function() {
+            const inputValue = $(this).val().trim();
+            
+            // Store answer
+            userAnswers[currentQuestionIndex] = inputValue;
+            
+            // Enable next button
+            updateNavigationButtons();
+        });
+
+        // Handle Enter key for fill-in-blank
+        $(document).on('keypress', '#fill-in-input', function(e) {
+            if (e.which === 13) { // Enter key
+                e.preventDefault();
+                
+                // Auto-submit if last question
+                if (currentQuestionIndex === questionCount - 1) {
+                    submitQuiz();
+                } else {
+                    // Move to next question
+                    $('#next-btn').click();
+                }
+            }
+        });
+
         // Previous button
         $('#prev-btn').click(function() {
             if (currentQuestionIndex > 0) {
@@ -202,8 +274,18 @@ $(document).ready(function() {
 
         // Calculate score
         selectedQuestions.forEach((question, index) => {
-            if (userAnswers[index] === question.correctAnswer) {
-                correctCount++;
+            if (question.type === 'fill-in-blank') {
+                // Case-insensitive string comparison for fill-in-blank
+                const userAnswer = (userAnswers[index] || '').toString().trim().toLowerCase();
+                const correctAnswer = question.correctAnswer.toString().trim().toLowerCase();
+                if (userAnswer === correctAnswer) {
+                    correctCount++;
+                }
+            } else {
+                // Direct comparison for multiple-choice and true-false
+                if (userAnswers[index] === question.correctAnswer) {
+                    correctCount++;
+                }
             }
         });
 

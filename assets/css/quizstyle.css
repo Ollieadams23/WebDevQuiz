@@ -61,6 +61,43 @@
     text-align: left;
 }
 
+/* Fill-in-blank styles */
+.fill-in-label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+}
+
+.fill-in-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    border: 3px solid var(--color-secondary);
+    border-radius: 8px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.fill-in-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(35, 134, 54, 0.2);
+}
+
+[data-theme="dark"] .fill-in-input:focus {
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
+}
+
+.fill-in-input::placeholder {
+    color: var(--color-secondary);
+    opacity: 0.6;
+}
+
 .progress-text {
     font-style: bold;
     margin-bottom: 1rem;

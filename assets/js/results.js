@@ -72,12 +72,19 @@ $(document).ready(function() {
         const $reviewList = $('#review-list');
         $reviewList.empty();
 
-        const labels = ['A', 'B', 'C', 'D'];
-
         results.questions.forEach((question, index) => {
             const userAnswer = results.userAnswers[index];
             const correctAnswer = question.correctAnswer;
-            const isCorrect = userAnswer === correctAnswer;
+            let isCorrect = false;
+
+            // Determine if answer is correct based on question type
+            if (question.type === 'fill-in-blank') {
+                const userAns = (userAnswer || '').toString().trim().toLowerCase();
+                const correctAns = correctAnswer.toString().trim().toLowerCase();
+                isCorrect = userAns === correctAns;
+            } else {
+                isCorrect = userAnswer === correctAnswer;
+            }
 
             // Create review item
             const $reviewItem = $('<div>')
@@ -100,23 +107,68 @@ $(document).ready(function() {
             // Answer details
             const $answersDiv = $('<div>').addClass('review-answers');
 
-            if (userAnswer !== null) {
-                const $userAnswerP = $('<p>')
-                    .addClass('user-answer')
-                    .html(`Your answer: <strong>${labels[userAnswer]}</strong> - ${question.options[userAnswer]}`);
-                $answersDiv.append($userAnswerP);
-            } else {
-                const $userAnswerP = $('<p>')
-                    .addClass('user-answer')
-                    .html(`Your answer: <strong>Not answered</strong>`);
-                $answersDiv.append($userAnswerP);
-            }
+            if (question.type === 'multiple-choice') {
+                // Multiple-choice display with A/B/C/D labels
+                const labels = ['A', 'B', 'C', 'D'];
+                
+                if (userAnswer !== null && userAnswer !== undefined) {
+                    const $userAnswerP = $('<p>')
+                        .addClass('user-answer')
+                        .html(`Your answer: <strong>${labels[userAnswer]}</strong> - ${question.options[userAnswer]}`);
+                    $answersDiv.append($userAnswerP);
+                } else {
+                    const $userAnswerP = $('<p>')
+                        .addClass('user-answer')
+                        .html(`Your answer: <strong>Not answered</strong>`);
+                    $answersDiv.append($userAnswerP);
+                }
 
-            if (!isCorrect) {
-                const $correctAnswerP = $('<p>')
-                    .addClass('correct-answer')
-                    .html(`Correct answer: <strong>${labels[correctAnswer]}</strong> - ${question.options[correctAnswer]}`);
-                $answersDiv.append($correctAnswerP);
+                if (!isCorrect) {
+                    const $correctAnswerP = $('<p>')
+                        .addClass('correct-answer')
+                        .html(`Correct answer: <strong>${labels[correctAnswer]}</strong> - ${question.options[correctAnswer]}`);
+                    $answersDiv.append($correctAnswerP);
+                }
+            } else if (question.type === 'true-false') {
+                // True-false display
+                if (userAnswer !== null && userAnswer !== undefined) {
+                    const $userAnswerP = $('<p>')
+                        .addClass('user-answer')
+                        .html(`Your answer: <strong>${question.options[userAnswer]}</strong>`);
+                    $answersDiv.append($userAnswerP);
+                } else {
+                    const $userAnswerP = $('<p>')
+                        .addClass('user-answer')
+                        .html(`Your answer: <strong>Not answered</strong>`);
+                    $answersDiv.append($userAnswerP);
+                }
+
+                if (!isCorrect) {
+                    const $correctAnswerP = $('<p>')
+                        .addClass('correct-answer')
+                        .html(`Correct answer: <strong>${question.options[correctAnswer]}</strong>`);
+                    $answersDiv.append($correctAnswerP);
+                }
+            } else if (question.type === 'fill-in-blank') {
+                // Fill-in-blank display
+                if (userAnswer !== null && userAnswer !== undefined && userAnswer !== '') {
+                    const $userAnswerP = $('<p>')
+                        .addClass('user-answer')
+                        .html(`Your answer: <strong>${userAnswer}</strong>`);
+                    $answersDiv.append($userAnswerP);
+                } else {
+                    const $userAnswerP = $('<p>')
+                        .addClass('user-answer')
+                        .html(`Your answer: <strong>Not answered</strong>`);
+                    $answersDiv.append($userAnswerP);
+                }
+
+                if (!isCorrect) {
+                    const $correctAnswerP = $('<p>')
+                        .addClass('correct-answer')
+                        .html(`Correct answer: <strong>${correctAnswer}</strong>`);
+                    $answersDiv.append($correctAnswerP);
+                }
             }
 
             // Explanation

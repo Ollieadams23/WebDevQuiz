@@ -263,133 +263,93 @@
     },
     {
       "id": 21,
-      "type": "multiple-choice",
-      "question": "What is the purpose of JSON.parse()?",
+      "type": "true-false",
+      "question": "JavaScript is a case-sensitive language.",
       "options": [
-        "Convert JSON string to JavaScript object",
-        "Convert JavaScript object to JSON string",
-        "Parse HTML",
-        "Parse CSS"
+        "True",
+        "False"
       ],
       "correctAnswer": 0,
-      "explanation": "JSON.parse() converts a JSON string into a JavaScript object. The opposite operation is JSON.stringify(), which converts an object to a JSON string."
+      "explanation": "True. JavaScript is case-sensitive, meaning 'myVariable' and 'myvariable' are considered different identifiers."
     },
     {
       "id": 22,
-      "type": "multiple-choice",
-      "question": "What does the 'break' statement do in a loop?",
+      "type": "true-false",
+      "question": "The 'let' keyword allows you to redeclare a variable in the same scope.",
       "options": [
-        "Exits the loop completely",
-        "Skips the current iteration",
-        "Pauses the loop",
-        "Restarts the loop"
+        "True",
+        "False"
       ],
-      "correctAnswer": 0,
-      "explanation": "The 'break' statement exits the loop completely and continues execution after the loop. The 'continue' statement skips the current iteration but stays in the loop."
+      "correctAnswer": 1,
+      "explanation": "False. Variables declared with 'let' cannot be redeclared in the same scope. This would cause a SyntaxError. However, 'var' allows redeclaration."
     },
     {
       "id": 23,
-      "type": "multiple-choice",
-      "question": "Which method joins all elements of an array into a string?",
+      "type": "true-false",
+      "question": "An array in JavaScript can hold elements of different data types.",
       "options": [
-        "join()",
-        "concat()",
-        "merge()",
-        "combine()"
+        "True",
+        "False"
       ],
       "correctAnswer": 0,
-      "explanation": "The join() method joins all elements of an array into a string using a specified separator. If no separator is provided, a comma is used by default."
+      "explanation": "True. JavaScript arrays are dynamic and can contain elements of different types, including numbers, strings, objects, and even other arrays."
     },
     {
       "id": 24,
-      "type": "multiple-choice",
-      "question": "What is the output of: typeof []?",
+      "type": "true-false",
+      "question": "The '==' operator performs type coercion when comparing values.",
       "options": [
-        "object",
-        "array",
-        "list",
-        "collection"
+        "True",
+        "False"
       ],
       "correctAnswer": 0,
-      "explanation": "Arrays in JavaScript are actually objects. The typeof operator returns 'object' for arrays. To check if something is an array, use Array.isArray()."
+      "explanation": "True. The '==' operator performs type coercion, converting values to the same type before comparison. For strict comparison without type coercion, use '==='."
     },
     {
       "id": 25,
-      "type": "multiple-choice",
-      "question": "Which method is used to find the length of a string?",
+      "type": "true-false",
+      "question": "Functions in JavaScript must always have a name.",
       "options": [
-        ".length",
-        ".size()",
-        ".count()",
-        ".strlen()"
+        "True",
+        "False"
       ],
-      "correctAnswer": 0,
-      "explanation": "The .length property returns the number of characters in a string. It's a property, not a method, so it doesn't use parentheses."
+      "correctAnswer": 1,
+      "explanation": "False. JavaScript supports anonymous functions (functions without names) which are commonly used in callbacks, IIFEs, and arrow functions."
     },
     {
       "id": 26,
-      "type": "multiple-choice",
-      "question": "What is a closure in JavaScript?",
-      "options": [
-        "A function that has access to variables in its outer scope",
-        "A function that is closed to modifications",
-        "A function with no parameters",
-        "A function that returns nothing"
-      ],
-      "correctAnswer": 0,
-      "explanation": "A closure is created when a function is defined inside another function, giving it access to the outer function's variables even after the outer function has finished executing."
+      "type": "fill-in-blank",
+      "question": "The keyword used to define a constant variable in JavaScript is ___.",
+      "correctAnswer": "const",
+      "explanation": "The 'const' keyword is used to declare constants in JavaScript. Constants cannot be reassigned after declaration."
     },
     {
       "id": 27,
-      "type": "multiple-choice",
-      "question": "Which method is used to round a number to the nearest integer?",
-      "options": [
-        "Math.round()",
-        "Math.floor()",
-        "Math.ceil()",
-        "Math.nearest()"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Math.round() rounds to the nearest integer. Math.floor() always rounds down, and Math.ceil() always rounds up."
+      "type": "fill-in-blank",
+      "question": "The method that combines all elements of an array into a single string is ___().",
+      "correctAnswer": "join",
+      "explanation": "The join() method creates and returns a new string by concatenating all elements in an array, separated by a specified separator."
     },
     {
       "id": 28,
-      "type": "multiple-choice",
-      "question": "What does the 'await' keyword do in JavaScript?",
-      "options": [
-        "Pauses execution until a Promise is resolved",
-        "Creates a new Promise",
-        "Cancels a Promise",
-        "Delays execution by a fixed time"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The 'await' keyword pauses the execution of an async function until a Promise is resolved or rejected. It can only be used inside async functions."
+      "type": "fill-in-blank",
+      "question": "The special value that represents the intentional absence of any object value is ___.",
+      "correctAnswer": "null",
+      "explanation": "null is a primitive value that represents the intentional absence of any object value. It's different from undefined, which means a variable has been declared but not assigned a value."
     },
     {
       "id": 29,
-      "type": "multiple-choice",
-      "question": "Which operator is used to check if a property exists in an object?",
-      "options": [
-        "in",
-        "exists",
-        "has",
-        "contains"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The 'in' operator returns true if the specified property exists in the object or its prototype chain. Example: 'name' in person."
+      "type": "fill-in-blank",
+      "question": "The operator used to check both value and type equality is ___.",
+      "correctAnswer": "===",
+      "explanation": "The === operator (strict equality) checks if two values are equal without performing type coercion, ensuring both value and type match."
     },
     {
       "id": 30,
-      "type": "multiple-choice",
-      "question": "What is the default return value of a function that doesn't explicitly return anything?",
-      "options": [
-        "undefined",
-        "null",
-        "0",
-        "false"
-      ],
-      "correctAnswer": 0,
-      "explanation": "If a function doesn't have a return statement or has a return statement without a value, it returns 'undefined' by default."
+      "type": "fill-in-blank",
+      "question": "The built-in object that provides mathematical operations like sqrt() and random() is ___.",
+      "correctAnswer": "Math",
+      "explanation": "The Math object is a built-in object that has properties and methods for mathematical constants and functions, such as Math.sqrt(), Math.random(), Math.PI, etc."
     }
   ]
 }
