@@ -1,6 +1,6 @@
 
 /* jshint esversion: 6 */
-
+/* global $ */
 
 // Quiz Logic - quiz.js
 $(document).ready(function() {

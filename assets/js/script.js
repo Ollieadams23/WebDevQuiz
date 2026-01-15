@@ -1,5 +1,6 @@
 
 /* jshint esversion: 6 */
+/* global $ */
 
 $(document).ready(function() {
     // Check for dark mode preference

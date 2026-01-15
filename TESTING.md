@@ -72,6 +72,7 @@ From line 16, column 13; to line 16, column 37
 - **Re-test Result:**
 - **Screenshot:** 
 ![alt text](image.png)
+![alt text](image-1.png)
 
 #### quiz.html
 - **Test Date:**11/1/2026
@@ -81,6 +82,7 @@ From line 16, column 13; to line 16, column 37
 - **Fixes Applied:**
 - **Re-test Result:**
 - **Screenshot:** 
+![alt text](image-2.png)
 
 #### results.html
 - **Test Date:**11/1/2026
@@ -90,22 +92,33 @@ From line 16, column 13; to line 16, column 37
 - **Fixes Applied:**
 - **Re-test Result:**
 - **Screenshot:** 
-
+![alt text](image-3.png)
 ---
 
 ### CSS Validation (Jigsaw)
 **Validator URL:** http://jigsaw.w3.org/css-validator/
 
 #### style.css
-- **Test Date:**11/1/2026
+- **Test Date:** 11/1/2026
 - **Result:** passed
-- **Errors Found:**
-
-
-- **Warnings Found:**
-- **Fixes Applied:**
-- **Re-test Result:**
+- **Errors Found:** None
+- **Warnings Found:** None
+- **Fixes Applied:** None needed
+- **Re-test Result:** Passed
 - **Screenshot:** 
+![alt text](image-4.png)
+
+#### quizstyle.css
+- **Test Date:** 15/1/2026
+- **Result:** Failed initially, then passed
+- **Errors Found:** 
+  - `font-style: bold` is not a valid value (line 121)
+- **Warnings Found:** None
+- **Fixes Applied:** 
+  - Removed `font-style: bold;` from `.progress-text` selector. The property `font-style` accepts values like `normal`, `italic`, or `oblique`, not `bold`. Bold styling is controlled by `font-weight`, which was already correctly set to `600` on the same selector.
+- **Re-test Result:** Passed
+- **Screenshot:** 
+![alt text](image-5.png)
 
 ---
 
@@ -120,6 +133,7 @@ From line 16, column 13; to line 16, column 37
 - **Fixes Applied:**
 - **Re-test Result:**
 - **Screenshot:** 
+![alt text](image-6.png)
 
 #### results.js
 - **Test Date:**11/1/2026
@@ -129,6 +143,7 @@ From line 16, column 13; to line 16, column 37
 - **Fixes Applied:**
 - **Re-test Result:**
 - **Screenshot:** 
+![alt text](image-7.png)
 
 #### quiz.js
 - **Test Date:**11/1/2026
@@ -137,7 +152,7 @@ From line 16, column 13; to line 16, column 37
 - **Significant Issues:**
 - **Fixes Applied:**
 - **Re-test Result:**
-- **Screenshot:** 
+- **Screenshot:** ![alt text](image-8.png)
 
 
 
@@ -153,7 +168,7 @@ From line 16, column 13; to line 16, column 37
 | Start Quiz button | Opens quiz.html |  | Passed|
 | Next button on quiz | Advances to next question | | Passed|
 | Previous button on quiz | Returns to previous question | | Passed|
-| Submit button | Displays results page |  | |
+| Submit button | Displays results page |  | Passed|
 | Retake Quiz button | Resets and returns to quiz | | Passed|
 
 ### Quiz Functionality Testing
@@ -196,24 +211,13 @@ From line 16, column 13; to line 16, column 37
 
 ## Responsiveness Testing
 
-### Device Testing Matrix
-| Device | Screen Size | Orientation | Layout Issues | Status |
-|--------|-------------|-------------|---------------|--------|
-| iPhone SE | 375x667 | Portrait | | |
-| iPhone SE | 667x375 | Landscape | | |
-| iPhone 12 Pro | 390x844 | Portrait | | |
-| iPad Mini | 768x1024 | Portrait | | |
-| iPad Mini | 1024x768 | Landscape | | |
-| iPad Pro | 1024x1366 | Portrait | | |
-| Laptop | 1366x768 | - | | |
-| Desktop | 1920x1080 | - | | |
 
 ### Breakpoint Testing
 | Breakpoint | Width | Elements Tested | Issues | Status |
 |------------|-------|-----------------|--------|--------|
-| Mobile | 320px-767px | | | |
-| Tablet | 768px-1023px | | | |
-| Desktop | 1024px+ | | | |
+| Mobile | 320px-767px | | | passed|
+| Tablet | 768px-1023px | | | passed|
+| Desktop | 1024px+ | | | passed|
 
 ### Responsive Elements Checklist
 - [ x] Navigation adapts to screen size
@@ -231,12 +235,27 @@ From line 16, column 13; to line 16, column 37
 ### Color Contrast Testing
 **Tool Used:** WebAIM Contrast Checker (https://webaim.org/resources/contrastchecker/)
 
+**Light Theme:**
+
 | Element | Foreground | Background | Contrast Ratio | WCAG AA | WCAG AAA |
 |---------|-----------|------------|----------------|---------|----------|
-| Body text | | | | | |
-| Headings | | | | | |
-| Buttons | | | | | |
-| Links | | | | | |
+| Body text | #24292F | #FFFFFF | 13.11:1 | ✅ Pass | ✅ Pass |
+| Headings | #0D1117 | #FFFFFF | 17.95:1 | ✅ Pass | ✅ Pass |
+| Primary Buttons | #FFFFFF | #238636 | 4.61:1 | ✅ Pass | ❌ Fail |
+| Error Messages | #FFFFFF | #DA3633 | 4.53:1 | ✅ Pass | ❌ Fail |
+| Links | #238636 | #FFFFFF | 4.61:1 | ✅ Pass | ❌ Fail |
+
+**Dark Theme:**
+
+| Element | Foreground | Background | Contrast Ratio | WCAG AA | WCAG AAA |
+|---------|-----------|------------|----------------|---------|----------|
+| Body text | #C9D1D9 | #0D1117 | 11.74:1 | ✅ Pass | ✅ Pass |
+| Headings | #58A6FF | #0D1117 | 7.38:1 | ✅ Pass | ✅ Pass |
+| Primary Buttons | #0D1117 | #3FB950 | 8.52:1 | ✅ Pass | ✅ Pass |
+| Error Messages | #0D1117 | #F85149 | 7.01:1 | ✅ Pass | ✅ Pass |
+| Links | #58A6FF | #0D1117 | 7.38:1 | ✅ Pass | ✅ Pass |
+
+**Note:** All text elements meet WCAG AA standards. Most elements meet AAA standards for enhanced accessibility.
 
 ### Keyboard Navigation
 | Test Case | Expected Result | Actual Result | Pass/Fail |
@@ -248,20 +267,20 @@ From line 16, column 13; to line 16, column 37
 | Enter on Submit | Quiz is submitted | | Pass|
 
 ### Screen Reader Testing (Basic)
-- [ ] Page titles are descriptive
-- [ ] Images have alt text
-- [ ] Form labels are associated
-- [ ] Headings provide structure
-- [ ] Links have descriptive text
+- [x] Page titles are descriptive (All pages have clear titles: "Web Dev Quiz - Home", "Web Dev Quiz - How To", "Web Dev Quiz - Question", "Web Dev Quiz - Results")
+- [x] Images have alt text (No images in project - uses emoji icons and text only)
+- [x] Form labels are associated (Fill-in-blank input has associated label element)
+- [x] Headings provide structure (Proper h1, h2, h3 hierarchy throughout all pages)
+- [x] Links have descriptive text (All links describe their destination: "How To", "Quit to Home", "Back to Home", topic names)
 
 ### Accessibility Checklist
-- [ ] Proper heading hierarchy (h1 → h2 → h3)
-- [ ] All images have alt attributes
-- [ ] Color is not the only means of conveying information
-- [ ] Focus indicators visible
-- [ ] ARIA labels used where appropriate
-- [ ] Semantic HTML elements used
-- [ ] Skip to main content link (optional)
+- [x] Proper heading hierarchy (h1 → h2 → h3) - All pages follow proper hierarchy
+- [x] All images have alt attributes (N/A - No images used in project)
+- [x] Color is not the only means of conveying information (✓/✗ icons used alongside color for correct/incorrect answers)
+- [x] Focus indicators visible (Browser default focus indicators present on all interactive elements)
+- [x] ARIA labels used where appropriate (aria-label="Toggle dark mode" on theme toggle button)
+- [x] Semantic HTML elements used (header, main, section, article used throughout)
+- [ ] Skip to main content link (optional - Not implemented)
 
 ---
 
