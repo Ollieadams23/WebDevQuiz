@@ -1,6 +1,6 @@
 # Online Quiz Application
 
-![Quiz Application Screenshot](assets/images/screenshot-home.png)
+![Quiz Application Screenshot](assets/images/homepage.png)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -18,7 +18,7 @@
 
 A comprehensive web development quiz application featuring four core categories: **JavaScript Fundamentals**, **UI/UX Design**, **HTML & CSS Basics**, and **Git & GitHub**. Test your knowledge across essential web development concepts with randomized questions and detailed explanations.
 
-**Live Site:** [Your GitHub Pages URL will go here]
+**Live Site:** (https://ollieadams23.github.io/WebDevQuiz)
 
 ---
 
@@ -32,7 +32,7 @@ This online quiz application was developed to test and reinforce fundamental web
 - **Git & GitHub** - Version control concepts and best practices
 
 ### Value to Users
-- **Educational:** Users can test and expand their knowledge on [your chosen topic]
+- **Educational:** Users can test and expand their knowledge on one of the topics
 - **Interactive Learning:** Immediate feedback helps users learn from their mistakes
 - **Engaging Experience:** Randomized questions ensure a fresh experience each time
 - **Accessible:** Designed with accessibility in mind to accommodate all users
@@ -43,31 +43,31 @@ This online quiz application was developed to test and reinforce fundamental web
 ## Features
 
 ### 🏠 Home Page
-![Home Page Screenshot](assets/images/screenshot-home.png)
+![Home Page Screenshot](assets/images/homepage.png)
 
-[Brief description of what users see on the home page]
+The home page welcomes users with a clean, modern design featuring the "Web Dev Quiz" title and dark/light mode toggle. Users can select their preferred number of questions (10 or 20) and choose from four quiz categories: JavaScript Fundamentals, UI/UX Design, HTML & CSS Basics, or Git & GitHub. A "How To" button provides access to detailed instructions.
 
 **Value:** Provides a welcoming entry point with clear call-to-action to start the quiz.
 
 ---
 
 ### 📖 How To Page
-![How To Page Screenshot](assets/images/screenshot-howto.png)
+![How To Page Screenshot](assets/images/howto.png)
 
-[Brief description of instructions provided]
+The How To page provides clear, step-by-step instructions on using the quiz application. It explains the three question types (multiple-choice, true/false, and fill-in-the-blank), navigation controls, scoring system, and how to review results. The page includes a "Start Quiz" button for easy transition to the quiz.
 
 **Value:** Ensures users understand how to take the quiz and what to expect, reducing confusion.
 
 ---
 
 ### ❓ Quiz Page
-![Quiz Page Screenshot](assets/images/screenshot-quiz.png)
+![Quiz Page Screenshot](assets/images/quizpage.png)
 
-[Brief description of quiz interface]
+The quiz page displays one question at a time with a clean, distraction-free interface. Questions are presented with clear formatting, and answer options adapt based on question type (four buttons for multiple-choice, two for true/false, or a text input for fill-in-the-blank). A progress indicator tracks the user's position in the quiz.
 
 **Features:**
 - Randomized questions for each attempt
-- Multiple question types [list types: multiple-choice, true/false, etc.]
+- Three question types: multiple-choice, true/false, and fill-in-the-blank
 - Progress indicator showing current question number
 - Clear answer selection with visual feedback
 - Navigation buttons (Next/Previous/Submit)
@@ -77,9 +77,9 @@ This online quiz application was developed to test and reinforce fundamental web
 ---
 
 ### 📊 Results Page
-![Results Page Screenshot](assets/images/screenshot-results.png)
+![Results Page Screenshot](assets/images/results.png)
 
-[Brief description of results display]
+The results page displays a comprehensive summary of the user's quiz performance, including their total score, percentage, and a complete review of all questions. Each question shows the user's answer, the correct answer, and a detailed explanation. Visual indicators (✓ for correct, ✗ for incorrect) make it easy to scan results.
 
 **Features:**
 - Total score and percentage
@@ -123,7 +123,7 @@ This online quiz application was developed to test and reinforce fundamental web
 - **CSS3** - Styling and responsive design
 - **JavaScript (ES6+)** - Quiz functionality and interactivity
 - **jQuery 3.7.1** - DOM manipulation and simplified JavaScript
-- **Bootstrap 5.3.7** - Responsive framework and UI components
+
 
 ### Development Tools
 - **Git** - Version control
@@ -136,7 +136,7 @@ This online quiz application was developed to test and reinforce fundamental web
 - W3C CSS Validator (Jigsaw)
 - JSHint - JavaScript linter
 - Chrome DevTools
-- [Add any other tools used]
+
 
 ---
 
@@ -225,19 +225,18 @@ Comprehensive testing has been performed on this application. For detailed testi
 ## Credits
 
 ### Code
-[List any code sources, tutorials, or libraries used]
-
-- **[Source Name]**: [URL]
-  - What was used: [Brief description]
-  - Location: [Where in your project]
+- **jQuery 3.7.1** - JavaScript Library
+  - Source: https://jquery.com/
+  - CDN: https://code.jquery.com/jquery-3.7.1.min.js
+  - License: MIT License
+  - Usage: Used for DOM manipulation, event handling, and AJAX requests throughout the application
 
 ### Content
-- Quiz questions and answers: [Original work / Source if applicable]
-- Images: [Sources and licenses]
+- Quiz questions and answers: generated by Copilot
+
 
 ### Acknowledgments
 - [Your mentor's name] - Project guidance and support
-- [Any other acknowledgments]
 
 ### Resources Referenced
 - Web Content Accessibility Guidelines (WCAG) 2.1 https://www.w3.org/TR/WCAG21/
@@ -249,16 +248,14 @@ Comprehensive testing has been performed on this application. For detailed testi
 
 ## Author
 
-**[Ollie Adams]**  
-- GitHub: [@your-username](https://github.com/your-username)
-- [Any other relevant links]
+**Ollie Adams**  
+- GitHub: [Ollieadams23](https://github.com/Ollieadams23)
+
 
 ---
 
 ## License
 
-This project is for educational purposes as part of [Your Course/Institution Name].
+This project is for educational purposes as part of (https://learningpeopleapac.percipio.com/).
 
 ---
-
-**Note:** This README will be updated as the project develops. Screenshots will be added once features are implemented.

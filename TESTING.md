@@ -71,8 +71,8 @@ From line 16, column 13; to line 16, column 37
 
 - **Re-test Result:**
 - **Screenshot:** 
-![alt text](image.png)
-![alt text](image-1.png)
+![HTML Validation - how-to.html](assets/images/image.png)
+![HTML Validation - how-to.html Pass](assets/images/image-1.png)
 
 #### quiz.html
 - **Test Date:**11/1/2026
@@ -82,7 +82,7 @@ From line 16, column 13; to line 16, column 37
 - **Fixes Applied:**
 - **Re-test Result:**
 - **Screenshot:** 
-![alt text](image-2.png)
+![HTML Validation - quiz.html Pass](assets/images/image-2.png)
 
 #### results.html
 - **Test Date:**11/1/2026
@@ -92,7 +92,7 @@ From line 16, column 13; to line 16, column 37
 - **Fixes Applied:**
 - **Re-test Result:**
 - **Screenshot:** 
-![alt text](image-3.png)
+![HTML Validation - results.html Pass](assets/images/image-3.png)
 ---
 
 ### CSS Validation (Jigsaw)
@@ -106,7 +106,7 @@ From line 16, column 13; to line 16, column 37
 - **Fixes Applied:** None needed
 - **Re-test Result:** Passed
 - **Screenshot:** 
-![alt text](image-4.png)
+![CSS Validation - style.css Pass](assets/images/image-4.png)
 
 #### quizstyle.css
 - **Test Date:** 15/1/2026
@@ -118,7 +118,7 @@ From line 16, column 13; to line 16, column 37
   - Removed `font-style: bold;` from `.progress-text` selector. The property `font-style` accepts values like `normal`, `italic`, or `oblique`, not `bold`. Bold styling is controlled by `font-weight`, which was already correctly set to `600` on the same selector.
 - **Re-test Result:** Passed
 - **Screenshot:** 
-![alt text](image-5.png)
+![CSS Validation - quizstyle.css Pass](assets/images/image-5.png)
 
 ---
 
@@ -133,7 +133,7 @@ From line 16, column 13; to line 16, column 37
 - **Fixes Applied:**
 - **Re-test Result:**
 - **Screenshot:** 
-![alt text](image-6.png)
+![JSHint Validation - script.js Pass](assets/images/image-6.png)
 
 #### results.js
 - **Test Date:**11/1/2026
@@ -143,7 +143,7 @@ From line 16, column 13; to line 16, column 37
 - **Fixes Applied:**
 - **Re-test Result:**
 - **Screenshot:** 
-![alt text](image-7.png)
+![JSHint Validation - results.js Pass](assets/images/image-7.png)
 
 #### quiz.js
 - **Test Date:**11/1/2026
@@ -152,7 +152,8 @@ From line 16, column 13; to line 16, column 37
 - **Significant Issues:**
 - **Fixes Applied:**
 - **Re-test Result:**
-- **Screenshot:** ![alt text](image-8.png)
+- **Screenshot:** 
+![JSHint Validation - quiz.js Pass](assets/images/image-8.png)
 
 
 
@@ -195,15 +196,15 @@ From line 16, column 13; to line 16, column 37
 ### Desktop Browsers
 | Browser | Version | Test Date | Issues Found | Status |
 |---------|---------|-----------|--------------|--------|
-| Chrome | | | | |
+| Chrome | 143.0.7499.170|16/1/2026 | 0 issues | Passed |
 | Firefox | | | | |
 | Edge | | | | |
-| Safari | | | | |
+| Opera | 7| 16/1/2026 | 0 issues | Passed |
 
 ### Mobile Browsers
 | Browser | Device | Test Date | Issues Found | Status |
 |---------|--------|-----------|--------------|--------|
-| Chrome Mobile | | | | |
+| Chrome Mobile |huawei p30 pro | 16/1/2026 | 0 issues | Passed |
 | Safari Mobile | | | | |
 | Samsung Internet | | | | |
 
@@ -325,22 +326,31 @@ From line 16, column 13; to line 16, column 37
 ## Testing Summary
 
 ### Overall Results
-- **Total Tests Performed:**
-- **Tests Passed:**
-- **Tests Failed:**
-- **Pass Rate:**
+- **Total Tests Performed:** 42
+- **Tests Passed:** 42
+- **Tests Failed:** 0
+- **Pass Rate:** 100%
 
 ### Known Issues
-*List any remaining issues that don't prevent core functionality*
+No known issues that prevent core functionality. All features working as expected across tested browsers and devices.
 
 ### Browser Support Summary
-*Summary of which browsers/versions are fully supported*
+Fully tested and supported on:
+- **Desktop:** Chrome 143.0, Opera 7 (All features working, 0 issues)
+- **Mobile:** Chrome Mobile on Huawei P30 Pro (All features working, 0 issues)
+
+The application uses standard HTML5, CSS3, and JavaScript (ES6) with jQuery, ensuring broad browser compatibility across modern browsers.
 
 ### Responsiveness Summary
-*Summary of which devices are fully supported*
+Fully responsive across all tested breakpoints:
+- **Mobile (320px-767px):** All elements display correctly, navigation adapts, buttons easily clickable
+- **Tablet (768px-1023px):** Layout adjusts appropriately, all features accessible
+- **Desktop (1024px+):** Optimal viewing experience, all functionality working
+
+All responsive elements pass checklist: navigation adaptation, text readability, button accessibility, quiz display, answer options layout, and footer positioning.
 
 ---
 
-**Testing completed by:** [Your Name]  
-**Final testing date:** [Date]  
-**Project status:** [Ready for deployment / Needs fixes]
+**Testing completed by:** Ollie Adams  
+**Final testing date:** January 16, 2026  
+**Project status:** Ready for deployment
