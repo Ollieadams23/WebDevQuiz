@@ -302,14 +302,22 @@ From line 16, column 13; to line 16, column 37
 - **Status:** ✅ Fixed
 
 ### Bug #2
-- **Date Found:**
-- **Description:**
-- **Steps to Reproduce:**
-- **Expected Behavior:**
-- **Actual Behavior:**
-- **Fix Applied:**
-- **Date Fixed:**
-- **Status:**
+- **Date Found:** February 2, 2026
+- **Description:** HTML tags in fill-in-blank answers not displaying and not accepted as correct
+- **Steps to Reproduce:** 
+  1. Start HTML/CSS quiz
+  2. Get to question 27: "The HTML tag used to create a hyperlink is ___."
+  3. Type `<a>` as the answer
+  4. Submit quiz and view results
+  5. Notice answer is marked incorrect and shows as blank or hidden
+- **Expected Behavior:** When user types `<a>` it should be accepted as correct (along with `a`) and should display properly on the results page as `<a>`
+- **Actual Behavior:** Browser interpreted `<a>` as HTML tag instead of text, causing it to be hidden in the results display. Answer was also not recognized as correct since validation only checked for `a`.
+- **Fix Applied:** 
+  1. In `results.js` (lines 161, 173): Added HTML escaping using `.replace(/</g, '&lt;').replace(/>/g, '&gt;')` to convert angle brackets to HTML entities when displaying user answers and correct answers for fill-in-blank questions
+  2. In `quiz.js` (line 293): Updated answer validation logic to accept both formats: `userAnswer === correctAnswer || userAnswer === '<' + correctAnswer + '>'`
+  3. In `results.js` (line 84): Updated the isCorrect check to also accept angle bracket format: `userAns === correctAns || userAns === '<' + correctAns + '>'`
+- **Date Fixed:** February 2, 2026
+- **Status:** ✅ Fixed
 
 ### Bug #3
 - **Date Found:**
