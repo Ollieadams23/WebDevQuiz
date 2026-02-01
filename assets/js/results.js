@@ -82,7 +82,7 @@ $(document).ready(function() {
             if (question.type === 'fill-in-blank') {
                 const userAns = (userAnswer || '').toString().trim().toLowerCase();
                 const correctAns = correctAnswer.toString().trim().toLowerCase();
-                isCorrect = userAns === correctAns;
+                isCorrect = userAns === correctAns || userAns === '<' + correctAns + '>';
             } else {
                 isCorrect = userAnswer === correctAnswer;
             }
@@ -155,7 +155,7 @@ $(document).ready(function() {
                 if (userAnswer !== null && userAnswer !== undefined && userAnswer !== '') {
                     const $userAnswerP = $('<p>')
                         .addClass('user-answer')
-                        .html(`Your answer: <strong>${userAnswer}</strong>`);
+                        .html(`Your answer: <strong>${userAnswer.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</strong>`);
                     $answersDiv.append($userAnswerP);
                 } else {
                     const $userAnswerP = $('<p>')

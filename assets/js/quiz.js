@@ -290,7 +290,7 @@ $(document).ready(function() {
                 // Case-insensitive string comparison for fill-in-blank
                 const userAnswer = (userAnswers[index] || '').toString().trim().toLowerCase();
                 const correctAnswer = question.correctAnswer.toString().trim().toLowerCase();
-                if (userAnswer === correctAnswer) {
+                if (userAnswer === correctAnswer || userAnswer === '<' + correctAnswer + '>') {
                     correctCount++;
                 }
             } else {
