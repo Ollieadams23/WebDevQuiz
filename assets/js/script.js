@@ -67,3 +67,11 @@ $('#htmlcss').click(function() {
 $('#gitgithub').click(function() {
     window.location.href = 'quiz.html?category=gitgithub';
 });
+
+$('#sql').click(function() {
+    window.location.href = 'quiz.html?category=sql';
+});
+
+$('#django').click(function() {
+    window.location.href = 'quiz.html?category=django';
+});

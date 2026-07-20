@@ -1,0 +1,395 @@
+{
+  "category": "Django Fundamentals",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "What is Django?",
+      "options": [
+        "A JavaScript library",
+        "A high-level Python web framework",
+        "A database engine",
+        "A CSS framework"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Django is a high-level Python web framework designed for rapid development and clean, pragmatic design."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Which command creates a new Django project?",
+      "options": [
+        "django-admin startproject mysite",
+        "python manage.py startproject mysite",
+        "django-admin create mysite",
+        "python django new mysite"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The canonical command to create a new Django project is django-admin startproject project_name."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Which command creates a new app inside a Django project?",
+      "options": [
+        "python manage.py createapp blog",
+        "python manage.py startapp blog",
+        "django-admin startapp blog",
+        "python manage.py newapp blog"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Use python manage.py startapp app_name to create a new Django app."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "What file lists installed Django apps?",
+      "options": [
+        "urls.py",
+        "models.py",
+        "settings.py",
+        "views.py"
+      ],
+      "correctAnswer": 2,
+      "explanation": "INSTALLED_APPS is defined in settings.py."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "What does MVT stand for in Django architecture?",
+      "options": [
+        "Model, View, Template",
+        "Model, Validator, Template",
+        "Module, View, Transaction",
+        "Model, View, Thread"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Django follows the MVT pattern: Model, View, Template."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Which file is commonly used to define URL routes for an app?",
+      "options": [
+        "routes.py",
+        "views.py",
+        "urls.py",
+        "paths.py"
+      ],
+      "correctAnswer": 2,
+      "explanation": "App-level URL patterns are usually declared in urls.py."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Which function is commonly used to render a template in a view?",
+      "options": [
+        "render_template()",
+        "render()",
+        "template()",
+        "response()"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Django views often return render(request, template_name, context)."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Which ORM method retrieves all records of a model?",
+      "options": [
+        "Model.getAll()",
+        "Model.objects.all()",
+        "Model.select()",
+        "Model.fetch()"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Model.objects.all() returns a QuerySet with all model instances."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "Which command creates migration files from model changes?",
+      "options": [
+        "python manage.py makemigrations",
+        "python manage.py migrate",
+        "python manage.py syncdb",
+        "python manage.py dbmigrate"
+      ],
+      "correctAnswer": 0,
+      "explanation": "makemigrations generates migration files based on model changes."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Which command applies migrations to the database?",
+      "options": [
+        "python manage.py apply",
+        "python manage.py migrate",
+        "python manage.py makemigrations",
+        "python manage.py updatedb"
+      ],
+      "correctAnswer": 1,
+      "explanation": "migrate applies pending migrations to the configured database."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "Which command creates an admin superuser account?",
+      "options": [
+        "python manage.py createsuperuser",
+        "python manage.py addadmin",
+        "python manage.py superuser",
+        "python manage.py makeadmin"
+      ],
+      "correctAnswer": 0,
+      "explanation": "createsuperuser creates a user who can access Django admin with full permissions."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Where are database models usually defined in a Django app?",
+      "options": [
+        "admin.py",
+        "views.py",
+        "models.py",
+        "forms.py"
+      ],
+      "correctAnswer": 2,
+      "explanation": "models.py is the conventional location for model classes."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "What is the purpose of Django templates?",
+      "options": [
+        "To define database schema",
+        "To generate dynamic HTML",
+        "To manage URLs",
+        "To run migrations"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Templates are used to present dynamic HTML from view context data."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Which template syntax outputs a variable value?",
+      "options": [
+        "{% variable %}",
+        "{{ variable }}",
+        "[[ variable ]]",
+        "<% variable %>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Double curly braces render context variables in Django templates."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Which template tag is used for control flow like loops and conditionals?",
+      "options": [
+        "{{ }}",
+        "{% %}",
+        "<# #>",
+        "(( ))"
+      ],
+      "correctAnswer": 1,
+      "explanation": "{% %} is used for template tags such as if, for, and block."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "What does STATIC_URL configure in Django?",
+      "options": [
+        "The admin login URL",
+        "The base path for static files",
+        "The database host",
+        "The API root path"
+      ],
+      "correctAnswer": 1,
+      "explanation": "STATIC_URL is the URL prefix for serving static assets like CSS and JS."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "What does MEDIA_ROOT typically store?",
+      "options": [
+        "Project settings files",
+        "User-uploaded files",
+        "Static CSS files",
+        "Template files"
+      ],
+      "correctAnswer": 1,
+      "explanation": "MEDIA_ROOT is the filesystem path where uploaded files are stored."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "What is the default template extension commonly used in Django projects?",
+      "options": [
+        ".djt",
+        ".html",
+        ".tpl",
+        ".jinja"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Django templates are commonly written as .html files."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "Which built-in app provides the Django admin interface?",
+      "options": [
+        "django.contrib.admin",
+        "django.admin",
+        "django.core.admin",
+        "django.apps.admin"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The admin interface is provided by django.contrib.admin."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Which decorator is used to require a logged-in user for a view?",
+      "options": [
+        "@auth_required",
+        "@login_required",
+        "@user_required",
+        "@require_auth"
+      ],
+      "correctAnswer": 1,
+      "explanation": "@login_required restricts a view to authenticated users."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "What is QuerySet in Django?",
+      "options": [
+        "A template context object only",
+        "A representation of database queries and results",
+        "A middleware class",
+        "A URL router"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A QuerySet represents a lazy database lookup for model objects."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "Which HTTP object is passed as the first argument to a function-based view?",
+      "options": [
+        "response",
+        "request",
+        "context",
+        "session"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Function-based views receive request as the first parameter."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "Which method is commonly used to get a single object or return 404 if missing?",
+      "options": [
+        "Model.objects.one()",
+        "get_object_or_404()",
+        "fetch_or_404()",
+        "find_or_404()"
+      ],
+      "correctAnswer": 1,
+      "explanation": "get_object_or_404() is a shortcut that raises Http404 if not found."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Which file in a Django project usually contains global URL configuration?",
+      "options": [
+        "settings.py",
+        "wsgi.py",
+        "project urls.py",
+        "manage.py"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The project-level urls.py contains the root URL patterns."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "What command starts Django's development server by default?",
+      "options": [
+        "python manage.py runserver",
+        "python manage.py serve",
+        "django-admin run",
+        "python app.py"
+      ],
+      "correctAnswer": 0,
+      "explanation": "runserver starts the built-in development server, usually at http://127.0.0.1:8000/."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Which middleware helps protect forms against CSRF attacks?",
+      "options": [
+        "AuthenticationMiddleware",
+        "SessionMiddleware",
+        "CsrfViewMiddleware",
+        "SecurityHeadersMiddleware"
+      ],
+      "correctAnswer": 2,
+      "explanation": "CsrfViewMiddleware validates CSRF tokens on unsafe HTTP requests."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Which template tag is used inside HTML forms to include a CSRF token?",
+      "options": [
+        "{% csrf %}",
+        "{% token csrf %}",
+        "{% csrf_token %}",
+        "{{ csrf_token }}"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Use {% csrf_token %} inside forms that submit POST data."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Which settings value should be False in production for security?",
+      "options": [
+        "INSTALLED_APPS",
+        "DEBUG",
+        "MIDDLEWARE",
+        "DATABASES"
+      ],
+      "correctAnswer": 1,
+      "explanation": "DEBUG should be False in production to avoid exposing sensitive details."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "What does manage.py primarily provide?",
+      "options": [
+        "A browser UI for models",
+        "A command-line utility for Django project tasks",
+        "A deployment manifest",
+        "A migration file"
+      ],
+      "correctAnswer": 1,
+      "explanation": "manage.py is a convenience wrapper for Django administrative commands."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Which Django feature helps map model classes to database tables?",
+      "options": [
+        "Django ORM",
+        "Django Signals",
+        "Django Channels",
+        "Django Cache"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The ORM maps Python model definitions to relational database tables."
+    }
+  ]
+}

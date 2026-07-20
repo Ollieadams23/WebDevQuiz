@@ -32,7 +32,9 @@ $(document).ready(function() {
             'javascript': 'assets/questions/javascript.json',
             'uiux': 'assets/questions/uiux.json',
             'htmlcss': 'assets/questions/htmlcss.json',
-            'gitgithub': 'assets/questions/gitgithub.json'
+            'gitgithub': 'assets/questions/gitgithub.json',
+            'sql': 'assets/questions/sql.json',
+            'django': 'assets/questions/django.json'
         };
 
         const jsonFile = categoryFiles[category];

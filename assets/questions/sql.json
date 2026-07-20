@@ -1,0 +1,395 @@
+{
+  "category": "SQL Fundamentals",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "What does SQL stand for?",
+      "options": [
+        "Structured Query Language",
+        "Simple Query Language",
+        "System Query Logic",
+        "Sequential Query Language"
+      ],
+      "correctAnswer": 0,
+      "explanation": "SQL stands for Structured Query Language, the standard language for working with relational databases."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Which SQL statement is used to retrieve data from a database?",
+      "options": [
+        "GET",
+        "FETCH",
+        "SELECT",
+        "EXTRACT"
+      ],
+      "correctAnswer": 2,
+      "explanation": "SELECT is the standard SQL command for reading data from one or more tables."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Which clause is used to filter rows in a query?",
+      "options": [
+        "ORDER BY",
+        "WHERE",
+        "GROUP BY",
+        "HAVING"
+      ],
+      "correctAnswer": 1,
+      "explanation": "WHERE filters rows before grouping or ordering happens."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Which SQL command adds new rows to a table?",
+      "options": [
+        "ADD",
+        "CREATE",
+        "INSERT INTO",
+        "UPDATE"
+      ],
+      "correctAnswer": 2,
+      "explanation": "INSERT INTO is used to add new records to a table."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Which command changes existing data in a table?",
+      "options": [
+        "MODIFY",
+        "UPDATE",
+        "ALTER",
+        "REPLACE"
+      ],
+      "correctAnswer": 1,
+      "explanation": "UPDATE modifies values in rows that already exist."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Which command removes rows from a table?",
+      "options": [
+        "DELETE",
+        "DROP",
+        "REMOVE",
+        "TRUNCATE TABLE"
+      ],
+      "correctAnswer": 0,
+      "explanation": "DELETE removes selected rows, usually with a WHERE clause."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "Which statement creates a new table?",
+      "options": [
+        "NEW TABLE",
+        "ADD TABLE",
+        "CREATE TABLE",
+        "MAKE TABLE"
+      ],
+      "correctAnswer": 2,
+      "explanation": "CREATE TABLE defines a new table and its columns."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Which keyword sorts query results in ascending or descending order?",
+      "options": [
+        "ORDER BY",
+        "SORT BY",
+        "GROUP BY",
+        "RANK BY"
+      ],
+      "correctAnswer": 0,
+      "explanation": "ORDER BY sorts the final result set. Use ASC or DESC to choose direction."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "What does COUNT(*) return?",
+      "options": [
+        "The sum of a numeric column",
+        "The number of rows",
+        "The number of columns",
+        "The average of all values"
+      ],
+      "correctAnswer": 1,
+      "explanation": "COUNT(*) returns the total number of rows in the result set."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Which aggregate function calculates the average value?",
+      "options": [
+        "MEAN()",
+        "AVG()",
+        "AVERAGE()",
+        "MID()"
+      ],
+      "correctAnswer": 1,
+      "explanation": "AVG() returns the arithmetic mean of numeric values."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "What is the purpose of a PRIMARY KEY?",
+      "options": [
+        "To store duplicate values",
+        "To uniquely identify each row",
+        "To sort the table automatically",
+        "To encrypt the data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A PRIMARY KEY uniquely identifies each row and cannot be NULL."
+    },
+    {
+      "id": 12,
+      "type": "multiple-choice",
+      "question": "Which key creates a relationship between two tables?",
+      "options": [
+        "FOREIGN KEY",
+        "PRIMARY KEY",
+        "UNIQUE KEY",
+        "INDEX KEY"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A FOREIGN KEY references a key in another table to enforce relationships."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "Which JOIN returns only matching rows from both tables?",
+      "options": [
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "FULL JOIN",
+        "INNER JOIN"
+      ],
+      "correctAnswer": 3,
+      "explanation": "INNER JOIN includes only rows with matching values in both tables."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "Which JOIN returns all rows from the left table and matches from the right?",
+      "options": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "CROSS JOIN"
+      ],
+      "correctAnswer": 0,
+      "explanation": "LEFT JOIN keeps every row from the left table and adds matching right-side data when available."
+    },
+    {
+      "id": 15,
+      "type": "multiple-choice",
+      "question": "Which operator is used to search for a pattern in text?",
+      "options": [
+        "MATCH",
+        "LIKE",
+        "IN",
+        "BETWEEN"
+      ],
+      "correctAnswer": 1,
+      "explanation": "LIKE supports wildcard pattern matching, often with % and _."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "What does the % wildcard represent in a LIKE pattern?",
+      "options": [
+        "Exactly one character",
+        "Any number of characters",
+        "Any digit only",
+        "A space character"
+      ],
+      "correctAnswer": 1,
+      "explanation": "% matches zero or more characters in most SQL dialects."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "Which clause groups rows that have the same values?",
+      "options": [
+        "ORDER BY",
+        "WHERE",
+        "GROUP BY",
+        "HAVING"
+      ],
+      "correctAnswer": 2,
+      "explanation": "GROUP BY combines rows into groups so aggregate functions can be applied."
+    },
+    {
+      "id": 18,
+      "type": "multiple-choice",
+      "question": "Which clause filters grouped results (after GROUP BY)?",
+      "options": [
+        "WHERE",
+        "HAVING",
+        "ORDER BY",
+        "LIMIT"
+      ],
+      "correctAnswer": 1,
+      "explanation": "HAVING filters groups, while WHERE filters individual rows before grouping."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "What does DISTINCT do in a SELECT query?",
+      "options": [
+        "Sorts rows alphabetically",
+        "Removes duplicate rows from the result",
+        "Returns only NULL values",
+        "Joins multiple tables"
+      ],
+      "correctAnswer": 1,
+      "explanation": "DISTINCT removes duplicate result rows based on selected columns."
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "Which statement is used to remove an entire table definition and data?",
+      "options": [
+        "DELETE TABLE",
+        "TRUNCATE TABLE",
+        "DROP TABLE",
+        "REMOVE TABLE"
+      ],
+      "correctAnswer": 2,
+      "explanation": "DROP TABLE deletes the table structure and data permanently."
+    },
+    {
+      "id": 21,
+      "type": "multiple-choice",
+      "question": "Which statement changes the structure of an existing table?",
+      "options": [
+        "UPDATE TABLE",
+        "ALTER TABLE",
+        "MODIFY TABLE",
+        "CHANGE TABLE"
+      ],
+      "correctAnswer": 1,
+      "explanation": "ALTER TABLE is used to add, remove, or modify columns and constraints."
+    },
+    {
+      "id": 22,
+      "type": "multiple-choice",
+      "question": "What does NULL represent in SQL?",
+      "options": [
+        "Zero",
+        "An empty string",
+        "Unknown or missing value",
+        "False"
+      ],
+      "correctAnswer": 2,
+      "explanation": "NULL means no value is present; it is not the same as 0 or an empty string."
+    },
+    {
+      "id": 23,
+      "type": "multiple-choice",
+      "question": "Which condition checks whether a value is between two bounds (inclusive)?",
+      "options": [
+        "RANGE",
+        "IN",
+        "BETWEEN",
+        "WITHIN"
+      ],
+      "correctAnswer": 2,
+      "explanation": "BETWEEN checks whether a value falls within a lower and upper bound, inclusive."
+    },
+    {
+      "id": 24,
+      "type": "multiple-choice",
+      "question": "Which operator checks if a value matches any value in a list?",
+      "options": [
+        "ANY",
+        "IN",
+        "EXISTS",
+        "ALL"
+      ],
+      "correctAnswer": 1,
+      "explanation": "IN compares a value against a list of possible values."
+    },
+    {
+      "id": 25,
+      "type": "multiple-choice",
+      "question": "What is the default sort order when using ORDER BY without ASC or DESC?",
+      "options": [
+        "Descending",
+        "Random",
+        "Ascending",
+        "Database-specific only"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ascending order is the default when no direction is specified."
+    },
+    {
+      "id": 26,
+      "type": "multiple-choice",
+      "question": "Which command can remove all rows from a table quickly while keeping the table?",
+      "options": [
+        "DELETE",
+        "DROP",
+        "TRUNCATE TABLE",
+        "CLEAR TABLE"
+      ],
+      "correctAnswer": 2,
+      "explanation": "TRUNCATE TABLE removes all rows and keeps the table structure."
+    },
+    {
+      "id": 27,
+      "type": "multiple-choice",
+      "question": "Which SQL clause limits the number of returned rows in many SQL dialects?",
+      "options": [
+        "TOP",
+        "LIMIT",
+        "MAXROWS",
+        "ROWCOUNT"
+      ],
+      "correctAnswer": 1,
+      "explanation": "LIMIT is commonly used (for example in MySQL and PostgreSQL) to cap result rows."
+    },
+    {
+      "id": 28,
+      "type": "multiple-choice",
+      "question": "Which command is used to grant permissions to a database user?",
+      "options": [
+        "ALLOW",
+        "PERMIT",
+        "GRANT",
+        "AUTHORIZE"
+      ],
+      "correctAnswer": 2,
+      "explanation": "GRANT assigns privileges such as SELECT, INSERT, or UPDATE to users/roles."
+    },
+    {
+      "id": 29,
+      "type": "multiple-choice",
+      "question": "Which command removes previously granted permissions?",
+      "options": [
+        "DENY",
+        "REVOKE",
+        "REMOVE",
+        "UNGRANT"
+      ],
+      "correctAnswer": 1,
+      "explanation": "REVOKE removes privileges that were previously granted."
+    },
+    {
+      "id": 30,
+      "type": "multiple-choice",
+      "question": "Which statement best describes a SQL transaction?",
+      "options": [
+        "A query that runs only once",
+        "A set of operations treated as one unit of work",
+        "A backup operation",
+        "A database user permission"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A transaction groups operations so they can be committed together or rolled back together."
+    }
+  ]
+}
