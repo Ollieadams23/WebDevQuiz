@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Test your web development knowledge with our interactive quiz covering JavaScript, UI/UX, HTML/CSS, and Git/GitHub">
+    <meta name="github-repository" content="Ollieadams23/WebDevQuiz">
     <title>Web Dev Quiz - Home</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/questionBank.js" defer></script>
     <script src="assets/js/script.js" defer></script>
 
 </head>
@@ -49,13 +51,8 @@
                 <section class="links-section">
                     <br>
                     <h2>Step 2: Select Topic to Start</h2>
-                    <ul class="topic-links">
-                        <li><a id="jsfund" >JavaScript Fundamentals</a></li>
-                        <li><a id="uiux" >UI/UX Design</a></li>
-                        <li><a id="htmlcss" >HTML & CSS Basics</a></li>
-                        <li><a id="gitgithub" >Git & GitHub</a></li>
-                        <li><a id="sql" >SQL Fundamentals</a></li>
-                        <li><a id="django" >Django Fundamentals</a></li>
+                    <ul class="topic-links" id="topic-links" aria-live="polite">
+                        <li>Loading quiz topics…</li>
                     </ul>
                 </section>
             </div>

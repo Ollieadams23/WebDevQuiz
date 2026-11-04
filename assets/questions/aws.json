@@ -1,0 +1,360 @@
+{
+    "category":  "AWS",
+    "questions":  [
+                      {
+                          "id":  1,
+                          "type":  "multiple-choice",
+                          "question":  "Which feature of Amazon Cognito supports identity federation among social and enterprise identity providers?",
+                          "options":  [
+                                          "Requires manual integration with identity providers",
+                                          "Requires users to manage authentication infrastructure",
+                                          "Only supports user authentication through EC2",
+                                          "Does not support mobile or web applications",
+                                          "Offers integration with social and enterprise identity providers"
+                                      ],
+                          "correctAnswer":  4,
+                          "explanation":  "Amazon Cognito supports identity federation by serving as a central hub that natively integrates with public social providers (like Google, Facebook, Apple, and Amazon) as well as enterprise systems via SAML 2.0 or OpenID Connect (OIDC)."
+                      },
+                      {
+                          "id":  2,
+                          "type":  "multiple-choice",
+                          "question":  "What is one use case of AWS Resource Groups?",
+                          "options":  [
+                                          "Configuring IAM federation",
+                                          "Generating billing reports",
+                                          "Creating resource groups based on tags or CloudFormation stacks",
+                                          "Creating EBS snapshots",
+                                          "Setting up multi-factor authentication"
+                                      ],
+                          "correctAnswer":  2,
+                          "explanation":  "AWS Resource Groups allows you to organize and manage your AWS resources collectively by creating dynamic groups based on shared tags or specific CloudFormation stacks."
+                      },
+                      {
+                          "id":  3,
+                          "type":  "multiple-choice",
+                          "question":  "How does envelope encryption improve the scalability of AWS encryption practices?",
+                          "options":  [
+                                          "By using TLS 1.3 instead of TLS 1.2 for all network traffic",
+                                          "By encrypting data keys under a CMK instead of encrypting large data directly",
+                                          "By encrypting each object with a unique AWS-managed key",
+                                          "By encrypting data directly with the customer master key (CMK)"
+                                      ],
+                          "correctAnswer":  1,
+                          "explanation":  "Envelope encryption uses a local data key to encrypt large data payloads, while the data key itself is encrypted under a root KMS Customer Master Key (CMK). This prevents network bottlenecks and bypasses the strict 4 KB direct payload limits of KMS."
+                      },
+                      {
+                          "id":  4,
+                          "type":  "multiple-choice",
+                          "question":  "Which action can you perform when managing packages in AWS CodeArtifact?",
+                          "options":  [
+                                          "Enable version control on the file system hosting the repository",
+                                          "Modify package source code directly in the repository",
+                                          "View, delete, and control access to individual package versions",
+                                          "Encrypt packages manually before uploading",
+                                          "Use EC2 to build and compile all packages"
+                                      ],
+                          "correctAnswer":  2,
+                          "explanation":  "AWS CodeArtifact provides built-in repository interfaces and APIs to view package metadata, delete old iterations, and apply IAM rules to restrict or authorize package usage across your development pipeline."
+                      },
+                      {
+                          "id":  5,
+                          "type":  "multiple-select",
+                          "question":  "Which feature(s) must be enabled to allow automatic patching in your AWS Elastic Beanstalk environment? (Select all that apply)",
+                          "options":  [
+                                          "Alarm configuration",
+                                          "Enhanced health monitoring",
+                                          "Managed updates",
+                                          "AWS Config integration",
+                                          "AWS Systems Manager"
+                                      ],
+                          "correctAnswer":  [
+                                                1,
+                                                2
+                                            ],
+                          "explanation":  "Managed Updates handles the automation engine for patches, but Elastic Beanstalk strictly mandates that Enhanced Health Monitoring must also be enabled to evaluate rolling health in real-time."
+                      },
+                      {
+                          "id":  6,
+                          "type":  "multiple-select",
+                          "question":  "Which two options are available for deploying .NET applications to AWS Elastic Beanstalk? (Select all that apply)",
+                          "options":  [
+                                          ".NET for macOS",
+                                          ".NET for Ubuntu",
+                                          ".NET Core on Linux",
+                                          ".NET for Windows Server",
+                                          ".NET for Windows NT"
+                                      ],
+                          "correctAnswer":  [
+                                                2,
+                                                3
+                                            ],
+                          "explanation":  "Elastic Beanstalk natively supports cross-platform modern workloads using .NET Core on Linux (Amazon Linux) alongside enterprise or legacy ecosystems running standard .NET on Windows Server IIS."
+                      },
+                      {
+                          "id":  7,
+                          "type":  "multiple-choice",
+                          "question":  "What EC2 networking feature allows you to attach multiple IP addresses and security groups to a single instance?",
+                          "options":  [
+                                          "Elastic IP address",
+                                          "Cluster placement group",
+                                          "Elastic Network Interface (ENI)",
+                                          "Subnet"
+                                      ],
+                          "correctAnswer":  2,
+                          "explanation":  "An Elastic Network Interface (ENI) functions as a virtual network card. You can map multiple private/public IPs and bind distinct combinations of Security Groups directly to an ENI."
+                      },
+                      {
+                          "id":  8,
+                          "type":  "multiple-choice",
+                          "question":  "After copying WordPress files into /var/www/html, what change must be made in Apache\u0027s configuration to enable WordPress permalinks?",
+                          "options":  [
+                                          "Replace the default index page with index.php",
+                                          "Install the mod_rewrite module manually",
+                                          "Set DocumentRoot to /var/www/wordpress",
+                                          "Change AllowOverride None to AllowOverride All in the /var/www/html directory block"
+                                      ],
+                          "correctAnswer":  3,
+                          "explanation":  "Changing AllowOverride to \u0027All\u0027 permits Apache to read and enforce localized URL routing rules contained within the WordPress .htaccess file."
+                      },
+                      {
+                          "id":  9,
+                          "type":  "multiple-choice",
+                          "question":  "Which AWS CodeCommit capability includes fast-forward, squash, or three-way?",
+                          "options":  [
+                                          "Pull requests",
+                                          "Push requests",
+                                          "Branching",
+                                          "Merge options"
+                                      ],
+                          "correctAnswer":  3,
+                          "explanation":  "Fast-forward, squash, and three-way define the standard merge actions available to combine divergent developer branches into target branches within CodeCommit."
+                      },
+                      {
+                          "id":  10,
+                          "type":  "multiple-choice",
+                          "question":  "Which resource layer includes IOPS, throughput, and encryption as key parameters?",
+                          "options":  [
+                                          "Compute",
+                                          "Database",
+                                          "Networking",
+                                          "Storage"
+                                      ],
+                          "correctAnswer":  3,
+                          "explanation":  "IOPS, operational throughput metrics, and cryptographic rest-encryption represent core settings used to provision and evaluate block or object storage platforms like Amazon EBS and S3."
+                      },
+                      {
+                          "id":  11,
+                          "type":  "multiple-select",
+                          "question":  "While adding resources using AWS Resource Explorer, which type of properties can be filtered? (Select all that apply)",
+                          "options":  [
+                                          "Creation date",
+                                          "Resource type",
+                                          "Service",
+                                          "Account ID",
+                                          "Application"
+                                      ],
+                          "correctAnswer":  [
+                                                1,
+                                                2,
+                                                3,
+                                                4
+                                            ],
+                          "explanation":  "AWS Resource Explorer supports distinct query prefix syntaxes to isolate infrastructure footprints, filtering directly by resource type, parent service, target account IDs, and linked applications."
+                      },
+                      {
+                          "id":  12,
+                          "type":  "multiple-choice",
+                          "question":  "You are running \u0027sam deploy --guided\u0027 to deploy a new application. Which is the default name of the SAM configuration file?",
+                          "options":  [
+                                          "samconfig.ebe",
+                                          "samconfig.toml",
+                                          "samconfig.py",
+                                          "samconfig.js"
+                                      ],
+                          "correctAnswer":  1,
+                          "explanation":  "The guided deployment parameters captured by the AWS SAM CLI wizard automatically populate inside a structural configuration file named samconfig.toml by default."
+                      },
+                      {
+                          "id":  13,
+                          "type":  "multiple-choice",
+                          "question":  "Which AWS monitoring service allows users to audit AWS resource usage?",
+                          "options":  [
+                                          "Security Hub",
+                                          "X-Ray",
+                                          "CloudTrail",
+                                          "CloudWatch"
+                                      ],
+                          "correctAnswer":  2,
+                          "explanation":  "AWS CloudTrail tracks and logs the comprehensive history of account operations and API calls across the entire infrastructure footprint, serving as the central governance auditing register."
+                      },
+                      {
+                          "id":  14,
+                          "type":  "multiple-choice",
+                          "question":  "Which architectural component of AMP is responsible for collecting performance data?",
+                          "options":  [
+                                          "Workspace",
+                                          "Query API",
+                                          "Prometheus Server",
+                                          "Alert Manager"
+                                      ],
+                          "correctAnswer":  2,
+                          "explanation":  "The Prometheus Server (or an equivalent configured scraper agent) discovers workloads and harvests time-series metrics before forwarding them to the Amazon Managed Service for Prometheus workspace."
+                      },
+                      {
+                          "id":  15,
+                          "type":  "multiple-choice",
+                          "question":  "How are metrics from a newly created EC2 instance sent to AWS CloudWatch?",
+                          "options":  [
+                                          "By manually setting up an EC2 to CloudWatch connection via SSH",
+                                          "By default, automatically",
+                                          "By installing a CloudWatch agent on the EC2 instance",
+                                          "EC2 metrics are not sent to CloudWatch"
+                                      ],
+                          "correctAnswer":  1,
+                          "explanation":  "Hypervisor-level baseline telemetry (such as CPU, basic network I/O, and disk operations) routes automatically to CloudWatch by default without server-side agent plugins or installations."
+                      },
+                      {
+                          "id":  16,
+                          "type":  "multiple-choice",
+                          "question":  "How is the AWS Systems Manager agent installed on an EC2 instance running Amazon Linux 2?",
+                          "options":  [
+                                          "The agent is deployed from the AWS Systems Manager Agent Deployment console",
+                                          "The AWS Systems Manager agent cannot be deployed on Amazon Linux 2",
+                                          "The AWS Systems Manager agent is installed by default on Amazon Linux 2",
+                                          "The agent configuration file is transferred to AWS Systems Manager via FTP"
+                                      ],
+                          "correctAnswer":  2,
+                          "explanation":  "The Systems Manager (SSM) Agent comes baked into the standard Amazon Linux 2 operating system image by default. It activates automatically when granted an appropriate IAM role."
+                      },
+                      {
+                          "id":  17,
+                          "type":  "multiple-choice",
+                          "question":  "What is the primary distinction between Amazon EC2 Auto Scaling and AWS Application Auto Scaling?",
+                          "options":  [
+                                          "EC2 scales endpoints while Application Auto Scaling scales clusters and AZs",
+                                          "Both EC2 and Application Auto Scaling do the same thing with different names",
+                                          "EC2 scales EC2 and DynamoDB while Application Auto Scaling scales only serverless",
+                                          "EC2 scales EC2 only while Application Auto Scaling covers many AWS services"
+                                      ],
+                          "correctAnswer":  3,
+                          "explanation":  "Amazon EC2 Auto Scaling handles virtual machine fleet adjustments exclusively, whereas Application Auto Scaling provides a standardized platform scaling interface for ECS, DynamoDB, and other native AWS platforms."
+                      },
+                      {
+                          "id":  18,
+                          "type":  "multiple-select",
+                          "question":  "Which AWS resources are supported by AWS Compute Optimizer?",
+                          "options":  [
+                                          "AWS Lambda functions with memory and runtime tuning",
+                                          "Amazon S3 buckets with lifecycle and storage tiering",
+                                          "Amazon CloudFront distributions with caching optimization",
+                                          "Auto Scaling groups with scaling pattern analysis",
+                                          "EC2 instances with CPU, memory, and network analysis"
+                                      ],
+                          "correctAnswer":  [
+                                                0,
+                                                3,
+                                                4
+                                            ],
+                          "explanation":  "AWS Compute Optimizer leverages machine learning to review compute profiles and resources, supporting standalone EC2 instances, Auto Scaling configurations, Lambda allocations, and EBS volumes."
+                      },
+                      {
+                          "id":  19,
+                          "type":  "multiple-select",
+                          "question":  "You are creating an auto scaling group from an EC2 launch template. In step 4, \u0027Configure group size and scaling policies\u0027, which are options provided under Automatic scaling - optional?",
+                          "options":  [
+                                          "Prioritized scaling policy",
+                                          "No scaling policies",
+                                          "Flexible scaling limit",
+                                          "Target tracking scaling policy"
+                                      ],
+                          "correctAnswer":  [
+                                                1,
+                                                3
+                                            ],
+                          "explanation":  "The AWS creation process provides options to keep capacity static using \u0027No scaling policies\u0027 or to leverage automated elasticity adjustments using \u0027Target tracking scaling policies\u0027."
+                      },
+                      {
+                          "id":  20,
+                          "type":  "multiple-select",
+                          "question":  "You are configuring a CloudFront distribution. In Step 2, Specify origin, which Origin types are available to choose from?",
+                          "options":  [
+                                          "API origin",
+                                          "VPC origin",
+                                          "API Gateway",
+                                          "Amazon S3",
+                                          "DynamoDB"
+                                      ],
+                          "correctAnswer":  [
+                                                1,
+                                                2,
+                                                3
+                                            ],
+                          "explanation":  "CloudFront features built-in delivery routing structures for S3 storage targets, API Gateway wrappers, and secure VPC internal endpoints using native VPC origins."
+                      },
+                      {
+                          "id":  21,
+                          "type":  "multiple-choice",
+                          "question":  "Which is the most likely reason a load balancer marks healthy instances as unhealthy during peak traffic periods?",
+                          "options":  [
+                                          "Listener ports are misconfigured for HTTPS traffic",
+                                          "Backend instances are not registered with the target group",
+                                          "Health check thresholds are too high to detect failures",
+                                          "Health check intervals and timeouts are too short for the applicationâ€™s response time"
+                                      ],
+                          "correctAnswer":  3,
+                          "explanation":  "Heavy traffic causes execution delays on hosting layers. Tight timeout margins cause healthy but slow systems to miss their deadlines, leading the balancer to report false errors."
+                      },
+                      {
+                          "id":  22,
+                          "type":  "multiple-choice",
+                          "question":  "Which is the most likely cause of an application suddenly receiving \u0027Access Denied\u0027 errors when writing to an S3 bucket?",
+                          "options":  [
+                                          "The storage class was changed to Glacier",
+                                          "The IAM or bucket policy was recently misconfigured",
+                                          "The storage capacity limit was exceeded",
+                                          "The bucketâ€™s lifecycle policy expired"
+                                      ],
+                          "correctAnswer":  1,
+                          "explanation":  "HTTP 403 access issues denote authorization configuration breakdowns. This occurs from recent, faulty adjustments to identity access permissions or bucket safety policies."
+                      },
+                      {
+                          "id":  23,
+                          "type":  "multiple-choice",
+                          "question":  "What is the likely cause when an application shows SSL/TLS handshake failures despite network connectivity being functional?",
+                          "options":  [
+                                          "The IAM role attached to the instance lacks read permissions for S3",
+                                          "The SSL/TLS certificate is expired, missing, or does not match the hostname",
+                                          "The route table is misconfigured and missing a NAT gateway",
+                                          "The security group rules are blocking outbound traffic to port 443"
+                                      ],
+                          "correctAnswer":  1,
+                          "explanation":  "Handshake errors indicate that network paths are open, but cryptographic validation has failed. This is typically due to out-of-date, mismatched, or broken security certificate assets."
+                      },
+                      {
+                          "id":  24,
+                          "type":  "multiple-choice",
+                          "question":  "What is a likely explanation for a spike in alerts from Shodan or other scanning tools targeting your cloud environment?",
+                          "options":  [
+                                          "IAM permissions were overly restrictive for the user group",
+                                          "An internal endpoint was unintentionally made public",
+                                          "A load balancer was attached to the wrong availability zone",
+                                          "A CloudTrail misconfiguration exposed system logs"
+                                      ],
+                          "correctAnswer":  1,
+                          "explanation":  "Internet port-mappers and automated crawlers log exposures instantly whenever private internal resources are inadvertently given public network pathways or open firewalls."
+                      },
+                      {
+                          "id":  25,
+                          "type":  "multiple-choice",
+                          "question":  "Why might a sudden spike in network traffic combined with high CPU usage be an early indicator of a cyberattack?",
+                          "options":  [
+                                          "A cryptominer or DDoS operation is consuming system resources",
+                                          "A scheduled patch deployment is running longer than expected",
+                                          "A system update temporarily shut down the firewall",
+                                          "A user accidentally triggered a backup during peak hours"
+                                      ],
+                          "correctAnswer":  0,
+                          "explanation":  "Concurrent maximum spikes across both network connections and compute layers signal potential exploits, reflecting either DDoS flooding overhead or illicit background cryptomining processes."
+                      }
+                  ]
+}

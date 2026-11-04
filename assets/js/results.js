@@ -83,6 +83,12 @@ $(document).ready(function() {
                 const userAns = (userAnswer || '').toString().trim().toLowerCase();
                 const correctAns = correctAnswer.toString().trim().toLowerCase();
                 isCorrect = userAns === correctAns || userAns === '<' + correctAns + '>';
+            } else if (question.type === 'multiple-select') {
+                const userAnswersSorted = Array.isArray(userAnswer) ? userAnswer.slice().sort() : [];
+                const correctAnswersSorted = correctAnswer.slice().sort();
+                isCorrect = userAnswersSorted.length === correctAnswersSorted.length &&
+                    userAnswersSorted.every((answer, answerIndex) =>
+                        answer === correctAnswersSorted[answerIndex]);
             } else {
                 isCorrect = userAnswer === correctAnswer;
             }
@@ -93,89 +99,54 @@ $(document).ready(function() {
                 .addClass(isCorrect ? 'correct' : 'incorrect');
 
             // Review header
-            const $header = $('<div>')
-                .addClass('review-header')
-                .html(`
-                    <span class="question-number">Question ${index + 1}</span>
-                    <span class="result-icon">${isCorrect ? '✓' : '✗'}</span>
-                `);
+            const $header = $('<div>').addClass('review-header')
+                .append($('<span>').addClass('question-number').text('Question ' + (index + 1)))
+                .append($('<span>').addClass('result-icon').text(isCorrect ? '✓' : '✗'));
 
             // Question text
             const $questionText = $('<p>')
                 .addClass('review-question')
-                .text(question.question);
+                .text(window.QuestionBank.displayText(question.question));
 
             // Answer details
             const $answersDiv = $('<div>').addClass('review-answers');
 
-            if (question.type === 'multiple-choice') {
-                // Multiple-choice display with A/B/C/D labels
-                const labels = ['A', 'B', 'C', 'D'];
-                
-                if (userAnswer !== null && userAnswer !== undefined) {
-                    const $userAnswerP = $('<p>')
-                        .addClass('user-answer')
-                        .html(`Your answer: <strong>${labels[userAnswer]}</strong> - ${question.options[userAnswer]}`);
-                    $answersDiv.append($userAnswerP);
-                } else {
-                    const $userAnswerP = $('<p>')
-                        .addClass('user-answer')
-                        .html(`Your answer: <strong>Not answered</strong>`);
-                    $answersDiv.append($userAnswerP);
-                }
+            if (question.type === 'multiple-choice' || question.type === 'multiple-select') {
+                const labels = question.options.map((option, optionIndex) =>
+                    String.fromCharCode(65 + optionIndex));
+                const selectedIndices = question.type === 'multiple-select' ?
+                    (Array.isArray(userAnswer) ? userAnswer : []) :
+                    (userAnswer === null || userAnswer === undefined ? [] : [userAnswer]);
+                const correctIndices = question.type === 'multiple-select' ?
+                    correctAnswer : [correctAnswer];
 
+                appendAnswerLine($answersDiv, 'user-answer', 'Your answer: ',
+                    formatOptionAnswers(selectedIndices, labels, question.options));
                 if (!isCorrect) {
-                    const $correctAnswerP = $('<p>')
-                        .addClass('correct-answer')
-                        .html(`Correct answer: <strong>${labels[correctAnswer]}</strong> - ${question.options[correctAnswer]}`);
-                    $answersDiv.append($correctAnswerP);
+                    appendAnswerLine($answersDiv, 'correct-answer', 'Correct answer: ',
+                        formatOptionAnswers(correctIndices, labels, question.options));
                 }
             } else if (question.type === 'true-false') {
-                // True-false display
-                if (userAnswer !== null && userAnswer !== undefined) {
-                    const $userAnswerP = $('<p>')
-                        .addClass('user-answer')
-                        .html(`Your answer: <strong>${question.options[userAnswer]}</strong>`);
-                    $answersDiv.append($userAnswerP);
-                } else {
-                    const $userAnswerP = $('<p>')
-                        .addClass('user-answer')
-                        .html(`Your answer: <strong>Not answered</strong>`);
-                    $answersDiv.append($userAnswerP);
-                }
-
+                const userText = userAnswer !== null && userAnswer !== undefined ?
+                    window.QuestionBank.displayText(question.options[userAnswer]) : 'Not answered';
+                appendAnswerLine($answersDiv, 'user-answer', 'Your answer: ', userText);
                 if (!isCorrect) {
-                    const $correctAnswerP = $('<p>')
-                        .addClass('correct-answer')
-                        .html(`Correct answer: <strong>${question.options[correctAnswer]}</strong>`);
-                    $answersDiv.append($correctAnswerP);
+                    appendAnswerLine($answersDiv, 'correct-answer', 'Correct answer: ',
+                        window.QuestionBank.displayText(question.options[correctAnswer]));
                 }
             } else if (question.type === 'fill-in-blank') {
-                // Fill-in-blank display
-                if (userAnswer !== null && userAnswer !== undefined && userAnswer !== '') {
-                    const $userAnswerP = $('<p>')
-                        .addClass('user-answer')
-                        .html(`Your answer: <strong>${userAnswer.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</strong>`);
-                    $answersDiv.append($userAnswerP);
-                } else {
-                    const $userAnswerP = $('<p>')
-                        .addClass('user-answer')
-                        .html(`Your answer: <strong>Not answered</strong>`);
-                    $answersDiv.append($userAnswerP);
-                }
-
+                const userText = userAnswer !== null && userAnswer !== undefined && userAnswer !== '' ?
+                    userAnswer : 'Not answered';
+                appendAnswerLine($answersDiv, 'user-answer', 'Your answer: ', userText);
                 if (!isCorrect) {
-                    const $correctAnswerP = $('<p>')
-                        .addClass('correct-answer')
-                        .html(`Correct answer: <strong>${correctAnswer}</strong>`);
-                    $answersDiv.append($correctAnswerP);
+                    appendAnswerLine($answersDiv, 'correct-answer', 'Correct answer: ', correctAnswer);
                 }
             }
 
             // Explanation
             const $explanation = $('<p>')
                 .addClass('explanation')
-                .html(`<strong>Explanation:</strong> ${question.explanation}`);
+                .text('Explanation: ' + window.QuestionBank.displayText(question.explanation));
 
             // Append all elements
             $reviewItem.append($header);
@@ -185,6 +156,19 @@ $(document).ready(function() {
 
             $reviewList.append($reviewItem);
         });
+    }
+
+    function appendAnswerLine($target, className, label, answer) {
+        $target.append($('<p>').addClass(className).text(label + (answer || 'Not answered')));
+    }
+
+    function formatOptionAnswers(indices, labels, options) {
+        if (!indices.length) {
+            return 'Not answered';
+        }
+        return indices.map(index =>
+            labels[index] + ' - ' + window.QuestionBank.displayText(options[index])
+        ).join(', ');
     }
 
     // Initialize

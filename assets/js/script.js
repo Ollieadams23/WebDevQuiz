@@ -18,6 +18,10 @@ $(document).ready(function() {
         $('#amount10').removeClass('active');
     }
     // If nothing stored, no button is selected (default state)
+
+    if ($('#topic-links').length) {
+        loadQuestionTopics();
+    }
 });
 
 // Question Amount make buttons active
@@ -51,27 +55,29 @@ $('.darktoggle').click(function() {
 });
 
 
-//topic links
-$('#jsfund').click(function() {
-    window.location.href = 'quiz.html?category=javascript';
-});
+function loadQuestionTopics() {
+    const $topicLinks = $('#topic-links');
 
-$('#uiux').click(function() {
-    window.location.href = 'quiz.html?category=uiux';
-});
+    window.QuestionBank.getQuestionFiles()
+        .then(function(files) {
+            $topicLinks.empty();
 
-$('#htmlcss').click(function() {
-    window.location.href = 'quiz.html?category=htmlcss';
-});
+            if (!files.length) {
+                $topicLinks.append($('<li>').text('No quiz topics were found.'));
+                return;
+            }
 
-$('#gitgithub').click(function() {
-    window.location.href = 'quiz.html?category=gitgithub';
-});
-
-$('#sql').click(function() {
-    window.location.href = 'quiz.html?category=sql';
-});
-
-$('#django').click(function() {
-    window.location.href = 'quiz.html?category=django';
-});
+            files.forEach(function(file) {
+                const $link = $('<a>')
+                    .attr('href', 'quiz.html?category=' + encodeURIComponent(file))
+                    .text(window.QuestionBank.getCategoryLabel(file));
+                $topicLinks.append($('<li>').append($link));
+            });
+        })
+        .catch(function(error) {
+            console.error('Unable to load quiz topics:', error);
+            $topicLinks.empty().append(
+                $('<li>').text('Quiz topics could not be loaded: ' + error.message)
+            );
+        });
+}

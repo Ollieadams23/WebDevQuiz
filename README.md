@@ -9,6 +9,7 @@
 - [Technologies Used](#technologies-used)
 - [Deployment](#deployment)
 - [How to Use](#how-to-use)
+- [Adding a Question Bank](#adding-a-question-bank)
 - [Testing](#testing)
 - [Credits](#credits)
 
@@ -16,7 +17,7 @@
 
 ## Overview
 
-A comprehensive web development quiz application featuring four core categories: **JavaScript Fundamentals**, **UI/UX Design**, **HTML & CSS Basics**, and **Git & GitHub**. Test your knowledge across essential web development concepts with randomized questions and detailed explanations.
+A quiz application that discovers its topics from the JSON files in `assets/questions/`. It currently includes JavaScript, UI/UX, HTML/CSS, Git/GitHub, SQL, Django, and AWS question banks.
 
 **Live Site:** (https://ollieadams23.github.io/WebDevQuiz)
 
@@ -25,11 +26,7 @@ A comprehensive web development quiz application featuring four core categories:
 ## Purpose & Value
 
 ### Purpose
-This online quiz application was developed to test and reinforce fundamental web development knowledge across four key areas:
-- **JavaScript Fundamentals** - Variables, functions, loops, and core concepts
-- **UI/UX Design** - Design principles and accessibility standards
-- **HTML & CSS Basics** - Tags, selectors, properties, and structure
-- **Git & GitHub** - Version control concepts and best practices
+This online quiz application was developed to test and reinforce knowledge across technical topics. Add a question-bank JSON file to make another topic available without editing the category links in the code.
 
 ### Value to Users
 - **Educational:** Users can test and expand their knowledge on one of the topics
@@ -45,7 +42,7 @@ This online quiz application was developed to test and reinforce fundamental web
 ### 🏠 Home Page
 ![Home Page Screenshot](assets/images/homepage.png)
 
-The home page welcomes users with a clean, modern design featuring the "Web Dev Quiz" title and dark/light mode toggle. Users can select their preferred number of questions (10 or 20) and choose from four quiz categories: JavaScript Fundamentals, UI/UX Design, HTML & CSS Basics, or Git & GitHub. A "How To" button provides access to detailed instructions.
+The home page welcomes users with the "Web Dev Quiz" title and dark/light mode toggle. Users can select 10 or 20 questions and choose from the question banks discovered in `assets/questions/`. A "How To" button provides access to instructions.
 
 **Value:** Provides a welcoming entry point with clear call-to-action to start the quiz.
 
@@ -54,7 +51,7 @@ The home page welcomes users with a clean, modern design featuring the "Web Dev 
 ### 📖 How To Page
 ![How To Page Screenshot](assets/images/howto.png)
 
-The How To page provides clear, step-by-step instructions on using the quiz application. It explains the three question types (multiple-choice, true/false, and fill-in-the-blank), navigation controls, scoring system, and how to review results. The page includes a "Start Quiz" button for easy transition to the quiz.
+The How To page provides clear, step-by-step instructions on using the quiz application. It explains the question types, navigation controls, scoring system, and how to review results.
 
 **Value:** Ensures users understand how to take the quiz and what to expect, reducing confusion.
 
@@ -63,7 +60,7 @@ The How To page provides clear, step-by-step instructions on using the quiz appl
 ### ❓ Quiz Page
 ![Quiz Page Screenshot](assets/images/quizpage.png)
 
-The quiz page displays one question at a time with a clean, distraction-free interface. Questions are presented with clear formatting, and answer options adapt based on question type (four buttons for multiple-choice, two for true/false, or a text input for fill-in-the-blank). A progress indicator tracks the user's position in the quiz.
+The quiz page displays one question at a time with a clean, distraction-free interface. Questions are presented with clear formatting, and answer options adapt based on question type. A progress indicator tracks the user's position in the quiz.
 
 **Features:**
 - Randomized questions for each attempt
@@ -176,8 +173,7 @@ To run this project locally:
    ```
 
 3. **Open in browser**
-   - Simply open `index.html` in your web browser
-   - Or use a local server (e.g., Live Server extension in VS Code)
+   - Run the project through a local web server (for example, the Live Server extension in VS Code). The topic list needs a server that exposes a directory listing for `assets/questions/`.
 
 ---
 
@@ -206,6 +202,19 @@ To run this project locally:
    - Click "Retake Quiz" to start again with randomized questions
 
 ---
+
+## Adding a Question Bank
+
+Add a `.json` file directly to `assets/questions/`, then deploy the updated site. On GitHub Pages, the home page discovers JSON files using the public GitHub Contents API; during local development, use a web server that provides a directory listing for that folder. No category list or JavaScript mapping needs to be updated.
+
+Use the existing banks as examples. Each file should contain a `category` string and a `questions` array. Every question needs a `question`, `explanation`, and `type`:
+
+- `multiple-choice`: `options` is an array of strings and `correctAnswer` is the zero-based index of the correct option.
+- `multiple-select`: `options` is an array of strings and `correctAnswer` is an array of the correct option indexes.
+- `true-false`: `options` is an array of two strings and `correctAnswer` is the correct option index.
+- `fill-in-blank`: `correctAnswer` is the expected answer string; `options` is not required.
+
+Use a simple filename such as `aws.json` or `cloud-security.json`; that filename becomes the category URL. The `category` value is shown on the results page. For a 20-question quiz, include at least 20 questions; shorter banks automatically use all available questions.
 
 ## Testing
 

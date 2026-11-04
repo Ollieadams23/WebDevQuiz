@@ -20,35 +20,30 @@ $(document).ready(function() {
 
     // Initialize quiz
     function initQuiz() {
-        // Get category from URL parameter
+        // Get category from the question file name.
         category = getURLParameter('category');
-        
-        // Get question count from localStorage or default to 10
-        const storedCount = localStorage.getItem('questionCount');
-        questionCount = storedCount ? parseInt(storedCount) : 10;
 
-        // Map category to JSON file
-        const categoryFiles = {
-            'javascript': 'assets/questions/javascript.json',
-            'uiux': 'assets/questions/uiux.json',
-            'htmlcss': 'assets/questions/htmlcss.json',
-            'gitgithub': 'assets/questions/gitgithub.json',
-            'sql': 'assets/questions/sql.json',
-            'django': 'assets/questions/django.json'
-        };
-
-        const jsonFile = categoryFiles[category];
-
-        if (!jsonFile) {
+        if (!category || !/^[a-z0-9]+(?:[-_][a-z0-9]+)*$/i.test(category)) {
             alert('Invalid category. Redirecting to home.');
             window.location.href = 'index.html';
             return;
         }
 
+        // Get question count from localStorage or default to 10.
+        const storedCount = localStorage.getItem('questionCount');
+        const parsedCount = parseInt(storedCount, 10);
+        questionCount = parsedCount === 20 ? 20 : 10;
+        const jsonFile = 'assets/questions/' + encodeURIComponent(category) + '.json';
+
         // Load questions from JSON
         $.getJSON(jsonFile)
             .done(function(data) {
                 quizData = data;
+                if (!isValidQuestionBank(data)) {
+                    alert('This question file is not in the supported format. Please check the question bank.');
+                    window.location.href = 'index.html';
+                    return;
+                }
                 startQuiz();
             })
             .fail(function() {
@@ -57,20 +52,59 @@ $(document).ready(function() {
             });
     }
 
+    function isValidQuestionBank(data) {
+        return data && typeof data.category === 'string' &&
+            Array.isArray(data.questions) && data.questions.length > 0 &&
+            data.questions.every(function(question) {
+                if (!question || typeof question.question !== 'string' ||
+                    typeof question.explanation !== 'string') {
+                    return false;
+                }
+
+                if (question.type === 'fill-in-blank') {
+                    return typeof question.correctAnswer === 'string' ||
+                        typeof question.correctAnswer === 'number';
+                }
+
+                if (!Array.isArray(question.options) || question.options.length < 2 ||
+                    question.options.length > 26) {
+                    return false;
+                }
+
+                if (question.type === 'multiple-select') {
+                    return Array.isArray(question.correctAnswer) &&
+                        question.correctAnswer.length > 0 &&
+                        question.correctAnswer.every(function(answer) {
+                            return Number.isInteger(answer) && answer >= 0 &&
+                                answer < question.options.length;
+                        });
+                }
+
+                return (question.type === 'multiple-choice' ||
+                    question.type === 'true-false') &&
+                    Number.isInteger(question.correctAnswer) &&
+                    question.correctAnswer >= 0 &&
+                    question.correctAnswer < question.options.length;
+            });
+    }
+
     // Start the quiz
+    // This function randomizes questions and initializes the quiz state
     function startQuiz() {
         // Randomize and select questions
-        const allQuestions = quizData.questions;
+        const allQuestions = quizData.questions.slice();
         const shuffled = allQuestions.sort(() => 0.5 - Math.random());
+        questionCount = Math.min(questionCount, shuffled.length);
         selectedQuestions = shuffled.slice(0, questionCount);
 
         // Shuffle answer options only for multiple-choice questions
         selectedQuestions.forEach(question => {
-            if (question.type === 'multiple-choice') {
+            if (question.type === 'multiple-choice' || question.type === 'multiple-select') {
                 // Create array of option objects with original index
                 const optionsWithIndex = question.options.map((option, index) => ({
                     text: option,
-                    isCorrect: index === question.correctAnswer
+                    isCorrect: Array.isArray(question.correctAnswer) ?
+                        question.correctAnswer.includes(index) : index === question.correctAnswer
                 }));
 
                 // Shuffle the options
@@ -78,7 +112,14 @@ $(document).ready(function() {
 
                 // Update question with shuffled options and new correct answer index
                 question.options = shuffledOptions.map(opt => opt.text);
-                question.correctAnswer = shuffledOptions.findIndex(opt => opt.isCorrect);
+                const correctAnswers = [];
+                shuffledOptions.forEach((option, index) => {
+                    if (option.isCorrect) {
+                        correctAnswers.push(index);
+                    }
+                });
+                question.correctAnswer = question.type === 'multiple-select' ?
+                    correctAnswers : correctAnswers[0];
             }
             // true-false and fill-in-blank questions don't need shuffling
         });
@@ -110,41 +151,48 @@ $(document).ready(function() {
         $('#progress-fill').css('width', progressPercent + '%');
 
         // Display question text
-        $('#question-text').text(question.question);
+        $('#question-text').text(window.QuestionBank.displayText(question.question));
 
         // Clear and populate answer options
         const $answerOptions = $('#answer-options');
         $answerOptions.empty();
 
-        if (question.type === 'multiple-choice') {
-            // Display 4 buttons for multiple-choice
-            const labels = ['A', 'B', 'C', 'D'];
+        if (question.type === 'multiple-choice' || question.type === 'multiple-select') {
+            const labels = question.options.map((option, i) => String.fromCharCode(65 + i));
+            if (question.type === 'multiple-select') {
+                $('#question-instruction').text('Select all that apply.');
+            } else {
+                $('#question-instruction').empty();
+            }
             question.options.forEach((option, i) => {
+                const isSelected = question.type === 'multiple-select' ?
+                    Array.isArray(userAnswers[index]) && userAnswers[index].includes(i) :
+                    userAnswers[index] === i;
                 const $button = $('<button>')
                     .addClass('answer-btn')
                     .attr('data-answer', i)
-                    .html(`
-                        <span class="answer-label">${labels[i]}</span>
-                        <span class="answer-text">${option}</span>
-                    `);
+                    .attr('aria-pressed', isSelected ? 'true' : 'false');
+                $button.append($('<span>').addClass('answer-label').text(labels[i]));
+                $button.append($('<span>').addClass('answer-text')
+                    .text(window.QuestionBank.displayText(option)));
 
                 // Highlight if this answer was previously selected
-                if (userAnswers[index] === i) {
+                if (isSelected) {
                     $button.addClass('selected');
                 }
 
                 $answerOptions.append($button);
             });
         } else if (question.type === 'true-false') {
+            $('#question-instruction').empty();
             // Display 2 buttons for true-false
             const labels = ['True', 'False'];
             question.options.forEach((option, i) => {
                 const $button = $('<button>')
                     .addClass('answer-btn')
                     .attr('data-answer', i)
-                    .html(`
-                        <span class="answer-label">${labels[i]}</span>
-                    `);
+                    .attr('aria-pressed', userAnswers[index] === i ? 'true' : 'false')
+                    .append($('<span>').addClass('answer-label').text(labels[i]));
 
                 // Highlight if this answer was previously selected
                 if (userAnswers[index] === i) {
@@ -154,6 +202,7 @@ $(document).ready(function() {
                 $answerOptions.append($button);
             });
         } else if (question.type === 'fill-in-blank') {
+            $('#question-instruction').empty();
             // Display text input for fill-in-blank
             const $input = $('<input>')
                 .attr('type', 'text')
@@ -187,15 +236,13 @@ $(document).ready(function() {
             $('#prev-btn').prop('disabled', false);
         }
 
-        // Hide next button on last question
         if (currentQuestionIndex === questionCount - 1) {
-            $('#next-btn').hide();
+            $('#next-btn').text('Submit Quiz');
         } else {
-            $('#next-btn').show();
+            $('#next-btn').text('Next →');
         }
 
-        // Always enable next button - validation happens on click
-        $('#next-btn').prop('disabled', false);
+        $('#next-btn').show().prop('disabled', false);
     }
 
     // Setup event listeners
@@ -207,25 +254,28 @@ $(document).ready(function() {
             // Hide validation error
             $('#validation-error').hide();
             
-            // Remove previous selection
-            $('.answer-btn').removeClass('selected');
-            
-            // Add selection to clicked button
-            $(this).addClass('selected');
-            
-            // Store answer
-            userAnswers[currentQuestionIndex] = selectedAnswer;
+            const question = selectedQuestions[currentQuestionIndex];
+            if (question.type === 'multiple-select') {
+                const selectedAnswers = Array.isArray(userAnswers[currentQuestionIndex]) ?
+                    userAnswers[currentQuestionIndex].slice() : [];
+                const selectedIndex = selectedAnswers.indexOf(selectedAnswer);
+                if (selectedIndex === -1) {
+                    selectedAnswers.push(selectedAnswer);
+                } else {
+                    selectedAnswers.splice(selectedIndex, 1);
+                }
+                userAnswers[currentQuestionIndex] = selectedAnswers.length ? selectedAnswers : null;
+                $(this).toggleClass('selected', selectedIndex === -1)
+                    .attr('aria-pressed', selectedIndex === -1 ? 'true' : 'false');
+            } else {
+                $('.answer-btn').removeClass('selected').attr('aria-pressed', 'false');
+                $(this).addClass('selected').attr('aria-pressed', 'true');
+                userAnswers[currentQuestionIndex] = selectedAnswer;
+            }
             
             // Enable next button
             updateNavigationButtons();
             
-            // Auto-submit if last question
-            if (currentQuestionIndex === questionCount - 1) {
-                // Small delay for visual feedback
-                setTimeout(function() {
-                    submitQuiz();
-                }, 500);
-            }
         });
 
         // Fill-in-blank input handling
@@ -247,13 +297,7 @@ $(document).ready(function() {
             if (e.which === 13) { // Enter key
                 e.preventDefault();
                 
-                // Auto-submit if last question
-                if (currentQuestionIndex === questionCount - 1) {
-                    submitQuiz();
-                } else {
-                    // Move to next question
-                    $('#next-btn').click();
-                }
+                $('#next-btn').click();
             }
         });
 
@@ -275,8 +319,12 @@ $(document).ready(function() {
                 $('#validation-error').show();
                 return;
             }
-            
-            if (currentQuestionIndex < questionCount - 1) {
+
+            if (currentQuestionIndex === questionCount - 1) {
+                if (window.confirm('Submit your quiz?')) {
+                    submitQuiz();
+                }
+            } else {
                 displayQuestion(currentQuestionIndex + 1);
             }
         });
@@ -293,6 +341,14 @@ $(document).ready(function() {
                 const userAnswer = (userAnswers[index] || '').toString().trim().toLowerCase();
                 const correctAnswer = question.correctAnswer.toString().trim().toLowerCase();
                 if (userAnswer === correctAnswer || userAnswer === '<' + correctAnswer + '>') {
+                    correctCount++;
+                }
+            } else if (question.type === 'multiple-select') {
+                const selectedAnswers = Array.isArray(userAnswers[index]) ?
+                    userAnswers[index].slice().sort() : [];
+                const correctAnswers = question.correctAnswer.slice().sort();
+                if (selectedAnswers.length === correctAnswers.length &&
+                    selectedAnswers.every((answer, answerIndex) => answer === correctAnswers[answerIndex])) {
                     correctCount++;
                 }
             } else {
